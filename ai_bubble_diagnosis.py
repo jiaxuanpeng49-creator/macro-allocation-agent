@@ -4,6 +4,8 @@ from pathlib import Path
 import json
 
 from knowledge_base import load_knowledge
+from bubble_history import load_bubble_history
+from technology_bubbles import ai_historical_conclusion, load_technology_bubbles
 
 DIAGNOSIS_FILE = Path(__file__).parent / "knowledge" / "ai_bubble_diagnosis.json"
 
@@ -33,4 +35,24 @@ def unified_ai_bubble_diagnosis():
 def compact_diagnosis():
     result = unified_ai_bubble_diagnosis()
     keys = ["as_of_date", "model", "stage", "stage_score", "weighted_indicator_score", "confidence", "conclusion", "indicators", "expert_synthesis", "next_stage_triggers", "model_sources", "limitations"]
-    return {key: result[key] for key in keys}
+    compact = {key: result[key] for key in keys}
+    history = load_bubble_history()
+    compact["score_history"] = history["snapshots"]
+    compact["history_methodology"] = history["methodology"]
+    analogs = load_technology_bubbles()
+    compact["technology_bubble_comparison"] = {
+        "methodology": analogs["methodology"],
+        "unified_conclusion": ai_historical_conclusion(result["stage_score"]),
+        "analogs": [
+            {
+                "name": item["name"],
+                "period": f"{item['start_year']}—{item['end_year']}",
+                "capital_acceleration_year": item["capital_acceleration_year"],
+                "confidence": item["confidence"],
+                "classification": item["classification"],
+                "anchors": item["anchors"],
+            }
+            for item in analogs["bubbles"]
+        ],
+    }
+    return compact

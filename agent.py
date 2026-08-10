@@ -10,6 +10,7 @@ from agents import Agent, Runner, function_tool, OpenAIChatCompletionsModel, set
 from backtest import backtest_summary
 from ai_bubble_diagnosis import compact_diagnosis
 from knowledge_base import knowledge_answer_context
+from news_intelligence import latest_news_context
 from personal_allocation import run_personalized_allocation
 from pipeline import run_macro_analysis
 
@@ -67,6 +68,12 @@ def diagnose_current_ai_bubble() -> str:
 
 
 @function_tool
+def analyze_latest_market_news(top_k: int = 12) -> str:
+    """读取最近一次每日新闻快照，返回规则底稿、DeepSeek综合研判、资产与周期影响和原始链接。"""
+    return json.dumps(latest_news_context(top_k=max(3, min(top_k, 20))), ensure_ascii=False, indent=2)
+
+
+@function_tool
 def create_personalized_allocation(
     age: int,
     occupation: str,
@@ -115,6 +122,14 @@ macro_agent = Agent(
 
 当用户要求当前 AI 泡沫的总判断、所处阶段、Dalio模型、综合结论或未来触发条件时，
 必须调用 diagnose_current_ai_bubble；如需解释人物分歧，可同时调用 search_ai_bubble_views。
+当用户询问泡沫分数历史、某个日期的读数、分数如何演化时，也调用 diagnose_current_ai_bubble，
+并明确区分“历史模型复算”“六指标当前诊断”和“每日新闻连续更新”。
+当用户要求把AI与铁路、电报、电力、互联网或电信泡沫比较时，也调用 diagnose_current_ai_bubble；
+必须使用 technology_bubble_comparison 的锚点、置信度和统一结论，并说明标准化热度不是历史价格指数。
+
+当用户询问今天/最近发生了什么、每日新闻、突发新闻如何影响股票债券黄金、新闻对增长通胀或经济周期的影响时，
+必须调用 analyze_latest_market_news。回答必须注明新闻快照时间，引用主要新闻的 source、published_at 和 url；
+优先综合 DeepSeek 研判与透明规则底稿，若两者冲突要明确指出；不得把标题规则评分描述成已证明的因果关系。
 
 当用户要求结合自己的职业、收入、支出、家庭负担、投资期限或风险承受能力生成配置时，
 必须先收集 create_personalized_allocation 所需信息，再调用该工具。不能仅凭年龄猜测风险偏好。
@@ -139,6 +154,7 @@ create_personalized_allocation 内部已经读取当前宏观环境和AI泡沫�
         backtest_macro_portfolio,
         search_ai_bubble_views,
         diagnose_current_ai_bubble,
+        analyze_latest_market_news,
         create_personalized_allocation,
     ],
 )

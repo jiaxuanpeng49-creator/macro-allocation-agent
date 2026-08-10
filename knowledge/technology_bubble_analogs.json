@@ -1,0 +1,130 @@
+{
+  "methodology": "本数据把历史事件锚点映射为0—100的相对泡沫热度，再在相邻锚点之间做确定性线性插值。分数用于比较资本热度、预期透支、融资扩张与基本面验证的相对阶段，不是历史市场价格指数，也不是任何机构的官方泡沫评分。电报部分更准确地称为资本扩张热潮，而非学界一致认定的独立泡沫。",
+  "score_bands": [
+    {"min": 0, "max": 34, "label": "发明与早期验证"},
+    {"min": 35, "max": 61, "label": "商业扩张"},
+    {"min": 62, "max": 83, "label": "资本繁荣／预期透支"},
+    {"min": 84, "max": 100, "label": "狂热顶部／出清"}
+  ],
+  "bubbles": [
+    {
+      "id": "railway",
+      "name": "英国铁路狂热",
+      "short_name": "铁路",
+      "start_year": 1825,
+      "end_year": 1855,
+      "capital_acceleration_year": 1836,
+      "peak_year": 1845,
+      "color": "#A78BFA",
+      "confidence": "高",
+      "classification": "学界广泛认定的技术资产泡沫",
+      "anchors": [
+        {"year": 1825, "score": 18, "phase": "可行性验证", "event": "早期客运铁路项目启动", "rationale": "技术开始从实验转向可投资基础设施。", "source_url": "https://www.sciencedirect.com/science/article/pii/S0014498311000441"},
+        {"year": 1830, "score": 32, "phase": "商业验证", "event": "利物浦—曼彻斯特铁路开通", "rationale": "成功线路证明客运和货运的商业价值。", "source_url": "https://www.sciencedirect.com/science/article/pii/S0014498311000441"},
+        {"year": 1836, "score": 54, "phase": "第一次资本加速", "event": "1836—1837年铁路推广热潮", "rationale": "新线路和公司融资快速增加。", "source_url": "https://www.sciencedirect.com/science/article/pii/S0014498311000441"},
+        {"year": 1843, "score": 70, "phase": "价格加速", "event": "铁路股进入快速上涨区间", "rationale": "研究显示铁路股在1843—1845年显著上涨。", "source_url": "https://www.cambridge.org/core/books/abs/boom-and-bust/democratising-speculation-the-great-railway-mania/F5A16DC376684C14020C78D86B4A4B48"},
+        {"year": 1845, "score": 96, "phase": "狂热顶部", "event": "562个新铁路方案提交议会", "rationale": "低利率、部分缴款股票与杠杆把推广热潮推到极端。", "source_url": "https://www.cambridge.org/core/journals/financial-history-review/article/deriving-the-railway-mania/2EA377886FE48B4BF2DD620D4F845991"},
+        {"year": 1847, "score": 72, "phase": "融资反转", "event": "价格回落与追加缴款压力", "rationale": "后续缴款和融资收紧放大下行。", "source_url": "https://www.cambridge.org/core/journals/financial-history-review/article/deriving-the-railway-mania/2EA377886FE48B4BF2DD620D4F845991"},
+        {"year": 1850, "score": 34, "phase": "出清", "event": "铁路股与新项目经历深度调整", "rationale": "泡沫退潮，但大量铁路基础设施永久保留。", "source_url": "https://mpra.ub.uni-muenchen.de/21820/"},
+        {"year": 1855, "score": 25, "phase": "成熟建设", "event": "行业回归网络运营与整合", "rationale": "资本叙事退潮，基础设施进入长期使用期。", "source_url": "https://mpra.ub.uni-muenchen.de/21820/"}
+      ]
+    },
+    {
+      "id": "telegraph",
+      "name": "电报与跨洋通信热潮",
+      "short_name": "电报",
+      "start_year": 1837,
+      "end_year": 1872,
+      "capital_acceleration_year": 1845,
+      "peak_year": 1858,
+      "color": "#22D3EE",
+      "confidence": "中低",
+      "classification": "资本扩张热潮；并非学界一致认定的独立泡沫",
+      "anchors": [
+        {"year": 1837, "score": 12, "phase": "发明验证", "event": "Morse申请政府资助并公开演示", "rationale": "技术仍依赖公共资助与原型验证。", "source_url": "https://www.loc.gov/collections/samuel-morse-papers/articles-and-essays/invention-of-the-telegraph/"},
+        {"year": 1844, "score": 28, "phase": "公开验证", "event": "华盛顿至巴尔的摩首次公开电报", "rationale": "远距离即时通信首次面向公众得到验证。", "source_url": "https://guides.loc.gov/telecommunications-industry/history"},
+        {"year": 1845, "score": 46, "phase": "公司化加速", "event": "世界首家电信公司成立", "rationale": "技术被封装为可融资、可持股的商业实体。", "source_url": "https://www.loc.gov/exhibits/treasures/tr22c.html#obj5"},
+        {"year": 1853, "score": 64, "phase": "跨洋叙事", "event": "Cyrus Field推动大西洋电缆融资", "rationale": "全球网络愿景吸引英美资本与工程资源。", "source_url": "https://www.sil.si.edu/exhibitions/underwater-web/uw-bold-and-cautious-01.htm"},
+        {"year": 1858, "score": 86, "phase": "公众狂热与技术挫折", "event": "首条跨洋电缆短暂成功后失效", "rationale": "成功引发广泛庆祝，但技术在723条消息后失败。", "source_url": "https://sova.si.edu/record/nmah.ac.0073"},
+        {"year": 1861, "score": 47, "phase": "整合与出清", "event": "跨大陆电报完成，旧通信业务退出", "rationale": "网络价值兑现，同时落后模式被迅速替代。", "source_url": "https://www.loc.gov/loc/lcib/1005/missives.html"},
+        {"year": 1866, "score": 66, "phase": "二次验证", "event": "跨洋电缆稳定运营", "rationale": "多年失败后技术与商业模式得到更可靠验证。", "source_url": "https://sova.si.edu/record/nmah.ac.0073"},
+        {"year": 1872, "score": 38, "phase": "网络成熟", "event": "行业进入运营和整合阶段", "rationale": "从单一突破叙事转向持续通信服务。", "source_url": "https://guides.loc.gov/telecommunications-industry/history"}
+      ]
+    },
+    {
+      "id": "electricity",
+      "name": "电力公用事业与控股公司泡沫",
+      "short_name": "电力",
+      "start_year": 1882,
+      "end_year": 1940,
+      "capital_acceleration_year": 1923,
+      "peak_year": 1929,
+      "color": "#FBBF24",
+      "confidence": "中高",
+      "classification": "真实基础设施扩张叠加高杠杆控股结构",
+      "anchors": [
+        {"year": 1882, "score": 14, "phase": "系统验证", "event": "集中式电力系统进入商业示范", "rationale": "电力从发明走向城市基础设施。", "source_url": "https://www.eia.gov/electricity/pdfpages/puhca/index.php"},
+        {"year": 1905, "score": 30, "phase": "组织创新", "event": "电力控股公司结构开始扩散", "rationale": "跨地区控制与设备融资提高扩张速度。", "source_url": "https://www.sec.gov/divisions/investment/opur/filing/3-11616-021405pc.pdf"},
+        {"year": 1923, "score": 58, "phase": "资本加速", "event": "大型公用事业帝国迅速扩张", "rationale": "控股层级与证券发行使资本规模加速。", "source_url": "https://www.sec.gov/file/1959pdf"},
+        {"year": 1927, "score": 79, "phase": "杠杆繁荣", "event": "控股公司并购与证券融资高涨", "rationale": "经营资产上方叠加复杂且高杠杆的金融结构。", "source_url": "https://www.sec.gov/file/1959pdf"},
+        {"year": 1929, "score": 94, "phase": "狂热顶部", "event": "控股帝国规模与估值达到极端", "rationale": "部分集团资产从1923年的600万美元膨胀至1929年的10亿美元。", "source_url": "https://www.sec.gov/file/1959pdf"},
+        {"year": 1931, "score": 62, "phase": "杠杆崩解", "event": "Insull体系倒塌", "rationale": "经营收入的小幅下降被控股层杠杆放大成偿付危机。", "source_url": "https://www.sec.gov/divisions/investment/opur/filing/3-11616-021405pc.pdf"},
+        {"year": 1936, "score": 28, "phase": "出清与监管重构", "event": "53家公用事业控股公司进入破产或接管", "rationale": "金融结构被清理，基础电力需求本身仍存在。", "source_url": "https://www.sec.gov/file/1959pdf"},
+        {"year": 1940, "score": 24, "phase": "成熟运营", "event": "行业转向简化结构与受监管运营", "rationale": "基础设施保留，过度金融化结构退场。", "source_url": "https://www.sec.gov/files/1941.pdf"}
+      ]
+    },
+    {
+      "id": "internet_telecom",
+      "name": "互联网与电信泡沫",
+      "short_name": "互联网/电信",
+      "start_year": 1990,
+      "end_year": 2008,
+      "capital_acceleration_year": 1995,
+      "peak_year": 2000,
+      "color": "#FB7185",
+      "confidence": "高",
+      "classification": "学界与监管机构广泛认定的技术资产泡沫",
+      "anchors": [
+        {"year": 1990, "score": 18, "phase": "网络萌芽", "event": "商业互联网基础形成", "rationale": "联网价值开始从科研网络向商业用途扩散。", "source_url": "https://www.nber.org/system/files/working_papers/w22631/w22631.pdf"},
+        {"year": 1995, "score": 48, "phase": "资本加速", "event": "互联网公司与IPO快速增加", "rationale": "商业模式仍在探索，但资本市场开始集中定价网络未来。", "source_url": "https://www.sec.gov/news/speech/spch100704psa.htm"},
+        {"year": 1997, "score": 68, "phase": "新经济叙事", "event": "宽带、设备与互联网估值同步上行", "rationale": "更便宜的计算和网络基础设施强化增长预期。", "source_url": "https://www.sec.gov/news/speech/spch100704psa.htm"},
+        {"year": 1999, "score": 89, "phase": "IPO狂热", "event": "亏损互联网公司也获得极高估值", "rationale": "散户参与、日内交易和IPO管线共同放大投机。", "source_url": "https://www.sec.gov/news/speech/spch100704psa.htm"},
+        {"year": 2000, "score": 98, "phase": "顶部与破裂", "event": "高科技泡沫在春季见顶并破裂", "rationale": "SEC回顾明确将其描述为1990年代高科技泡沫的破裂。", "source_url": "https://www.sec.gov/news/speech/spch100704psa.htm"},
+        {"year": 2002, "score": 35, "phase": "深度出清", "event": "电信融投资与互联网企业大幅收缩", "rationale": "电信熔断、公司破产与需求调整共同清理过剩。", "source_url": "https://www.nber.org/system/files/working_papers/w14758/w14758.pdf"},
+        {"year": 2005, "score": 27, "phase": "商业模式验证", "event": "幸存平台进入盈利与规模化阶段", "rationale": "泡沫资产出清后，互联网基础设施继续创造价值。", "source_url": "https://www.nber.org/system/files/working_papers/w22631/w22631.pdf"},
+        {"year": 2008, "score": 30, "phase": "成熟网络", "event": "行业中心转向平台与可持续现金流", "rationale": "技术普及不等于早期估值正确。", "source_url": "https://www.nber.org/system/files/working_papers/w22631/w22631.pdf"}
+      ]
+    },
+    {
+      "id": "ai",
+      "name": "人工智能长周期",
+      "short_name": "AI",
+      "start_year": 1956,
+      "end_year": 2026,
+      "capital_acceleration_year": 2012,
+      "peak_year": null,
+      "color": "#60A5FA",
+      "confidence": "中",
+      "classification": "尚未结束的实时技术—资本周期",
+      "anchors": [
+        {"year": 1956, "score": 12, "phase": "学科诞生", "event": "达特茅斯会议提出人工智能", "rationale": "研究领域形成，但尚无可交易的产业泡沫。", "source_url": "https://ai.dartmouth.edu/our-story"},
+        {"year": 1966, "score": 31, "phase": "早期乐观", "event": "符号AI与自然语言演示引发期待", "rationale": "能力演示快于商业价值验证。", "source_url": "https://ai.dartmouth.edu/our-story"},
+        {"year": 1974, "score": 16, "phase": "资金降温", "event": "第一轮AI投入与预期收缩", "rationale": "承诺与算力、数据和算法现实之间出现落差。", "source_url": "https://archive.computerhistory.org/resources/access/text/2020/05/102781122-05-01-acc.pdf"},
+        {"year": 1980, "score": 43, "phase": "专家系统繁荣", "event": "专家系统进入企业应用", "rationale": "AI重新获得企业预算与商业化叙事。", "source_url": "https://archive.computerhistory.org/resources/access/text/2020/05/102781122-05-01-acc.pdf"},
+        {"year": 1987, "score": 57, "phase": "商业预期顶部", "event": "专家系统与专用硬件热度见顶", "rationale": "商业部署扩大，但维护成本和能力边界逐渐暴露。", "source_url": "https://archive.computerhistory.org/resources/access/text/2020/05/102781122-05-01-acc.pdf"},
+        {"year": 1993, "score": 21, "phase": "第二次降温", "event": "专家系统市场收缩", "rationale": "资本退潮，机器学习研究继续积累。", "source_url": "https://archive.computerhistory.org/resources/access/text/2020/05/102781122-05-01-acc.pdf"},
+        {"year": 1997, "score": 32, "phase": "能力再验证", "event": "Deep Blue击败国际象棋世界冠军", "rationale": "专用系统证明计算能力，但尚未形成全面商业繁荣。", "source_url": "https://www.ibm.com/history/deep-blue"},
+        {"year": 2006, "score": 28, "phase": "研究积累", "event": "深度学习方法重新受到重视", "rationale": "算法、数据与计算条件逐步汇合。", "source_url": "https://www.deeplearningbook.org/"},
+        {"year": 2012, "score": 46, "phase": "资本加速起点", "event": "深度学习视觉突破", "rationale": "GPU、数据集与神经网络带来可复制的性能跃迁。", "source_url": "https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks"},
+        {"year": 2016, "score": 55, "phase": "公众能力验证", "event": "AlphaGo击败李世石", "rationale": "全球公众见证AI跨越长期能力门槛。", "source_url": "https://deepmind.google/blog/deep-reinforcement-learning/"},
+        {"year": 2017, "score": 58, "phase": "通用架构突破", "event": "Transformer架构发布", "rationale": "更适合规模化训练的架构奠定生成式AI基础。", "source_url": "https://research.google/blog/transformer-a-novel-neural-network-architecture-for-language-understanding/"},
+        {"year": 2020, "score": 64, "phase": "规模化竞赛", "event": "大模型能力与算力需求同步上升", "rationale": "规模定律把模型进步与资本开支紧密绑定。", "source_url": "https://arxiv.org/abs/2001.08361"},
+        {"year": 2022, "score": 72, "phase": "大众采用拐点", "event": "ChatGPT发布", "rationale": "对话式产品把生成式AI带到大规模用户面前。", "source_url": "https://openai.com/index/chatgpt/"},
+        {"year": 2023, "score": 78, "phase": "资本繁荣", "event": "模型、芯片与数据中心投资升温", "rationale": "真实采用与远期预期同时推动估值和资本开支。", "source_url": "https://hai.stanford.edu/ai-index/2024-ai-index-report"},
+        {"year": 2024, "score": 73, "phase": "盈利验证开始", "event": "市场开始追问单位经济性与投资回报", "rationale": "能力继续提高，但资本回报分化成为核心问题。", "source_url": "https://hai.stanford.edu/ai-index/2025-ai-index-report"},
+        {"year": 2025, "score": 69, "phase": "泡沫扩张后期", "event": "产业需求与估值风险并存", "rationale": "基础设施偏热、应用层仍在扩散，不能把整个AI视为同质资产。", "source_url": "https://www.oaktreecapital.com/insights/memo/is-it-a-bubble"},
+        {"year": 2026, "score": 76, "phase": "盈利验证拐点", "event": "当前六指标与新闻连续更新", "rationale": "处于资本繁荣后段，但尚缺乏典型最终顶部所需的全面杠杆与现金流崩塌证据。", "source_url": "https://news.google.com/"}
+      ]
+    }
+  ]
+}

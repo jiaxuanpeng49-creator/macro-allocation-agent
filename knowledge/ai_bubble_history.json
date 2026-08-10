@@ -1,0 +1,120 @@
+{
+  "methodology": "2025-08至2026-03为基于已收录、带日期人物观点的模型历史复算；2026-08-10为当前六指标诊断；此后由每日新闻情报生成连续快照。所有分数均为本项目研究模型读数，不是Bridgewater官方历史数据。",
+  "snapshots": [
+    {
+      "date": "2025-08-15",
+      "score": 58,
+      "stage": "繁荣扩张",
+      "confidence": "低",
+      "snapshot_type": "历史模型复算",
+      "judgment": "技术与资本投入进入繁荣期，局部估值过热已经出现，但盈利验证仍有较长窗口。",
+      "drivers": [
+        "Sam Altman承认投资者可能整体过度兴奋",
+        "真实AI需求和长期技术价值仍构成基本面支撑"
+      ],
+      "source_title": "Sam Altman：AI市场存在局部泡沫",
+      "source_url": "https://www.theverge.com/ai-artificial-intelligence/759965/sam-altman-openai-ai-bubble-interview"
+    },
+    {
+      "date": "2025-10-03",
+      "score": 61,
+      "stage": "繁荣扩张",
+      "confidence": "低",
+      "snapshot_type": "历史模型复算",
+      "judgment": "产业投资具有长期生产率价值，但资本配置错误和短期估值泡沫风险继续累积。",
+      "drivers": [
+        "Jeff Bezos将AI描述为会带来长期社会收益的工业泡沫",
+        "资本开支继续提前定价远期需求"
+      ],
+      "source_title": "Jeff Bezos：AI支出热潮是最终会产生价值的泡沫",
+      "source_url": "https://news.bloomberglaw.com/artificial-intelligence/bezos-says-ai-spending-boom-is-a-bubble-that-will-pay-off"
+    },
+    {
+      "date": "2025-11-18",
+      "score": 66,
+      "stage": "泡沫扩张后期／盈利验证拐点",
+      "confidence": "中低",
+      "snapshot_type": "历史模型复算",
+      "judgment": "市场叙事开始从技术可行性转向估值合理性，非理性定价成为更明确的风险。",
+      "drivers": [
+        "Sundar Pichai公开承认市场存在非理性",
+        "龙头公司的真实需求尚未消失"
+      ],
+      "source_title": "Sundar Pichai：AI市场存在非理性",
+      "source_url": "https://www.youtube.com/watch?v=f23hv1zXN8I"
+    },
+    {
+      "date": "2025-11-19",
+      "score": 63,
+      "stage": "泡沫扩张后期／盈利验证拐点",
+      "confidence": "中低",
+      "snapshot_type": "历史模型复算",
+      "judgment": "基础设施可能偏热，但应用层投资不足降低了“整体AI都是泡沫”的概率。",
+      "drivers": [
+        "Andrew Ng认为AI应用层仍被低估",
+        "基础设施与应用层出现明显分化"
+      ],
+      "source_title": "Andrew Ng：AI应用层仍然投资不足",
+      "source_url": "https://www.bloomberg.com/news/videos/2025-11-19/ai-applications-underinvested-deeplearning-ai-s-ng-says-video"
+    },
+    {
+      "date": "2025-12-04",
+      "score": 61,
+      "stage": "繁荣扩张",
+      "confidence": "中低",
+      "snapshot_type": "历史模型复算",
+      "judgment": "长期需求与应用扩散仍为看多依据，但不同公司之间的资本回报差异正在扩大。",
+      "drivers": [
+        "Dario Amodei警惕投资时点错配",
+        "Lisa Su认为真实算力需求不支持整体泡沫论"
+      ],
+      "source_title": "产业CEO对需求与时点风险的分歧",
+      "source_url": "https://www.wired.com/story/big-interview-event-lisa-su-amd/"
+    },
+    {
+      "date": "2025-12-09",
+      "score": 66,
+      "stage": "泡沫扩张后期／盈利验证拐点",
+      "confidence": "中",
+      "snapshot_type": "历史模型复算",
+      "judgment": "价格、情绪和资本集中度进一步偏热，投资者需要把好公司与好价格分开判断。",
+      "drivers": [
+        "Howard Marks强调泡沫行为与价格风险",
+        "技术长期价值不能自动证明当前估值合理"
+      ],
+      "source_title": "Howard Marks：Is It a Bubble?",
+      "source_url": "https://www.oaktreecapital.com/insights/memo/is-it-a-bubble"
+    },
+    {
+      "date": "2026-03-19",
+      "score": 70,
+      "stage": "泡沫扩张后期／盈利验证拐点",
+      "confidence": "中",
+      "snapshot_type": "历史模型复算",
+      "judgment": "Dalio式指标已指向泡沫，但系统性杠杆和现金流质量仍弱于典型最终顶部。",
+      "drivers": [
+        "Ray Dalio明确认为市场存在泡沫特征",
+        "龙头现金流仍为周期提供缓冲"
+      ],
+      "source_title": "Ray Dalio：AI与市场泡沫判断",
+      "source_url": "https://www.youtube.com/watch?v=SdzkVVRIl1s"
+    },
+    {
+      "date": "2026-08-10",
+      "score": 76,
+      "stage": "泡沫扩张后期／盈利验证拐点",
+      "confidence": "中等",
+      "snapshot_type": "每日新闻连续更新",
+      "judgment": "相对上一期泡沫热度基本不变。当日新闻尚未显著改变泡沫判断。",
+      "drivers": [
+        "Israeli retail investors are swapping meme stocks for AI and semiconductor bets - calcalistech.com",
+        "Microsoft (MSFT) Maintains Cash Flow Amidst AI Investment Surge - GuruFocus",
+        "America’s AI Investment Boom Is Reshaping the Economy - AI News"
+      ],
+      "source_title": "每日新闻聚合｜Google News RSS",
+      "source_url": "https://news.google.com/",
+      "news_count": 100,
+      "change": 0
+    }
+  ]
+}

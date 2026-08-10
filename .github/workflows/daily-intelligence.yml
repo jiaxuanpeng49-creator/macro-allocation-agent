@@ -1,0 +1,33 @@
+name: Daily market intelligence
+
+on:
+  schedule:
+    - cron: "15 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install intelligence dependencies
+        run: pip install python-dotenv openai
+      - name: Refresh news and bubble timeline
+        run: python update_daily_intelligence.py
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: deepseek-chat
+          NEWSAPI_KEY: ${{ secrets.NEWSAPI_KEY }}
+      - name: Commit updated snapshots
+        run: |
+          git config user.name "daily-intelligence-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/news_intelligence.json knowledge/ai_bubble_history.json
+          git diff --cached --quiet || git commit -m "Update daily market intelligence"
+          git push
