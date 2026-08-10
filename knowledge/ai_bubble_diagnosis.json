@@ -1,0 +1,38 @@
+{
+  "as_of_date": "2026-08-10",
+  "model": "Ray Dalio 六项泡沫指标 + 大周期背景",
+  "stage": "泡沫扩张后期／盈利验证拐点",
+  "stage_index": 3,
+  "stage_score": 76,
+  "confidence": "中等",
+  "stages": ["技术突破", "资本验证", "繁荣扩张", "泡沫扩张后期／盈利验证拐点", "顶部与去杠杆", "出清与生产率兑现"],
+  "indicators": [
+    {"name":"价格相对传统价值","score":4,"weight":0.2,"assessment":"偏热","evidence":"部分上市龙头仍有真实盈利支撑，但私人市场估值、AI独角兽集中度和对远期收入的定价明显激进。","source_url":"https://carta.com/uk/en/data/state-of-private-markets-q1-2026/"},
+    {"name":"价格隐含不可持续条件","score":4,"weight":0.2,"assessment":"偏热","evidence":"估值与投资计划要求AI收入和生产率在未来数年持续高速增长，市场开始追问资本开支何时转化为利润。","source_url":"https://www.axios.com/2026/08/05/ai-spacex-amd-elon-musk"},
+    {"name":"新进入与经验不足买家","score":3,"weight":0.1,"assessment":"中度","evidence":"AI吸收了私人市场大部分新增资金，但资金高度集中于少数头部公司，尚非全面散户狂热。","source_url":"https://carta.com/uk/en/data/state-of-private-markets-q1-2026/"},
+    {"name":"普遍看多情绪","score":4,"weight":0.15,"assessment":"偏热","evidence":"AI仍是企业战略和资本市场的核心叙事，但大型科技公司提高投资后股价不再总是正面反应，情绪已从纯兴奋转向审视回报。","source_url":"https://www.lemonde.fr/en/economy/article/2026/08/06/us-tech-s-record-investments-no-longer-excite-markets_6756203_19.html"},
+    {"name":"杠杆融资购买","score":2,"weight":0.15,"assessment":"尚不极端","evidence":"核心超大规模厂商主要依靠强劲现金流融资，系统性杠杆弱于典型顶部；但数据中心、GPU云和供应链债务正在上升。","source_url":"https://www.imf.org/-/media/files/publications/gfsr/2026/april/english/text.pdf"},
+    {"name":"远期与投机性采购","score":5,"weight":0.2,"assessment":"极热","evidence":"2026年头部超大规模厂商资本开支预计达到数千亿美元，远期算力、芯片、电力和数据中心承诺是当前最强泡沫信号。","source_url":"https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3"}
+  ],
+  "supporting_facts": [
+    "AI需求和云收入仍在增长，说明并非纯粹依靠无收入概念支撑。",
+    "资本开支增长速度显著快于已披露AI收入，回报兑现窗口正在收窄。",
+    "系统性杠杆尚未达到典型最终顶部水平，因此不能判断泡沫已经进入必然破裂阶段。",
+    "市场对新增资本开支的反应趋于苛刻，意味着周期已进入从讲故事转向验证现金流的拐点。"
+  ],
+  "conclusion": "截至2026年8月，AI更接近真实技术革命中的泡沫扩张后期，而不是纯骗局或已经破裂的顶部。最危险的错配出现在基础设施和私人市场估值：投资正在以前所未有的速度提前发生，收入与生产率必须迅速追赶。由于龙头企业仍有真实现金流、需求和较低系统性杠杆，当前证据不足以断言即将崩盘；但未来12至24个月将从‘谁能融资’转向‘谁能证明AI收入、利用率和资本回报率’。",
+  "next_stage_triggers": {
+    "toward_top": ["AI收入增速持续低于资本开支增速", "数据中心利用率或芯片订单下修", "大型厂商以更多债务维持资本开支", "私人AI公司估值上升但现金消耗恶化", "货币政策或长期利率显著收紧"],
+    "toward_healthy_buildout": ["AI应用收入和客户ROI加速兑现", "推理成本下降并带来需求弹性", "资本开支增速放缓但云和AI收入保持增长", "估值通过盈利增长而非价格下跌得到消化"]
+  },
+  "model_sources": [
+    {"title":"Ray Dalio: Are We in a Stock Market Bubble?","url":"https://www.linkedin.com/pulse/we-stock-market-bubble-ray-dalio-zpdre"},
+    {"title":"Ray Dalio: 2025","url":"https://www.linkedin.com/pulse/2025-ray-dalio-kaf8e"},
+    {"title":"Ray Dalio: Stimulating Into a Bubble","url":"https://www.linkedin.com/pulse/stimulating-bubble-ray-dalio-yione"}
+  ],
+  "limitations": [
+    "Dalio完整泡沫指标为专有模型，本诊断只复刻其公开六项框架，不声称等同Bridgewater读数。",
+    "阶段评分包含研究判断，不是可直接交易的实时量化信号。",
+    "截图所示大周期通常持续75至100年，不能用于预测AI资产短期见顶日期。"
+  ]
+}
