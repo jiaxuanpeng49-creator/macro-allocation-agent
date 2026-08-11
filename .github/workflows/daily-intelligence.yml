@@ -28,6 +28,6 @@ jobs:
         run: |
           git config user.name "daily-intelligence-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/news_intelligence.json knowledge/ai_bubble_history.json
+          git add data/news_intelligence.json data/news_archive.sqlite3 knowledge/ai_bubble_history.json
           git diff --cached --quiet || git commit -m "Update daily market intelligence"
           git push
