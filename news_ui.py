@@ -89,8 +89,7 @@ def _render_report(report, selected_date, latest_date):
     view_badge = "最新快照" if is_latest else "历史归档"
     st.markdown(f"### {view_badge}｜{_date_label(selected_date)}")
     st.caption(
-        "数据库仅保存当日聚合摘要、资产风向与模型结论，不保存新闻正文。"
-        + (" 当前页仍可查看今日抓取的标题证据。" if report.get("articles") else "")
+        "数据库保存当日聚合摘要、资产风向、模型结论与精简标题证据，不保存新闻正文。"
     )
 
     if report.get("stale"):
@@ -172,7 +171,7 @@ def _render_report(report, selected_date, latest_date):
         if news_asset != "全部":
             filtered_news = [item for item in filtered_news if abs(item["asset_impact"][news_asset]) >= 1]
 
-        st.markdown(f"### 今日标题证据｜{len(filtered_news)} 条")
+        st.markdown(f"### 当天标题证据｜{len(filtered_news)} 条")
         st.caption("这里只展示标题、来源、时间与规则影响；新闻正文不会保存到数据库。")
         for item in filtered_news[:25]:
             with st.container(border=True):
@@ -249,6 +248,25 @@ def render_news_intelligence_page():
         st.warning("没有找到这一天的档案，请选择其他日期。")
         return
 
+
+    if not selected_report.get("deepseek_analysis") and selected_report.get("articles"):
+        st.warning("该日期已有标题证据，但综合研判尚未生成。定时任务会自动补齐，也可以现在生成。")
+        if st.button(
+            f"补生成 {_date_label(selected_date)} DeepSeek 综合研判",
+            key=f"backfill_analysis_{selected_date}",
+            width="stretch",
+        ):
+            try:
+                with st.spinner("DeepSeek 正在根据当天标题证据补生成历史研判……"):
+                    selected_report = generate_deepseek_news_analysis(
+                        selected_report,
+                        persist_cache=selected_date == latest_date,
+                    )
+                    archive_daily_report(selected_report)
+                st.success("该日期的综合研判已生成并写入数据库。")
+            except Exception as exc:
+                st.error(f"历史研判生成失败：{exc}")
+
     _render_report(selected_report, selected_date, latest_date)
 
     st.divider()
@@ -259,10 +277,11 @@ def render_news_intelligence_page():
         st.markdown(
             """
             - SQLite 数据库按日期保存一条聚合记录；同一天再次抓取会更新该记录，不会重复堆积。
-            - 数据库只保存主题数量、资产风向、周期指标、泡沫压力和综合摘要，不保存新闻正文或完整文章列表。
+            - 数据库保存主题数量、资产风向、周期指标、泡沫压力、综合摘要，以及最多60条精简标题证据；不保存新闻正文。
             - 配置 `NEWSAPI_KEY` 后优先使用 NewsAPI；未配置时使用 Google News RSS 作为研究用途回退源。
             - DeepSeek 只接收精选标题、来源、时间、链接和规则底稿，不假装读取新闻正文。
             - 每日自动流程会先保存透明关键词规则，再生成 DeepSeek 综合研判；二者都保留，便于发现分歧。
+            - 定时任务还会自动扫描“已有标题证据但缺少综合研判”的历史日期，并逐日补齐。
             """
         )
         for limitation in selected_report.get("limitations", []):

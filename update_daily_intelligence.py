@@ -4,7 +4,7 @@ import os
 import subprocess
 
 from bubble_history import append_news_snapshot
-from news_archive import archive_daily_report
+from news_archive import archive_daily_report, list_reports_needing_analysis
 from news_intelligence import (
     generate_deepseek_news_analysis,
     load_news_intelligence,
@@ -29,6 +29,21 @@ if __name__ == "__main__":
     except Exception as exc:
         ai_status = f"；DeepSeek综合研判跳过：{exc}"
 
+    backfilled = 0
+    if os.getenv("DEEPSEEK_API_KEY"):
+        for historical_report in list_reports_needing_analysis(limit=7):
+            if historical_report["as_of_date"] == report.get("as_of_date"):
+                continue
+            try:
+                historical_report = generate_deepseek_news_analysis(
+                    historical_report,
+                    persist_cache=False,
+                )
+                archive_daily_report(historical_report)
+                backfilled += 1
+            except Exception as exc:
+                print(f"历史研判补齐失败 {historical_report['as_of_date']}：{exc}")
+
     # 兼容已经在线运行的旧工作流：预先暂存数据库文件，后续工作流的
     # git commit 会自动把它一并提交，无需等待 workflow 文件同步。
     if os.getenv("GITHUB_ACTIONS") == "true":
@@ -36,4 +51,7 @@ if __name__ == "__main__":
             ["git", "add", "data/news_archive.sqlite3"],
             check=True,
         )
-    print(f"更新完成：{report['news_count']}条新闻；泡沫分数 {snapshot['score']}/100{ai_status}")
+    print(
+        f"更新完成：{report['news_count']}条新闻；泡沫分数 "
+        f"{snapshot['score']}/100{ai_status}；补齐历史研判 {backfilled} 天"
+    )
