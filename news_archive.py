@@ -117,9 +117,26 @@ def archive_daily_report(report, db_path=ARCHIVE_DB):
     }
     columns = ", ".join(values)
     placeholders = ", ".join(f":{name}" for name in values)
-    updates = ", ".join(
-        f"{name} = excluded.{name}" for name in values if name != "report_date"
-    )
+    protected = {
+        "deepseek_analysis",
+        "deepseek_analyzed_at",
+        "deepseek_model",
+        "deepseek_evidence_count",
+    }
+    update_parts = []
+    for name in values:
+        if name == "report_date":
+            continue
+        if name in protected:
+            update_parts.append(
+                f"{name} = CASE "
+                "WHEN excluded.deepseek_analysis IS NOT NULL "
+                "AND TRIM(excluded.deepseek_analysis) != '' "
+                f"THEN excluded.{name} ELSE daily_news_archive.{name} END"
+            )
+        else:
+            update_parts.append(f"{name} = excluded.{name}")
+    updates = ", ".join(update_parts)
     with _connect(db_path) as connection:
         connection.execute(
             f"""
