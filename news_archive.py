@@ -1,6 +1,6 @@
 """每日新闻情报归档数据库。
 
-数据库只保存聚合摘要、风向指标与模型结论，不保存新闻正文或文章列表。
+数据库保存聚合摘要、风向指标、模型结论和精简标题证据，不保存新闻正文。
 """
 
 from __future__ import annotations
@@ -44,6 +44,14 @@ def _connect(db_path=ARCHIVE_DB):
         )
         """
     )
+    columns = {
+        row["name"] for row in connection.execute("PRAGMA table_info(daily_news_archive)")
+    }
+    if "evidence_articles_json" not in columns:
+        connection.execute(
+            "ALTER TABLE daily_news_archive "
+            "ADD COLUMN evidence_articles_json TEXT NOT NULL DEFAULT '[]'"
+        )
     connection.execute(
         "CREATE INDEX IF NOT EXISTS idx_daily_news_fetched_at "
         "ON daily_news_archive(fetched_at DESC)"
@@ -63,7 +71,7 @@ def _from_json(value, fallback):
 
 
 def archive_daily_report(report, db_path=ARCHIVE_DB):
-    """按日期写入或更新一条摘要记录，不保存 ``articles``。"""
+    """按日期写入或更新摘要与精简标题证据，不保存新闻正文。"""
     if not report:
         raise ValueError("没有可归档的新闻报告。")
     report_date = report.get("as_of_date") or report["fetched_at"][:10]
@@ -87,6 +95,25 @@ def archive_daily_report(report, db_path=ARCHIVE_DB):
         "deepseek_evidence_count": int(report.get("deepseek_evidence_count", 0)),
         "source_url": report.get("source_url"),
         "limitations_json": _json(report.get("limitations", [])),
+        "evidence_articles_json": _json(
+            [
+                {
+                    key: article.get(key)
+                    for key in (
+                        "title",
+                        "source",
+                        "published_at",
+                        "url",
+                        "category",
+                        "impact_summary",
+                        "asset_impact",
+                        "cycle_impact",
+                        "relevance_score",
+                    )
+                }
+                for article in report.get("articles", [])[:60]
+            ]
+        ),
     }
     columns = ", ".join(values)
     placeholders = ", ".join(f":{name}" for name in values)
@@ -127,10 +154,26 @@ def _row_to_report(row):
         "deepseek_model": row["deepseek_model"],
         "deepseek_evidence_count": row["deepseek_evidence_count"],
         "limitations": _from_json(row["limitations_json"], []),
-        "articles": [],
+        "articles": _from_json(row["evidence_articles_json"], []),
         "is_archived": True,
     }
     return report
+
+
+def list_reports_needing_analysis(db_path=ARCHIVE_DB, limit=30):
+    """返回已有标题证据但尚无DeepSeek结论的日期，供定时任务自动补齐。"""
+    with _connect(db_path) as connection:
+        rows = connection.execute(
+            """
+            SELECT * FROM daily_news_archive
+            WHERE (deepseek_analysis IS NULL OR TRIM(deepseek_analysis) = '')
+              AND evidence_articles_json != '[]'
+            ORDER BY report_date DESC
+            LIMIT ?
+            """,
+            (int(limit),),
+        ).fetchall()
+    return [_row_to_report(row) for row in rows]
 
 
 def load_archived_report(report_date=None, db_path=ARCHIVE_DB):

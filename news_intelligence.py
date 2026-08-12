@@ -249,7 +249,7 @@ def refresh_news_intelligence(force=False, max_age_hours=6):
         raise
 
 
-def generate_deepseek_news_analysis(report=None, max_articles=24):
+def generate_deepseek_news_analysis(report=None, max_articles=24, persist_cache=True):
     """让DeepSeek基于规则底稿与精选标题生成可审计的综合研判，并写回缓存。"""
     report = report or load_news_intelligence()
     if not report:
@@ -308,8 +308,9 @@ def generate_deepseek_news_analysis(report=None, max_articles=24):
     report["deepseek_analyzed_at"] = datetime.now(timezone.utc).isoformat()
     report["deepseek_model"] = model
     report["deepseek_evidence_count"] = len(selected)
-    with NEWS_FILE.open("w", encoding="utf-8") as file:
-        json.dump(report, file, ensure_ascii=False, indent=2)
+    if persist_cache:
+        with NEWS_FILE.open("w", encoding="utf-8") as file:
+            json.dump(report, file, ensure_ascii=False, indent=2)
     return report
 
 
