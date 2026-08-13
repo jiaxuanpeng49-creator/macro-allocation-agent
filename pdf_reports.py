@@ -43,24 +43,28 @@ def _pdf_markup(value):
     return text.replace("\n", "<br/>")
 
 
-def _split_pdf_message(value, limit=850):
-    """Keep each table row page-sized so unusually long Agent answers still export."""
-    text = str(value)
+def _split_pdf_message(value, limit=280, line_limit=10):
+    """Keep rows page-sized even when an answer contains dense tables and lists."""
     chunks = []
-    current = ""
-    for paragraph in text.split("\n\n"):
-        pieces = [paragraph[index:index + limit] for index in range(0, len(paragraph), limit)] or [""]
+    current_lines = []
+    current_size = 0
+
+    def flush():
+        nonlocal current_lines, current_size
+        if current_lines:
+            chunks.append("\n".join(current_lines))
+            current_lines = []
+            current_size = 0
+
+    for line in str(value).splitlines():
+        pieces = [line[index:index + limit] for index in range(0, len(line), limit)] or [""]
         for piece in pieces:
-            candidate = f"{current}\n\n{piece}" if current else piece
-            if len(candidate) <= limit:
-                current = candidate
-            else:
-                if current:
-                    chunks.append(current)
-                current = piece
-    if current or not chunks:
-        chunks.append(current)
-    return chunks
+            if current_lines and (current_size + len(piece) > limit or len(current_lines) >= line_limit):
+                flush()
+            current_lines.append(piece)
+            current_size += len(piece)
+    flush()
+    return chunks or [""]
 
 
 def build_conversation_pdf(messages, website_url="https://macro-allocation-agent.onrender.com"):
