@@ -202,6 +202,63 @@ def apply_theme():
           text-shadow: 0 1px 0 rgba(255,255,255,.45), 0 7px 16px rgba(2,23,86,.46);
         }
 
+        /* 驾驶舱的低噪音信息层：一页只回答一个问题 */
+        .fin-quiet-note {
+          min-height: 116px;
+          padding: 18px 20px;
+          border: 1px solid rgba(255,255,255,.86);
+          border-radius: 20px;
+          color: var(--fin-muted);
+          background: linear-gradient(135deg, rgba(255,255,255,.68), rgba(239,244,255,.44));
+          box-shadow: var(--fin-shadow-soft), inset 0 1px 0 rgba(255,255,255,.96);
+          backdrop-filter: blur(20px) saturate(150%);
+          -webkit-backdrop-filter: blur(20px) saturate(150%);
+        }
+        .fin-quiet-note span { display: block; font-size: 12px; }
+        .fin-quiet-note strong { display: block; margin-top: 6px; color: var(--fin-text); font: 600 19px/1.3 'Space Grotesk', sans-serif; }
+        .fin-quiet-note p { margin: 7px 0 0; font-size: 13px; }
+        .fin-allocation-line {
+          display: grid;
+          grid-template-columns: minmax(84px,.7fr) minmax(120px,2fr) 68px;
+          align-items: center;
+          gap: 13px;
+          min-height: 56px;
+          margin: 9px 0;
+          padding: 10px 14px;
+          color: var(--fin-text);
+          background: rgba(255,255,255,.48);
+          border: 1px solid rgba(255,255,255,.78);
+          border-radius: 15px;
+        }
+        .fin-allocation-line > span { display: flex; align-items: center; gap: 8px; font-weight: 600; }
+        .fin-allocation-line i { width: 9px; height: 9px; border-radius: 50%; box-shadow: 0 0 0 4px rgba(255,255,255,.7); }
+        .fin-allocation-line > div { height: 8px; overflow: hidden; border-radius: 999px; background: rgba(96,111,174,.10); }
+        .fin-allocation-line b { display: block; height: 100%; border-radius: inherit; }
+        .fin-allocation-line strong { text-align: right; font-variant-numeric: tabular-nums; }
+
+        /* Streamlit dialog 改成靠右的 Liquid Glass Agent 抽屉 */
+        [data-testid="stDialog"] [role="dialog"] {
+          width: min(620px, calc(100vw - 24px));
+          max-width: 620px;
+          max-height: calc(100vh - 24px);
+          margin: 12px 12px 12px auto;
+          padding: 8px;
+          border: 1px solid rgba(255,255,255,.90);
+          border-radius: 28px;
+          background:
+            linear-gradient(135deg, rgba(255,255,255,.88), rgba(235,241,255,.72)),
+            radial-gradient(circle at 85% 8%, rgba(95,160,255,.20), transparent 34%);
+          box-shadow: -24px 24px 70px rgba(23,45,112,.20), inset 0 1px 0 #fff;
+          backdrop-filter: blur(32px) saturate(170%);
+          -webkit-backdrop-filter: blur(32px) saturate(170%);
+        }
+        [data-testid="stChatMessage"] {
+          border: 1px solid rgba(255,255,255,.82);
+          border-radius: 18px;
+          background: rgba(255,255,255,.48);
+          box-shadow: 0 8px 22px rgba(70,84,156,.07);
+        }
+
         /* 可点击的悬浮导航，模拟 macOS Tahoe/27 的浮动工具栏 */
         .stTabs [data-baseweb="tab-list"],
         .stTabs [role="tablist"] {
@@ -491,6 +548,8 @@ def apply_theme():
           [data-testid="stMetric"] { min-height: 98px; padding: 14px; }
           [data-testid="stForm"], [data-testid="stVerticalBlockBorderWrapper"] { padding: 15px; border-radius: 18px; }
           .fin-agent-orb { right: max(18px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); width: 66px; height: 66px; }
+          .fin-allocation-line { grid-template-columns: 84px 1fr 56px; gap: 8px; padding-inline: 10px; }
+          [data-testid="stDialog"] [role="dialog"] { width: calc(100vw - 12px); max-height: calc(100vh - 12px); margin: 6px; border-radius: 22px; }
         }
         @media (prefers-reduced-motion: reduce) {
           html { scroll-behavior: auto; }
