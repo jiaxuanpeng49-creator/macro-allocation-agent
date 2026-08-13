@@ -69,7 +69,7 @@ def apply_theme():
             radial-gradient(circle at 67% 58%, rgba(255,255,255,.82) 0 1px, transparent 2px);
           background-size: 370px 370px, 460px 460px, 290px 290px;
         }
-        .block-container { max-width: 1440px; padding-top: 3.75rem; padding-bottom: 6rem; }
+        .block-container { max-width: 1440px; padding-top: 3.75rem; padding-bottom: 8rem; }
         h1, h2, h3, h4 { color: var(--fin-text); letter-spacing: -.035em; }
         h1, h2, h3, [data-testid="stMetricValue"] { font-family: 'Space Grotesk', system-ui, sans-serif; }
         p, label, .stCaption { color: var(--fin-muted); line-height: 1.62; }
@@ -118,6 +118,89 @@ def apply_theme():
           -webkit-backdrop-filter: blur(18px) saturate(150%);
         }
         .fin-live-dot { width: 8px; height: 8px; border-radius: 50%; background: #4C7CF3; box-shadow: 0 0 0 4px rgba(76,124,243,.12); }
+
+        /* 固定 Agent 入口：深蓝冰晶镜片，和 Hero 的虹彩大球保持明显区分 */
+        .fin-agent-orb {
+          position: fixed;
+          right: max(26px, env(safe-area-inset-right));
+          bottom: max(26px, env(safe-area-inset-bottom));
+          z-index: 1200;
+          width: 76px;
+          height: 76px;
+          display: grid;
+          place-items: center;
+          overflow: hidden;
+          color: rgba(244,252,255,.98) !important;
+          text-decoration: none !important;
+          border: 2px solid rgba(224,249,255,.90);
+          border-radius: 50%;
+          background:
+            radial-gradient(circle at 27% 18%, #FFFFFF 0 5%, rgba(255,255,255,.46) 12%, transparent 29%),
+            radial-gradient(circle at 72% 77%, rgba(66,209,255,.26), transparent 40%),
+            radial-gradient(circle at 52% 48%, rgba(115,209,255,.14), rgba(26,77,175,.23) 62%, rgba(17,38,112,.46) 100%),
+            conic-gradient(from 190deg, rgba(80,230,255,.28), rgba(24,71,168,.60), rgba(82,112,222,.40), rgba(38,190,236,.34), rgba(80,230,255,.28));
+          background-size: 130% 130%, 140% 140%, 100% 100%, 160% 160%;
+          background-position: 15% 18%, 85% 80%, center, 12% 20%;
+          background-blend-mode: screen, screen, normal, screen;
+          box-shadow:
+            inset 12px 10px 24px rgba(255,255,255,.48),
+            inset -13px -15px 30px rgba(7,30,105,.36),
+            inset 0 0 0 5px rgba(122,222,255,.09),
+            0 18px 42px rgba(23,55,141,.30),
+            0 0 0 6px rgba(255,255,255,.20),
+            0 0 28px rgba(58,197,255,.16);
+          backdrop-filter: blur(9px) saturate(175%) brightness(1.03);
+          -webkit-backdrop-filter: blur(9px) saturate(175%) brightness(1.03);
+          cursor: pointer;
+          touch-action: manipulation;
+          isolation: isolate;
+          animation: fin-agent-crystal 6.2s ease-in-out infinite alternate;
+          transition: transform 240ms var(--fin-ease), box-shadow 240ms ease;
+        }
+        .fin-agent-orb::before {
+          content: "";
+          position: absolute;
+          inset: 7px;
+          z-index: -1;
+          border: 1px solid rgba(173,235,255,.68);
+          border-radius: 50%;
+          background:
+            conic-gradient(from 45deg, transparent 0 12%, rgba(125,225,255,.20) 13% 17%, transparent 18% 37%, rgba(255,255,255,.18) 38% 43%, transparent 44% 100%),
+            radial-gradient(circle at 37% 30%, transparent 0 47%, rgba(149,227,255,.16) 52%, transparent 58%);
+          box-shadow: inset 7px 6px 15px rgba(255,255,255,.22), inset -8px -8px 16px rgba(9,36,116,.20);
+        }
+        .fin-agent-orb::after {
+          content: "";
+          position: absolute;
+          width: 46%;
+          height: 12%;
+          top: 15%;
+          left: 16%;
+          z-index: -1;
+          border-radius: 50%;
+          background: rgba(255,255,255,.48);
+          filter: blur(4px);
+          transform: rotate(-24deg);
+        }
+        .fin-agent-orb:hover {
+          transform: translateY(-4px) scale(1.04);
+          box-shadow:
+            inset 13px 11px 26px rgba(255,255,255,.56),
+            inset -14px -16px 32px rgba(7,30,105,.40),
+            inset 0 0 0 5px rgba(122,222,255,.13),
+            0 24px 52px rgba(23,55,141,.36),
+            0 0 0 8px rgba(255,255,255,.25),
+            0 0 40px rgba(58,197,255,.22);
+        }
+        .fin-agent-orb:active { transform: translateY(-1px) scale(.97); }
+        .fin-agent-orb:focus-visible { outline: 3px solid rgba(35,103,235,.58); outline-offset: 8px; }
+        .fin-agent-orb span {
+          position: relative;
+          z-index: 1;
+          font: 650 13px/1 'DM Sans', system-ui, sans-serif;
+          letter-spacing: .01em;
+          text-shadow: 0 1px 0 rgba(255,255,255,.45), 0 7px 16px rgba(2,23,86,.46);
+        }
 
         /* 可点击的悬浮导航，模拟 macOS Tahoe/27 的浮动工具栏 */
         .stTabs [data-baseweb="tab-list"],
@@ -381,6 +464,11 @@ def apply_theme():
           52% { transform: translateY(0) scale(1); }
           100% { transform: translateY(-26px) scale(1.035); }
         }
+        @keyframes fin-agent-crystal {
+          0% { background-position: 14% 17%, 86% 80%, center, 5% 18%; filter: saturate(1.02) brightness(1.02); }
+          55% { background-position: 32% 29%, 66% 63%, center, 68% 55%; filter: saturate(1.18) brightness(1.10); }
+          100% { background-position: 22% 12%, 78% 85%, center, 96% 82%; filter: saturate(1.08) brightness(1.06); }
+        }
 
         @media (max-width: 900px) {
           .block-container { padding-inline: 1rem; }
@@ -389,7 +477,7 @@ def apply_theme():
           .stTabs [data-baseweb="tab"], .stTabs [role="tab"] { padding-inline: 12px; }
         }
         @media (max-width: 680px) {
-          .block-container { padding: 3.5rem .75rem 4rem; }
+          .block-container { padding: 3.5rem .75rem 7rem; }
           .fin-brandbar { padding-inline: 4px; }
           .fin-live span:last-child { display: none; }
           .fin-hero { grid-template-columns: 1fr; min-height: auto; padding: 34px 10px 10px; }
@@ -402,6 +490,7 @@ def apply_theme():
           .stTabs [data-baseweb="tab"] p, .stTabs [role="tab"] p { font-size: 12px !important; white-space: nowrap; }
           [data-testid="stMetric"] { min-height: 98px; padding: 14px; }
           [data-testid="stForm"], [data-testid="stVerticalBlockBorderWrapper"] { padding: 15px; border-radius: 18px; }
+          .fin-agent-orb { right: max(18px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); width: 66px; height: 66px; }
         }
         @media (prefers-reduced-motion: reduce) {
           html { scroll-behavior: auto; }
@@ -430,6 +519,19 @@ def render_brand_bar():
             <span>宏观、新闻与模型数据已连接</span>
           </div>
         </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def render_agent_orb():
+    """Render a persistent, accessible shortcut to the Agent conversation tab."""
+    st.markdown(
+        """
+        <a class="fin-agent-orb" href="?view=agent" target="_self"
+           aria-label="打开 Agent 对话" title="打开 Agent 对话">
+          <span>Agent</span>
+        </a>
         """,
         unsafe_allow_html=True,
     )

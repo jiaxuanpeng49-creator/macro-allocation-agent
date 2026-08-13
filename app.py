@@ -9,14 +9,23 @@ from bubble_ui import render_ai_bubble_page
 from news_ui import render_news_intelligence_page
 from personal_allocation import OCCUPATION_STABILITY, run_personalized_allocation
 from pipeline import run_macro_analysis
-from ui_theme import apply_theme, render_app_header, render_brand_bar, section_header, style_plotly
+from ui_theme import apply_theme, render_agent_orb, render_app_header, render_brand_bar, section_header, style_plotly
 
 st.set_page_config(page_title="宏观资产配置 Agent", layout="wide", initial_sidebar_state="collapsed")
 apply_theme()
 render_brand_bar()
+render_agent_orb()
 
+MAIN_TABS = ["综合配置建议", "30年历史回测", "AI泡沫知识库", "每日新闻情报", "与 Agent 对话"]
+if st.query_params.get("view") == "agent":
+    st.session_state["main_tabs"] = "与 Agent 对话"
+    del st.query_params["view"]
+default_tab = st.session_state.get("main_tabs", MAIN_TABS[0])
 combined_tab, history_tab, knowledge_tab, news_tab, chat_tab = st.tabs(
-    ["综合配置建议", "30年历史回测", "AI泡沫知识库", "每日新闻情报", "与 Agent 对话"]
+    MAIN_TABS,
+    default=default_tab,
+    key="main_tabs",
+    on_change="rerun",
 )
 
 with combined_tab:
