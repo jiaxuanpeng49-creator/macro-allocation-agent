@@ -22,6 +22,9 @@ STRATEGIC_WEIGHTS = {
 
 EQUITY_CAPS = {"保守型": 0.35, "稳健型": 0.55, "成长型": 0.72, "进取型": 0.85}
 
+INCOME_STABILITY = {"波动较大": 2, "一般": 3, "较稳定": 4, "很稳定": 5}
+LIQUIDITY_CASH_ADJUSTMENT = {"低": -0.02, "中": 0.02, "高": 0.08}
+
 
 def _clamp(value, low, high):
     return max(low, min(high, value))
@@ -30,13 +33,13 @@ def _clamp(value, low, high):
 def _risk_profile(
     age, occupation, monthly_income, monthly_expenses, liquid_assets,
     high_interest_debt, dependents, horizon_years, max_loss_pct,
-    risk_willingness, investment_experience,
+    risk_willingness, investment_experience, income_stability=None,
 ):
     income = max(float(monthly_income), 0)
     expenses = max(float(monthly_expenses), 0)
     assets = max(float(liquid_assets), 0)
     debt = max(float(high_interest_debt), 0)
-    stability = OCCUPATION_STABILITY[occupation]
+    stability = INCOME_STABILITY.get(income_stability, OCCUPATION_STABILITY[occupation])
     savings_rate = (income - expenses) / income if income else -1
     coverage = assets / expenses if expenses else 24
 
@@ -71,9 +74,9 @@ def _risk_profile(
     }
 
 
-def _emergency_months(occupation, dependents, high_interest_debt):
+def _emergency_months(occupation, dependents, high_interest_debt, income_stability=None, liquidity_need=None):
     months = 6
-    stability = OCCUPATION_STABILITY[occupation]
+    stability = INCOME_STABILITY.get(income_stability, OCCUPATION_STABILITY[occupation])
     if stability <= 2:
         months += 3
     elif stability == 3:
@@ -81,6 +84,10 @@ def _emergency_months(occupation, dependents, high_interest_debt):
     months += min(max(dependents, 0), 2)
     if high_interest_debt > 0:
         months += 1
+    if liquidity_need == "中":
+        months += 1
+    elif liquidity_need == "高":
+        months += 3
     return int(_clamp(months, 3, 12))
 
 
@@ -101,6 +108,8 @@ def run_personalized_allocation(
     max_loss_pct=20,
     risk_willingness=3,
     investment_experience=3,
+    income_stability=None,
+    liquidity_need=None,
 ):
     """生成“个人底线约束 + 宏观倾斜”的教育性配置建议。金额使用用户输入的同一币种。"""
     if occupation not in OCCUPATION_STABILITY:
@@ -108,15 +117,23 @@ def run_personalized_allocation(
     profile = _risk_profile(
         age, occupation, monthly_income, monthly_expenses, liquid_assets,
         high_interest_debt, dependents, horizon_years, max_loss_pct,
-        risk_willingness, investment_experience,
+        risk_willingness, investment_experience, income_stability,
     )
-    emergency_months = _emergency_months(occupation, dependents, high_interest_debt)
+    emergency_months = _emergency_months(
+        occupation, dependents, high_interest_debt, income_stability, liquidity_need
+    )
     emergency_target = emergency_months * max(float(monthly_expenses), 0)
     emergency_gap = max(emergency_target - float(liquid_assets), 0)
     investable_now = max(float(liquid_assets) - emergency_target - float(high_interest_debt), 0)
     monthly_surplus = max(float(monthly_income) - float(monthly_expenses), 0)
 
     strategic = deepcopy(STRATEGIC_WEIGHTS[profile["level"]])
+    if liquidity_need in LIQUIDITY_CASH_ADJUSTMENT:
+        strategic["现金"] = _clamp(
+            strategic["现金"] + LIQUIDITY_CASH_ADJUSTMENT[liquidity_need],
+            0.03,
+            0.25,
+        )
     macro = run_macro_analysis()
     macro_risky = _normalize(macro["portfolio_weights"])
     cash_weight = strategic["现金"]
@@ -169,13 +186,15 @@ def run_personalized_allocation(
             "macro_weights": macro["portfolio_weights"],
             "ai_bubble_stage": bubble["stage"],
             "ai_bubble_score": bubble["stage_score"],
+            "income_stability": income_stability,
+            "liquidity_need": liquidity_need,
         },
         "final_weights": rounded_final,
         "monthly_contribution": {
             asset: round(monthly_surplus * weight, 2) for asset, weight in final.items()
         },
         "priority": priority,
-        "method": "个人战略配置占75%，当前宏观模型占25%；AI泡沫热度达到70时，个人风险等级的股票上限下调5个百分点。",
+        "method": "个人战略配置占75%，当前宏观模型占25%；收入稳定性影响风险承受能力，流动性需求影响应急资金与现金权重；AI泡沫热度达到70时，个人风险等级的股票上限下调5个百分点。",
         "guardrails": [
             "应急资金与近期必用资金不进入风险资产",
             "实际风险等级取承受能力和主观意愿中较低者",

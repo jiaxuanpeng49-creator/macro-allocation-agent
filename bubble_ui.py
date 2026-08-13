@@ -291,7 +291,7 @@ def _render_views():
         st.dataframe(pd.DataFrame(views)[["person", "role", "date", "stance", "source_type"]], hide_index=True, width="stretch")
 
 
-def render_ai_bubble_page(show_header=True):
+def render_ai_bubble_page(show_header=True, view="all"):
     diagnosis = unified_ai_bubble_diagnosis()
     analogs, analog_df = all_bubble_series()
     if show_header:
@@ -305,6 +305,18 @@ def render_ai_bubble_page(show_header=True):
     m2.metric("泡沫热度", f"{diagnosis['stage_score']}/100")
     m3.metric("置信度", diagnosis["confidence"])
     st.success("**总判断：** " + diagnosis["conclusion"])
+
+    if view == "monitor":
+        _render_ai_timeline(diagnosis, analog_df)
+        return
+    if view == "history":
+        _render_history_map(analogs, analog_df, diagnosis)
+        return
+    if view == "dalio":
+        _render_dalio(diagnosis)
+        st.divider()
+        _render_views()
+        return
 
     ai_tab, history_tab, dalio_tab, views_tab = st.tabs(["AI长期轨迹", "历史泡沫对比", "Dalio诊断", "人物观点"])
     with ai_tab:

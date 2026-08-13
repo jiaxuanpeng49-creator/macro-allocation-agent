@@ -84,7 +84,7 @@ def _render_archive_trend():
         st.dataframe(table, hide_index=True, width="stretch")
 
 
-def _render_report(report, selected_date, latest_date):
+def _render_report(report, selected_date, latest_date, key_prefix="news"):
     is_latest = selected_date == latest_date
     view_badge = "最新快照" if is_latest else "历史归档"
     st.markdown(f"### {view_badge}｜{_date_label(selected_date)}")
@@ -161,9 +161,9 @@ def _render_report(report, selected_date, latest_date):
     if articles:
         filter_col, asset_col = st.columns(2)
         categories = ["全部"] + sorted(report["category_counts"])
-        news_category = filter_col.selectbox("按新闻主题筛选", categories, key="news_category")
+        news_category = filter_col.selectbox("按新闻主题筛选", categories, key=f"{key_prefix}_category")
         news_asset = asset_col.selectbox(
-            "按主要影响资产筛选", ["全部", "股票", "债券", "黄金"], key="news_asset"
+            "按主要影响资产筛选", ["全部", "股票", "债券", "黄金"], key=f"{key_prefix}_asset"
         )
         filtered_news = articles
         if news_category != "全部":
@@ -187,17 +187,7 @@ def _render_report(report, selected_date, latest_date):
                 st.caption(impacts)
 
 
-def render_news_intelligence_page(show_header=True):
-    if show_header:
-        section_header(
-            "DAILY / NEWS ARCHIVE",
-            "每日宏观与资产新闻情报",
-            "每天自动抓取并归档摘要、资产风向、周期判断与AI泡沫增量；可按日期回看历史结论。",
-        )
-    latest_report = load_news_intelligence()
-    if latest_report:
-        _archive_current_report(latest_report)
-
+def _render_refresh_controls(latest_report):
     refresh_col, ai_col, status_col = st.columns([1, 1, 2])
     if refresh_col.button("立即抓取今日新闻", type="primary", width="stretch"):
         try:
@@ -217,39 +207,11 @@ def render_news_intelligence_page(show_header=True):
             st.success("今日 DeepSeek 研判已完成并写入数据库。")
         except Exception as exc:
             st.error(f"DeepSeek 分析失败：{exc}。新闻与规则档案仍可正常使用。")
-    status_col.caption("自动任务每日抓取一次并更新同一天记录；手动刷新不会产生重复日期。")
-
-    dates = list_archive_dates()
-    overview = archive_overview()
-    if not dates:
-        st.info("数据库还没有记录。点击“立即抓取今日新闻”创建第一天的情报档案。")
-        return
-
-    latest_date = latest_report.get("as_of_date") if latest_report else dates[0]
-    database_col, range_col, selector_col = st.columns([1, 1, 2])
-    database_col.metric("数据库已归档", f"{overview['day_count']} 天")
-    date_range = (
-        _date_label(overview["first_date"])
-        if overview["first_date"] == overview["last_date"]
-        else f"{overview['first_date']} → {overview['last_date']}"
-    )
-    range_col.metric("历史范围", date_range)
-    selected_date = selector_col.selectbox(
-        "选择已有情报日期",
-        dates,
-        format_func=lambda value: _date_label(value, latest_date),
-        help="只显示数据库中已经完成归档的日期。",
-    )
-
-    if latest_report and selected_date == latest_report.get("as_of_date"):
-        selected_report = latest_report
-    else:
-        selected_report = load_archived_report(selected_date)
-    if not selected_report:
-        st.warning("没有找到这一天的档案，请选择其他日期。")
-        return
+    status_col.caption("自动任务每日更新同一天记录；手动刷新不会产生重复日期。")
+    return latest_report
 
 
+def _render_selected_report(selected_report, selected_date, latest_date, key_prefix):
     if not selected_report.get("deepseek_analysis") and selected_report.get("articles"):
         st.warning("该日期已有标题证据，但综合研判尚未生成。定时任务会自动补齐，也可以现在生成。")
         if st.button(
@@ -267,13 +229,10 @@ def render_news_intelligence_page(show_header=True):
                 st.success("该日期的综合研判已生成并写入数据库。")
             except Exception as exc:
                 st.error(f"历史研判生成失败：{exc}")
+    _render_report(selected_report, selected_date, latest_date, key_prefix=key_prefix)
 
-    _render_report(selected_report, selected_date, latest_date)
 
-    st.divider()
-    st.markdown("### 历史风向轨迹")
-    _render_archive_trend()
-
+def _render_methodology(report):
     with st.expander("自动更新、数据库与模型边界"):
         st.markdown(
             """
@@ -282,8 +241,62 @@ def render_news_intelligence_page(show_header=True):
             - 配置 `NEWSAPI_KEY` 后优先使用 NewsAPI；未配置时使用 Google News RSS 作为研究用途回退源。
             - DeepSeek 只接收精选标题、来源、时间、链接和规则底稿，不假装读取新闻正文。
             - 每日自动流程会先保存透明关键词规则，再生成 DeepSeek 综合研判；二者都保留，便于发现分歧。
-            - 定时任务还会自动扫描“已有标题证据但缺少综合研判”的历史日期，并逐日补齐。
+            - 定时任务会扫描已有标题证据但缺少综合研判的历史日期，并逐日补齐。
             """
         )
-        for limitation in selected_report.get("limitations", []):
+        for limitation in (report or {}).get("limitations", []):
             st.markdown(f"- {limitation}")
+
+
+def render_news_intelligence_page(show_header=True, mode="all"):
+    if show_header:
+        section_header(
+            "DAILY / NEWS ARCHIVE",
+            "每日宏观与资产新闻情报",
+            "每天自动抓取并归档摘要、资产风向、周期判断与AI泡沫增量；可按日期回看历史结论。",
+        )
+    latest_report = load_news_intelligence()
+    if latest_report:
+        _archive_current_report(latest_report)
+
+    if mode in {"all", "today"}:
+        latest_report = _render_refresh_controls(latest_report)
+
+    dates = list_archive_dates()
+    if not dates:
+        st.info("数据库还没有记录。点击“立即抓取今日新闻”创建第一天的情报档案。")
+        return
+    latest_date = latest_report.get("as_of_date") if latest_report else dates[0]
+
+    if mode == "today":
+        selected_report = latest_report or load_archived_report(latest_date)
+        _render_selected_report(selected_report, latest_date, latest_date, "today")
+        _render_methodology(selected_report)
+        return
+
+    overview = archive_overview()
+    database_col, range_col, selector_col = st.columns([1, 1, 2])
+    database_col.metric("数据库已归档", f"{overview['day_count']} 天")
+    date_range = (
+        _date_label(overview["first_date"])
+        if overview["first_date"] == overview["last_date"]
+        else f"{overview['first_date']} → {overview['last_date']}"
+    )
+    range_col.metric("历史范围", date_range)
+    selected_date = selector_col.selectbox(
+        "选择已有情报日期",
+        dates,
+        format_func=lambda value: _date_label(value, latest_date),
+        help="只显示数据库中已经完成归档的日期。",
+        key="archive_date_selector",
+    )
+    selected_report = latest_report if latest_report and selected_date == latest_date else load_archived_report(selected_date)
+    if not selected_report:
+        st.warning("没有找到这一天的档案，请选择其他日期。")
+        return
+
+    _render_selected_report(selected_report, selected_date, latest_date, "archive")
+    st.divider()
+    st.markdown("### 历史风向轨迹")
+    _render_archive_trend()
+    _render_methodology(selected_report)

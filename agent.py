@@ -86,8 +86,10 @@ def create_personalized_allocation(
     max_loss_pct: float,
     risk_willingness: int,
     investment_experience: int,
+    income_stability: str = "",
+    liquidity_need: str = "",
 ) -> str:
-    """结合个人职业收入、现金流、风险能力、投资期限和当前宏观环境生成约束后的资产配置。"""
+    """结合个人职业收入、现金流、风险能力、可选收入稳定性与流动性需求生成约束后的资产配置。"""
     result = run_personalized_allocation(
         age=age,
         occupation=occupation,
@@ -100,6 +102,8 @@ def create_personalized_allocation(
         max_loss_pct=max_loss_pct,
         risk_willingness=risk_willingness,
         investment_experience=investment_experience,
+        income_stability=income_stability or None,
+        liquidity_need=liquidity_need or None,
     )
     return json.dumps(result, ensure_ascii=False, indent=2)
 
