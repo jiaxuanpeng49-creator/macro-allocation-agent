@@ -32,7 +32,10 @@ jobs:
           git diff --cached --quiet || git commit -m "Update daily market intelligence"
           git push
       - name: Trigger Render deployment
-        if: ${{ success() && secrets.RENDER_DEPLOY_HOOK != '' }}
+        if: ${{ success() }}
         env:
           RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
-        run: curl --fail --silent --show-error --request POST "$RENDER_DEPLOY_HOOK"
+        run: |
+          if [ -n "$RENDER_DEPLOY_HOOK" ]; then
+            curl --fail --silent --show-error --request POST "$RENDER_DEPLOY_HOOK"
+          fi

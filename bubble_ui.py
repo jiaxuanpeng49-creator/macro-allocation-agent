@@ -25,11 +25,11 @@ def _render_ai_timeline(diagnosis, analog_df):
         x=ai_df.year,
         y=ai_df.score,
         mode="lines+markers",
-        line={"width": 3, "color": "#60A5FA", "shape": "spline", "smoothing": 0.55},
+        line={"width": 3, "color": "#4266E8", "shape": "spline", "smoothing": 0.55},
         marker={
             "size": [10 if value else 4 for value in ai_df.is_anchor],
-            "color": ["#F8FAFC" if value else "#60A5FA" for value in ai_df.is_anchor],
-            "line": {"color": "#60A5FA", "width": 2},
+            "color": ["#FFFFFF" if value else "#4266E8" for value in ai_df.is_anchor],
+            "line": {"color": "#4266E8", "width": 2},
         },
         customdata=ai_df[["year", "phase", "event", "is_anchor"]],
         hovertemplate="%{customdata[0]}年 · %{y:.0f}/100<br>%{customdata[1]}<br>%{customdata[2]}<extra></extra>",
@@ -75,7 +75,7 @@ def _render_ai_timeline(diagnosis, analog_df):
             x=recent_df.date_value,
             y=recent_df.score,
             mode="lines+markers",
-            line={"width": 2.5, "color": "#60A5FA"},
+            line={"width": 2.5, "color": "#4266E8"},
             marker={"size": 8},
             customdata=recent_df[["date", "stage"]],
             hovertemplate="%{customdata[0]} · %{y}/100<br>%{customdata[1]}<extra></extra>",
@@ -166,7 +166,7 @@ def _render_history_map(analogs, analog_df, diagnosis):
         x=ai_frame.relative_year,
         y=ai_frame.score,
         mode="lines",
-        line={"width": 4, "color": "#60A5FA", "shape": "spline", "smoothing": .45},
+        line={"width": 4, "color": "#4266E8", "shape": "spline", "smoothing": .45},
         name="AI",
         customdata=ai_frame[["year", "phase"]],
         hovertemplate="T%{x:+d} · %{y:.0f}/100<br>原始年份 %{customdata[0]}<br>%{customdata[1]}<extra>AI</extra>",
@@ -175,7 +175,7 @@ def _render_history_map(analogs, analog_df, diagnosis):
     ai_today = ai_frame.loc[ai_frame.relative_year == ai_today_t].iloc[0]
     compare.add_trace(go.Scatter(
         x=[ai_today_t], y=[diagnosis["stage_score"]], mode="markers",
-        marker={"size": 15, "symbol": "diamond", "color": "#F8FAFC", "line": {"color": "#60A5FA", "width": 3}},
+        marker={"size": 15, "symbol": "diamond", "color": "#FFFFFF", "line": {"color": "#4266E8", "width": 3}},
         name="AI今天", hovertemplate=f"AI今天 · T+{ai_today_t}<br>{diagnosis['stage_score']}/100<extra></extra>",
     ))
     style_plotly(compare, "生命周期对齐", 390)
@@ -211,13 +211,13 @@ def _render_dalio(diagnosis):
     cycle_y = [0.08, 0.35, 0.72, 0.96, 0.30, 0.48]
     cycle = go.Figure(go.Scatter(
         x=list(range(len(stages))), y=cycle_y, mode="lines+markers",
-        line={"shape": "spline", "width": 3, "color": "#60A5FA"},
+        line={"shape": "spline", "width": 3, "color": "#4266E8"},
         marker={"size": 8}, hovertemplate="%{text}<extra></extra>", text=stages,
     ))
     current = diagnosis["stage_index"]
     cycle.add_trace(go.Scatter(
         x=[current], y=[cycle_y[current]], mode="markers",
-        marker={"size": 16, "symbol": "diamond", "color": "#F8FAFC", "line": {"color": "#60A5FA", "width": 3}},
+        marker={"size": 16, "symbol": "diamond", "color": "#FFFFFF", "line": {"color": "#4266E8", "width": 3}},
         hovertemplate="当前AI<extra></extra>",
     ))
     style_plotly(cycle, "长期周期位置", 350)
@@ -233,7 +233,7 @@ def _render_dalio(diagnosis):
     bars = go.Figure(go.Bar(
         x=indicators.score, y=indicators.name, orientation="h",
         text=[f"{score}/5" for score in indicators.score], textposition="inside",
-        marker_color="#3B82F6",
+        marker_color="#4266E8",
         customdata=indicators.assessment,
         hovertemplate="%{y} · %{x}/5<br>%{customdata}<extra></extra>",
     ))
@@ -291,14 +291,15 @@ def _render_views():
         st.dataframe(pd.DataFrame(views)[["person", "role", "date", "stance", "source_type"]], hide_index=True, width="stretch")
 
 
-def render_ai_bubble_page():
+def render_ai_bubble_page(show_header=True):
     diagnosis = unified_ai_bubble_diagnosis()
     analogs, analog_df = all_bubble_series()
-    section_header(
-        "AI CYCLE / HISTORY",
-        "AI 泡沫知识库",
-        f"诊断日期 {diagnosis['as_of_date']}｜历史重建、当前指标与人物观点分层展示",
-    )
+    if show_header:
+        section_header(
+            "AI CYCLE / HISTORY",
+            "AI 泡沫知识库",
+            f"诊断日期 {diagnosis['as_of_date']}｜历史重建、当前指标与人物观点分层展示",
+        )
     m1, m2, m3 = st.columns([2, 1, 1])
     m1.metric("当前阶段", diagnosis["stage"])
     m2.metric("泡沫热度", f"{diagnosis['stage_score']}/100")

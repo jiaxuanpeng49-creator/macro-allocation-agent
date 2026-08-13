@@ -128,7 +128,7 @@ def _render_report(report, selected_date, latest_date):
             orientation="h",
             text=category_data["count"],
             textposition="auto",
-            marker_color="#3B82F6",
+            marker_color="#4266E8",
         )
     )
     style_plotly(category_chart, "新闻主题分布", 360)
@@ -143,7 +143,7 @@ def _render_report(report, selected_date, latest_date):
             text=[f"{value:+.2f}" for value in impact_values.values()],
             textposition="auto",
             marker_color=[
-                "#10B981" if value > 0 else "#F87171" if value < 0 else "#94A3B8"
+                "#31836D" if value > 0 else "#C34F67" if value < 0 else "#8792B0"
                 for value in impact_values.values()
             ],
         )
@@ -187,12 +187,13 @@ def _render_report(report, selected_date, latest_date):
                 st.caption(impacts)
 
 
-def render_news_intelligence_page():
-    section_header(
-        "DAILY / NEWS ARCHIVE",
-        "每日宏观与资产新闻情报",
-        "每天自动抓取并归档摘要、资产风向、周期判断与AI泡沫增量；可按日期回看历史结论。",
-    )
+def render_news_intelligence_page(show_header=True):
+    if show_header:
+        section_header(
+            "DAILY / NEWS ARCHIVE",
+            "每日宏观与资产新闻情报",
+            "每天自动抓取并归档摘要、资产风向、周期判断与AI泡沫增量；可按日期回看历史结论。",
+        )
     latest_report = load_news_intelligence()
     if latest_report:
         _archive_current_report(latest_report)
