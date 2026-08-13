@@ -69,7 +69,7 @@ def apply_theme():
             radial-gradient(circle at 67% 58%, rgba(255,255,255,.82) 0 1px, transparent 2px);
           background-size: 370px 370px, 460px 460px, 290px 290px;
         }
-        .block-container { max-width: 1440px; padding-top: 1rem; padding-bottom: 6rem; }
+        .block-container { max-width: 1440px; padding-top: 3.75rem; padding-bottom: 6rem; }
         h1, h2, h3, h4 { color: var(--fin-text); letter-spacing: -.035em; }
         h1, h2, h3, [data-testid="stMetricValue"] { font-family: 'Space Grotesk', system-ui, sans-serif; }
         p, label, .stCaption { color: var(--fin-muted); line-height: 1.62; }
@@ -120,9 +120,10 @@ def apply_theme():
         .fin-live-dot { width: 8px; height: 8px; border-radius: 50%; background: #4C7CF3; box-shadow: 0 0 0 4px rgba(76,124,243,.12); }
 
         /* 可点击的悬浮导航，模拟 macOS Tahoe/27 的浮动工具栏 */
-        .stTabs [data-baseweb="tab-list"] {
+        .stTabs [data-baseweb="tab-list"],
+        .stTabs [role="tablist"] {
           position: sticky;
-          top: .55rem;
+          top: 3.65rem;
           z-index: 999;
           gap: 5px;
           width: fit-content;
@@ -141,8 +142,10 @@ def apply_theme():
           -webkit-backdrop-filter: blur(28px) saturate(170%);
           scrollbar-width: none;
         }
-        .stTabs [data-baseweb="tab-list"]::-webkit-scrollbar { display: none; }
-        .stTabs [data-baseweb="tab"] {
+        .stTabs [data-baseweb="tab-list"]::-webkit-scrollbar,
+        .stTabs [role="tablist"]::-webkit-scrollbar { display: none; }
+        .stTabs [data-baseweb="tab"],
+        .stTabs [role="tab"] {
           flex: 0 0 auto;
           min-height: 43px;
           padding: 8px 16px;
@@ -150,13 +153,15 @@ def apply_theme():
           border-radius: 999px;
           transition: color 220ms var(--fin-ease), background 220ms var(--fin-ease), box-shadow 220ms var(--fin-ease), transform 220ms var(--fin-ease);
         }
-        .stTabs [data-baseweb="tab"]:hover { color: var(--fin-primary); background: rgba(255,255,255,.52); transform: translateY(-1px); }
+        .stTabs [data-baseweb="tab"]:hover,
+        .stTabs [role="tab"]:hover { color: var(--fin-primary); background: rgba(255,255,255,.52); transform: translateY(-1px); }
         .stTabs [aria-selected="true"] {
           color: var(--fin-primary);
           background: rgba(255,255,255,.86);
           box-shadow: 0 8px 22px rgba(65,81,161,.10), inset 0 0 0 1px rgba(255,255,255,.92);
         }
-        .stTabs [data-baseweb="tab-highlight"] { display: none; }
+        .stTabs [data-baseweb="tab-highlight"],
+        .stTabs .react-aria-SelectionIndicator { display: none; }
 
         /* 大幅 Hero */
         .fin-hero {
@@ -339,7 +344,8 @@ def apply_theme():
         hr { border-color: var(--fin-border); margin: 30px 0; }
 
         /* 内层 tabs 继续用较轻的玻璃分段控制器，不和主导航竞争 */
-        .stTabs .stTabs [data-baseweb="tab-list"] {
+        .stTabs .stTabs [data-baseweb="tab-list"],
+        .stTabs .stTabs [role="tablist"] {
           position: static;
           width: 100%;
           justify-content: flex-start;
@@ -380,10 +386,10 @@ def apply_theme():
           .block-container { padding-inline: 1rem; }
           .fin-hero { grid-template-columns: minmax(0,1fr) 340px; padding-inline: 22px; }
           .fin-sphere-main { left: 8%; width: 300px; height: 300px; min-width: 0; min-height: 0; }
-          .stTabs [data-baseweb="tab"] { padding-inline: 12px; }
+          .stTabs [data-baseweb="tab"], .stTabs [role="tab"] { padding-inline: 12px; }
         }
         @media (max-width: 680px) {
-          .block-container { padding: .5rem .75rem 4rem; }
+          .block-container { padding: 3.5rem .75rem 4rem; }
           .fin-brandbar { padding-inline: 4px; }
           .fin-live span:last-child { display: none; }
           .fin-hero { grid-template-columns: 1fr; min-height: auto; padding: 34px 10px 10px; }
@@ -391,9 +397,9 @@ def apply_theme():
           .fin-orbit-stage { min-height: 310px; }
           .fin-sphere-main { left: 50%; transform: translateX(-50%); width: 270px; height: 270px; }
           .fin-s1 { left: 1%; } .fin-s2 { right: 1%; }
-          .stTabs [data-baseweb="tab-list"] { width: 100%; margin-bottom: 4px; }
-          .stTabs [data-baseweb="tab"] { padding-inline: 10px; }
-          .stTabs [data-baseweb="tab"] p { font-size: 12px !important; white-space: nowrap; }
+          .stTabs [data-baseweb="tab-list"], .stTabs [role="tablist"] { width: 100%; margin-bottom: 4px; }
+          .stTabs [data-baseweb="tab"], .stTabs [role="tab"] { padding-inline: 10px; }
+          .stTabs [data-baseweb="tab"] p, .stTabs [role="tab"] p { font-size: 12px !important; white-space: nowrap; }
           [data-testid="stMetric"] { min-height: 98px; padding: 14px; }
           [data-testid="stForm"], [data-testid="stVerticalBlockBorderWrapper"] { padding: 15px; border-radius: 18px; }
         }
