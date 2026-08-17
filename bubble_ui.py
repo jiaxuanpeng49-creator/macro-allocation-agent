@@ -8,6 +8,7 @@ from ai_bubble_diagnosis import unified_ai_bubble_diagnosis
 from bubble_history import load_bubble_history
 from knowledge_base import load_knowledge, search_knowledge
 from technology_bubbles import (
+    ADDITIONAL_PRICE_SERIES_META,
     ai_historical_conclusion,
     all_bubble_series,
     load_normalized_price_series,
@@ -245,9 +246,14 @@ def _render_asset_price_map(analogs):
         return
 
     meta = {item["id"]: item for item in analogs["bubbles"]}
+    meta.update(ADDITIONAL_PRICE_SERIES_META)
     available_ids = [bubble_id for bubble_id in price_frame.bubble_id.unique() if bubble_id in meta]
     labels = {bubble_id: meta[bubble_id]["name"] for bubble_id in available_ids}
-    default_ids = [bubble_id for bubble_id in ("ai", "internet_telecom") if bubble_id in available_ids]
+    default_ids = [
+        bubble_id
+        for bubble_id in ("ai", "internet_telecom", "clean_energy")
+        if bubble_id in available_ids
+    ]
     selected_ids = st.multiselect(
         "历史参照",
         available_ids,

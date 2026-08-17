@@ -9,6 +9,28 @@ import pandas as pd
 ANALOGS_FILE = Path(__file__).parent / "knowledge" / "technology_bubble_analogs.json"
 PRICE_SERIES_FILE = Path(__file__).parent / "data" / "technology_bubble_prices.csv"
 
+# 这些是有独立、可复现市场指数的补充资本周期；不冒充铁路、电报或电力的历史价格。
+ADDITIONAL_PRICE_SERIES_META = {
+    "biotech_genomics": {
+        "id": "biotech_genomics",
+        "name": "生物科技与基因组学热潮",
+        "short_name": "生物科技",
+        "color": "#D98BD1",
+    },
+    "clean_energy": {
+        "id": "clean_energy",
+        "name": "清洁能源资本热潮",
+        "short_name": "清洁能源",
+        "color": "#55B89A",
+    },
+    "mobile_cloud": {
+        "id": "mobile_cloud",
+        "name": "移动互联网与云计算周期",
+        "short_name": "移动与云",
+        "color": "#82D4F8",
+    },
+}
+
 
 def load_technology_bubbles():
     with ANALOGS_FILE.open("r", encoding="utf-8") as file:

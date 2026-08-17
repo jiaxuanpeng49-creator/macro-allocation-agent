@@ -63,7 +63,7 @@ python agent.py
 - 历史时间轴：`knowledge/ai_bubble_history.json`；2025-08至2026-03为基于带日期观点的模型复算，之后逐日追加新闻快照。
 - AI长周期从1956年延伸到当前年份，按年拖动查看判断；史料锚点之间采用确定性插值。
 - `knowledge/technology_bubble_analogs.json` 比较铁路、电报通信、电力公用事业、互联网/电信与AI五轮技术—资本周期，并提供T=0生命周期对齐。
-- “资产价格对齐”读取 `data/technology_bubble_prices.csv` 中经过确认的代理资产价格，并按 `当前价格 / T0价格 × 100` 归一化。目前互联网周期使用 NASDAQ Composite（T0=1995-01-03），AI 周期使用 PHLX Semiconductor Index（T0=2012-01-03），数据来自 FRED；铁路、电报和电力仍显示数据缺口，不用热度曲线冒充价格。运行 `python scripts/refresh_bubble_prices.py` 可刷新月末观察值。
+- “资产价格对齐”读取 `data/technology_bubble_prices.csv` 中经过确认的代理资产价格，并按 `当前价格 / T0价格 × 100` 归一化。目前支持互联网与电信、AI、生物科技与基因组学、清洁能源、移动互联网与云计算五类市场周期，数据来自 FRED 的独立 Nasdaq 指数；铁路、电报和电力仍显示数据缺口，不用热度曲线冒充价格。运行 `python scripts/refresh_bubble_prices.py` 可刷新月末观察值。
 - 所有0—100分数都是事件锚点标准化后的研究模型读数，不是官方市场价格指数；电报被标为资本扩张热潮而非学界一致认定的独立泡沫。
 
 ## 每日新闻情报

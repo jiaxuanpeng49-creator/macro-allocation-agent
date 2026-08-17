@@ -30,6 +30,30 @@ SERIES = (
         "end_date": None,
         "source_url": "https://fred.stlouisfed.org/series/NASDAQSOX",
     },
+    {
+        "bubble_id": "biotech_genomics",
+        "series_id": "NASDAQNBI",
+        "proxy_asset": "NASDAQ Biotechnology Index（生物科技资本市场代理）",
+        "t0_date": "2010-01-04",
+        "end_date": "2018-12-31",
+        "source_url": "https://fred.stlouisfed.org/series/NASDAQNBI",
+    },
+    {
+        "bubble_id": "clean_energy",
+        "series_id": "NASDAQCELS",
+        "proxy_asset": "NASDAQ Clean Edge Green Energy Index（清洁能源代理）",
+        "t0_date": "2019-01-02",
+        "end_date": "2024-12-31",
+        "source_url": "https://fred.stlouisfed.org/series/NASDAQCELS",
+    },
+    {
+        "bubble_id": "mobile_cloud",
+        "series_id": "NASDAQNDXT",
+        "proxy_asset": "NASDAQ-100 Technology Sector（移动互联网与云计算代理）",
+        "t0_date": "2009-01-02",
+        "end_date": "2023-12-31",
+        "source_url": "https://fred.stlouisfed.org/series/NASDAQNDXT",
+    },
 )
 
 
