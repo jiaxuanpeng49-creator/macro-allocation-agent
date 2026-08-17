@@ -259,9 +259,16 @@ def _render_asset_price_map(analogs):
         st.info("请选择至少一个已有真实价格数据的技术周期。")
         return
 
+    scale_mode = st.segmented_control(
+        "纵轴尺度",
+        options=["线性", "对数"],
+        default="线性",
+        key="bubble_price_scale",
+        help="对数尺度只改变视觉刻度，不改变任何原始值或归一化结果。",
+    ) or "线性"
     chart = go.Figure()
     metrics = []
-    for bubble_id in selected_ids:
+    for series_index, bubble_id in enumerate(selected_ids):
         frame = price_frame.loc[price_frame.bubble_id == bubble_id].sort_values("date")
         color = meta[bubble_id]["color"]
         proxy = frame.proxy_asset.iloc[0]
@@ -270,7 +277,13 @@ def _render_asset_price_map(analogs):
                 x=frame.relative_year,
                 y=frame.normalized_price,
                 mode="lines",
-                line={"width": 3.5 if bubble_id == "ai" else 2.5, "color": color},
+                line={
+                    "width": 4 if bubble_id == "ai" else 3,
+                    "color": color,
+                    "shape": "spline",
+                    "smoothing": 0.45,
+                    "dash": "solid" if bubble_id == "ai" else "dash",
+                },
                 name=meta[bubble_id]["short_name"],
                 customdata=frame[["date", "price", "proxy_asset"]],
                 hovertemplate=(
@@ -282,6 +295,23 @@ def _render_asset_price_map(analogs):
         peak_index = frame.normalized_price.idxmax()
         peak = frame.loc[peak_index]
         drawdown = frame.normalized_price / frame.normalized_price.cummax() - 1
+        chart.add_trace(
+            go.Scatter(
+                x=[peak.relative_year],
+                y=[peak.normalized_price],
+                mode="markers+text",
+                marker={"size": 10, "color": "#FFFFFF", "line": {"color": color, "width": 3}},
+                text=[f"{meta[bubble_id]['short_name']} 峰值"],
+                textposition="top center" if series_index % 2 == 0 else "bottom center",
+                textfont={"color": color, "size": 12},
+                name=f"{meta[bubble_id]['short_name']}峰值",
+                showlegend=False,
+                hovertemplate=(
+                    f"{meta[bubble_id]['short_name']}历史峰值<br>"
+                    "T%{x:+.1f} · %{y:.1f}<extra></extra>"
+                ),
+            )
+        )
         metrics.append(
             {
                 "技术周期": meta[bubble_id]["name"],
@@ -300,8 +330,11 @@ def _render_asset_price_map(analogs):
                 go.Scatter(
                     x=[today.relative_year],
                     y=[today.normalized_price],
-                    mode="markers",
+                    mode="markers+text",
                     marker={"size": 16, "symbol": "diamond", "color": "#FFFFFF", "line": {"color": color, "width": 3}},
+                    text=["AI today"],
+                    textposition="middle right",
+                    textfont={"color": color, "size": 13},
                     name="AI今天",
                     hovertemplate=f"AI今天 · T%{{x:+.1f}}<br>%{{y:.1f}}<br>{proxy}<extra></extra>",
                 )
@@ -312,12 +345,14 @@ def _render_asset_price_map(analogs):
         hovermode="closest",
         xaxis_title="距资本加速起点的年数（T）",
         yaxis_title="归一化资产价格（T0 = 100）",
+        yaxis_type="log" if scale_mode == "对数" else "linear",
         legend={"orientation": "h", "x": 0, "y": -0.2, "title": None},
         margin={"l": 48, "r": 24, "t": 58, "b": 92},
     )
     st.plotly_chart(chart, width="stretch")
     st.caption(
-        "显示 FRED 收录的 Nasdaq 指数月末价格及精确 T0 观察值；没有峰值缩放、曲线拟合或未来外推。"
+        "曲线从同一 T0=100 起点叠加；使用轻度样条连接月末真实观察值，仅改善显示观感，"
+        "没有峰值缩放、统计拟合或未来外推。"
     )
     st.dataframe(
         pd.DataFrame(metrics),
