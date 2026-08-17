@@ -286,10 +286,12 @@ def _render_asset_price_map(analogs):
             {
                 "技术周期": meta[bubble_id]["name"],
                 "资产代理": proxy,
+                "T0日期": f"{frame.t0_date.iloc[0]:%Y-%m-%d}",
                 "峰值（T0=100）": round(float(peak.normalized_price), 1),
                 "峰值T": round(float(peak.relative_year), 1),
                 "最大回撤": f"{drawdown.min():.1%}",
                 "价格点数": len(frame),
+                "数据来源": frame.source_url.dropna().iloc[0] if frame.source_url.notna().any() else "",
             }
         )
         if bubble_id == "ai":
@@ -314,8 +316,15 @@ def _render_asset_price_map(analogs):
         margin={"l": 48, "r": 24, "t": 58, "b": 92},
     )
     st.plotly_chart(chart, width="stretch")
-    st.caption("显示原始真实价格的归一化结果；没有峰值缩放、曲线拟合或未来外推。")
-    st.dataframe(pd.DataFrame(metrics), hide_index=True, width="stretch")
+    st.caption(
+        "显示 FRED 收录的 Nasdaq 指数月末价格及精确 T0 观察值；没有峰值缩放、曲线拟合或未来外推。"
+    )
+    st.dataframe(
+        pd.DataFrame(metrics),
+        hide_index=True,
+        width="stretch",
+        column_config={"数据来源": st.column_config.LinkColumn("数据来源", display_text="打开 FRED")},
+    )
     if errors:
         st.warning("部分价格序列未展示：" + "；".join(f"{key}：{value}" for key, value in errors.items()))
 
