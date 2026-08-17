@@ -14,6 +14,8 @@ import xml.etree.ElementTree as ET
 from dotenv import load_dotenv
 from openai import OpenAI
 
+from trend_metrics import derive_topic_metrics
+
 
 NEWS_FILE = Path(__file__).parent / "data" / "news_intelligence.json"
 GOOGLE_NEWS_URL = "https://news.google.com/rss/search"
@@ -197,6 +199,7 @@ def _aggregate(articles, provider, source_url):
     cycle = "增长升温" if growth > 0.25 else "增长降温" if growth < -0.25 else "增长信号中性"
     price = "通胀升温" if inflation > 0.25 else "通胀降温" if inflation < -0.25 else "通胀信号中性"
     bubble_drivers = [item["title"] for item in sorted(articles, key=lambda item: (abs(item["bubble_impact"]), item["relevance_score"]), reverse=True) if item["bubble_impact"]][:4]
+    topic_scores, topic_asset_impacts = derive_topic_metrics(articles)
     return {
         "as_of_date": datetime.now(timezone.utc).date().isoformat(),
         "fetched_at": datetime.now(timezone.utc).isoformat(),
@@ -204,6 +207,8 @@ def _aggregate(articles, provider, source_url):
         "source_url": source_url,
         "news_count": len(articles),
         "category_counts": dict(category_counts),
+        "topic_scores": topic_scores,
+        "topic_asset_impacts": topic_asset_impacts,
         "asset_impact": asset_impact,
         "cycle_impact": {"growth": growth, "inflation": inflation, "interpretation": f"{cycle}；{price}"},
         "bubble_pressure": bubble,

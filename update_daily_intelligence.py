@@ -13,20 +13,29 @@ from news_intelligence import (
 
 
 if __name__ == "__main__":
+    print("开始每日情报更新")
     # Actions 每次从干净环境启动。先把仓库里上一期的缓存归档，确保
     # SQLite 首次启用时也不会丢掉切换日前的历史记录。
     previous_report = load_news_intelligence()
     if previous_report:
-        archive_daily_report(previous_report)
+        previous_date = archive_daily_report(previous_report)
+        print(f"已有快照归档完成：{previous_date}")
 
     report = refresh_news_intelligence(force=True)
+    if report.get("stale"):
+        print(f"新闻抓取未获得新数据，保留缓存日期：{report.get('as_of_date')}")
+    else:
+        print(f"新闻抓取完成：{report['news_count']} 条有效新闻")
     snapshot = append_news_snapshot(report)
-    archive_daily_report(report)
+    saved_date = archive_daily_report(report)
+    print(f"趋势历史数据保存完成；保存日期：{saved_date}")
     try:
         report = generate_deepseek_news_analysis(report)
-        archive_daily_report(report)
+        saved_date = archive_daily_report(report)
+        print(f"AI分析完成；综合研判与趋势字段已更新：{saved_date}")
         ai_status = f"；DeepSeek综合研判已更新（{report['deepseek_model']}）"
     except Exception as exc:
+        print(f"AI分析失败：{exc}；保留已保存的透明规则评分，不写入伪造的零分记录")
         ai_status = f"；DeepSeek综合研判跳过：{exc}"
 
     backfilled = 0
@@ -52,6 +61,6 @@ if __name__ == "__main__":
             check=True,
         )
     print(
-        f"更新完成：{report['news_count']}条新闻；泡沫分数 "
+        f"任务执行成功：{report['news_count']}条新闻；泡沫分数 "
         f"{snapshot['score']}/100{ai_status}；补齐历史研判 {backfilled} 天"
     )

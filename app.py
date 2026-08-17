@@ -7,6 +7,7 @@ from backtest_ui import render_backtest_page
 from bubble_ui import render_ai_bubble_page
 from dashboard_ui import render_investment_dashboard
 from news_ui import render_news_intelligence_page
+from trend_ui import render_news_trend_page
 from ui_theme import apply_theme, render_agent_orb, render_brand_bar, section_header
 
 
@@ -36,8 +37,8 @@ if intelligence_page.open:
             "情报中心",
             "当天新闻、历史归档与 AI 连续监测分别展示，避免把不同时间尺度混在同一页面。",
         )
-        today_tab, archive_tab, ai_monitor_tab = st.tabs(
-            ["今日情报", "历史归档", "AI 连续监测"],
+        today_tab, archive_tab, trend_tab, ai_monitor_tab = st.tabs(
+            ["今日情报", "历史归档", "趋势分析", "AI 连续监测"],
             key="intelligence_navigation",
             on_change="rerun",
         )
@@ -47,6 +48,9 @@ if intelligence_page.open:
         if archive_tab.open:
             with archive_tab:
                 render_news_intelligence_page(show_header=False, mode="archive")
+        if trend_tab.open:
+            with trend_tab:
+                render_news_trend_page()
         if ai_monitor_tab.open:
             with ai_monitor_tab:
                 render_ai_bubble_page(show_header=False, view="monitor")

@@ -7,7 +7,12 @@ import streamlit as st
 from ai_bubble_diagnosis import unified_ai_bubble_diagnosis
 from bubble_history import load_bubble_history
 from knowledge_base import load_knowledge, search_knowledge
-from technology_bubbles import ai_historical_conclusion, all_bubble_series
+from technology_bubbles import (
+    ai_historical_conclusion,
+    all_bubble_series,
+    load_normalized_price_series,
+    price_series_availability,
+)
 from ui_theme import section_header, style_plotly
 
 
@@ -143,6 +148,16 @@ def _render_history_map(analogs, analog_df, diagnosis):
     st.caption("圆点越大代表标准化热度越高；颜色由蓝到黄再到红。图表表达相对阶段，不代表历史市场价格指数。")
 
     st.divider()
+    comparison_mode = st.segmented_control(
+        "比较模式",
+        options=["生命周期对齐", "资产价格对齐"],
+        default="生命周期对齐",
+        key="bubble_compare_mode",
+    ) or "生命周期对齐"
+    if comparison_mode == "资产价格对齐":
+        _render_asset_price_map(analogs)
+        return
+
     st.markdown("### AI与单一历史周期对比")
     st.caption("一次只比较一个对象，避免五条曲线缠绕。所有曲线把资本加速年设为 T=0。")
     choices = {item["name"]: item["id"] for item in analogs["bubbles"] if item["id"] != "ai"}
@@ -201,6 +216,108 @@ def _render_history_map(analogs, analog_df, diagnosis):
         st.caption(analogs["methodology"])
         table = pd.DataFrame(selected_meta["anchors"])[["year", "score", "phase", "event", "source_url"]]
         st.dataframe(table, hide_index=True, width="stretch")
+
+
+def _render_asset_price_map(analogs):
+    st.markdown("### 200 年技术泡沫地图")
+    st.caption(
+        "将不同技术革命的真实代理资产价格统一到 T0 = 100。只统一起点，不统一峰值，"
+        "不使用热度曲线代替价格，也不做正态拟合。"
+    )
+    try:
+        price_frame, errors = load_normalized_price_series()
+    except ValueError as exc:
+        st.error(f"历史价格数据结构不完整：{exc}")
+        return
+    availability = price_series_availability(price_frame)
+    if price_frame.empty:
+        st.info(
+            "暂无可审计的历史资产价格序列\n\n"
+            "当前项目只有铁路、电报、电力、互联网与 AI 的史料热度锚点，尚未确认各周期的 proxy asset、"
+            "精确 T0 日期和真实价格序列。为避免伪造比较，本图暂不绘制曲线。"
+        )
+        with st.expander("查看当前数据缺口", expanded=True):
+            st.dataframe(availability, hide_index=True, width="stretch")
+            st.caption(
+                "后续数据文件需提供 bubble_id、date、price、proxy_asset、t0_date、source_url。"
+                "归一化会由后端自动计算，前端不硬编码历史价格。"
+            )
+        return
+
+    meta = {item["id"]: item for item in analogs["bubbles"]}
+    available_ids = [bubble_id for bubble_id in price_frame.bubble_id.unique() if bubble_id in meta]
+    labels = {bubble_id: meta[bubble_id]["name"] for bubble_id in available_ids}
+    default_ids = [bubble_id for bubble_id in ("ai", "internet_telecom") if bubble_id in available_ids]
+    selected_ids = st.multiselect(
+        "历史参照",
+        available_ids,
+        default=default_ids or available_ids[:2],
+        format_func=labels.get,
+        key="bubble_price_selection",
+    )
+    if not selected_ids:
+        st.info("请选择至少一个已有真实价格数据的技术周期。")
+        return
+
+    chart = go.Figure()
+    metrics = []
+    for bubble_id in selected_ids:
+        frame = price_frame.loc[price_frame.bubble_id == bubble_id].sort_values("date")
+        color = meta[bubble_id]["color"]
+        proxy = frame.proxy_asset.iloc[0]
+        chart.add_trace(
+            go.Scatter(
+                x=frame.relative_year,
+                y=frame.normalized_price,
+                mode="lines",
+                line={"width": 3.5 if bubble_id == "ai" else 2.5, "color": color},
+                name=meta[bubble_id]["short_name"],
+                customdata=frame[["date", "price", "proxy_asset"]],
+                hovertemplate=(
+                    "T%{x:+.1f} · %{y:.1f}<br>%{customdata[0]|%Y-%m-%d}<br>"
+                    "原始价格 %{customdata[1]:.3f}<br>%{customdata[2]}<extra></extra>"
+                ),
+            )
+        )
+        peak_index = frame.normalized_price.idxmax()
+        peak = frame.loc[peak_index]
+        drawdown = frame.normalized_price / frame.normalized_price.cummax() - 1
+        metrics.append(
+            {
+                "技术周期": meta[bubble_id]["name"],
+                "资产代理": proxy,
+                "峰值（T0=100）": round(float(peak.normalized_price), 1),
+                "峰值T": round(float(peak.relative_year), 1),
+                "最大回撤": f"{drawdown.min():.1%}",
+                "价格点数": len(frame),
+            }
+        )
+        if bubble_id == "ai":
+            today = frame.iloc[-1]
+            chart.add_trace(
+                go.Scatter(
+                    x=[today.relative_year],
+                    y=[today.normalized_price],
+                    mode="markers",
+                    marker={"size": 16, "symbol": "diamond", "color": "#FFFFFF", "line": {"color": color, "width": 3}},
+                    name="AI今天",
+                    hovertemplate=f"AI今天 · T%{{x:+.1f}}<br>%{{y:.1f}}<br>{proxy}<extra></extra>",
+                )
+            )
+    chart.add_hline(y=100, line_color="rgba(95,107,139,.45)", line_dash="dash")
+    style_plotly(chart, "技术泡沫资产价格对齐", 470)
+    chart.update_layout(
+        hovermode="closest",
+        xaxis_title="距资本加速起点的年数（T）",
+        yaxis_title="归一化资产价格（T0 = 100）",
+        legend={"orientation": "h", "x": 0, "y": -0.2, "title": None},
+        margin={"l": 48, "r": 24, "t": 58, "b": 92},
+    )
+    st.plotly_chart(chart, width="stretch")
+    st.caption("显示原始真实价格的归一化结果；没有峰值缩放、曲线拟合或未来外推。")
+    st.dataframe(pd.DataFrame(metrics), hide_index=True, width="stretch")
+    if errors:
+        st.warning("部分价格序列未展示：" + "；".join(f"{key}：{value}" for key, value in errors.items()))
 
 
 def _render_dalio(diagnosis):

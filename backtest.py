@@ -150,6 +150,49 @@ def run_historical_backtest(cost_bps=10, benchmark="equal_weight", temperature=3
     }
 
 
+def run_custom_strategy_backtest(strategy_spec, cost_bps=10, benchmark="equal_weight"):
+    """回测由自然语言转换出的受约束周期配置；大模型不参与收益计算。"""
+    if benchmark not in BENCHMARK_NAMES:
+        raise ValueError(f"benchmark 必须是 {list(BENCHMARK_NAMES)} 之一")
+    cycle_weights = strategy_spec.get("cycle_weights") or {}
+    macro, returns = _load_data()
+    factors = _factors(macro).reindex(returns.index)
+    rows = []
+    for _, row in factors.iterrows():
+        allocation = cycle_weights.get(row.cycle) or cycle_weights.get("中性")
+        if not allocation:
+            raise ValueError(f"策略缺少“{row.cycle}”配置，且没有中性回退配置")
+        rows.append({asset: float(allocation[asset]) for asset in ASSETS})
+    weights = pd.DataFrame(rows, index=factors.index).shift(1).dropna()
+    returns = returns.reindex(weights.index)
+    turnover = weights.diff().abs().sum(axis=1).fillna(0) / 2
+    strategy_return = (weights * returns).sum(axis=1) - turnover * cost_bps / 10000
+
+    benchmarks = pd.DataFrame(index=returns.index)
+    benchmarks["sixty_forty"] = 0.6 * returns.stock + 0.4 * returns.bond
+    benchmarks["equal_weight"] = returns.mean(axis=1)
+    benchmarks["stock"] = returns.stock
+    benchmark_return = benchmarks[benchmark]
+
+    detail = factors.join(weights.add_prefix("weight_"))
+    detail = detail.join(strategy_return.rename("strategy_return"))
+    detail = detail.join(benchmark_return.rename("benchmark_return"))
+    detail["strategy_wealth"] = 100 * (1 + detail.strategy_return).cumprod()
+    detail["benchmark_wealth"] = 100 * (1 + detail.benchmark_return).cumprod()
+    detail.index.name = "date"
+    return {
+        "period": f"{detail.index.min():%Y-%m} 至 {detail.index.max():%Y-%m}",
+        "benchmark": BENCHMARK_NAMES[benchmark],
+        "cost_bps": float(cost_bps),
+        "strategy": _metrics(strategy_return),
+        "benchmark_metrics": _metrics(benchmark_return),
+        "annual_turnover": float(turnover.mean() * 12),
+        "monthly": detail.reset_index(),
+        "strategy_spec": strategy_spec,
+        "method_note": "DeepSeek仅把自然语言转换成受约束配置规则；收益、成本和回撤均由Python历史数据确定性计算。",
+    }
+
+
 def backtest_summary(cost_bps=10, benchmark="equal_weight", temperature=3.0):
     """提供给语言模型工具调用的紧凑结果，不返回整张月度表。"""
     result = run_historical_backtest(cost_bps, benchmark, temperature)
