@@ -10,8 +10,6 @@ from pathlib import Path
 import json
 import sqlite3
 
-from trend_metrics import derive_topic_metrics
-
 
 ARCHIVE_DB = Path(__file__).parent / "data" / "news_archive.sqlite3"
 
@@ -54,16 +52,6 @@ def _connect(db_path=ARCHIVE_DB):
             "ALTER TABLE daily_news_archive "
             "ADD COLUMN evidence_articles_json TEXT NOT NULL DEFAULT '[]'"
         )
-    if "topic_scores_json" not in columns:
-        connection.execute(
-            "ALTER TABLE daily_news_archive "
-            "ADD COLUMN topic_scores_json TEXT NOT NULL DEFAULT '{}'"
-        )
-    if "topic_asset_impacts_json" not in columns:
-        connection.execute(
-            "ALTER TABLE daily_news_archive "
-            "ADD COLUMN topic_asset_impacts_json TEXT NOT NULL DEFAULT '{}'"
-        )
     connection.execute(
         "CREATE INDEX IF NOT EXISTS idx_daily_news_fetched_at "
         "ON daily_news_archive(fetched_at DESC)"
@@ -88,7 +76,6 @@ def archive_daily_report(report, db_path=ARCHIVE_DB):
         raise ValueError("没有可归档的新闻报告。")
     report_date = report.get("as_of_date") or report["fetched_at"][:10]
     archived_at = datetime.now(timezone.utc).isoformat()
-    derived_scores, derived_asset_impacts = derive_topic_metrics(report.get("articles", []))
     values = {
         "report_date": report_date,
         "fetched_at": report["fetched_at"],
@@ -99,10 +86,6 @@ def archive_daily_report(report, db_path=ARCHIVE_DB):
         "bubble_summary": report.get("bubble_summary", "暂无泡沫增量判断。"),
         "bubble_pressure": float(report.get("bubble_pressure", 0)),
         "category_counts_json": _json(report.get("category_counts", {})),
-        "topic_scores_json": _json(report.get("topic_scores") or derived_scores),
-        "topic_asset_impacts_json": _json(
-            report.get("topic_asset_impacts") or derived_asset_impacts
-        ),
         "asset_impact_json": _json(report.get("asset_impact", {})),
         "cycle_impact_json": _json(report.get("cycle_impact", {})),
         "bubble_drivers_json": _json(report.get("bubble_drivers", [])),
@@ -180,8 +163,6 @@ def _row_to_report(row):
         "bubble_summary": row["bubble_summary"],
         "bubble_pressure": row["bubble_pressure"],
         "category_counts": _from_json(row["category_counts_json"], {}),
-        "topic_scores": _from_json(row["topic_scores_json"], {}),
-        "topic_asset_impacts": _from_json(row["topic_asset_impacts_json"], {}),
         "asset_impact": _from_json(row["asset_impact_json"], {}),
         "cycle_impact": _from_json(row["cycle_impact_json"], {}),
         "bubble_drivers": _from_json(row["bubble_drivers_json"], []),
@@ -280,26 +261,3 @@ def load_archive_series(db_path=ARCHIVE_DB, limit=365):
             }
         )
     return series
-
-
-def load_trend_history(db_path=ARCHIVE_DB, limit=1200):
-    """读取已经归档的真实主题与分主题资产评分；缺失字段保持缺失。"""
-    with _connect(db_path) as connection:
-        rows = connection.execute(
-            """
-            SELECT report_date, topic_scores_json, topic_asset_impacts_json
-            FROM daily_news_archive
-            ORDER BY report_date ASC
-            LIMIT ?
-            """,
-            (int(limit),),
-        ).fetchall()
-    return [
-        {
-            "date": row["report_date"],
-            "topics": _from_json(row["topic_scores_json"], {}),
-            "asset_impacts": _from_json(row["topic_asset_impacts_json"], {}),
-        }
-        for row in rows
-        if row["topic_scores_json"] != "{}" or row["topic_asset_impacts_json"] != "{}"
-    ]
