@@ -1,42 +1,49 @@
 {
-  "as_of_date": "2026-11-26",
-  "fetched_at": "2026-11-26T08:06:53.008568+00:00",
+  "as_of_date": "2026-11-27",
+  "fetched_at": "2026-11-27T08:16:29.733491+00:00",
   "provider": "Google News RSS",
   "source_url": "https://news.google.com/",
   "news_count": 101,
   "category_counts": {
-    "AI与科技": 45,
-    "货币政策": 6,
-    "增长与就业": 7,
-    "地缘政治与贸易": 12,
-    "通胀与大宗商品": 21,
-    "宏观经济": 7,
-    "市场与地缘": 3
+    "AI与科技": 38,
+    "企业盈利与资本开支": 2,
+    "地缘政治与贸易": 18,
+    "增长与就业": 12,
+    "宏观经济": 4,
+    "货币政策": 2,
+    "通胀与大宗商品": 19,
+    "市场与地缘": 6
   },
   "topic_scores": {
-    "AI与科技": 0.014,
-    "地缘政治与贸易": 0.0,
-    "增长与就业": -0.2,
+    "AI与科技": 0.0,
+    "企业盈利与资本开支": 0.233,
+    "地缘政治与贸易": 0.297,
+    "增长与就业": -0.133,
     "宏观经济": 0.0,
     "市场与地缘": 0.0,
-    "货币政策": 0.095,
-    "通胀与大宗商品": -0.139
+    "货币政策": 0.222,
+    "通胀与大宗商品": 0.086
   },
   "topic_asset_impacts": {
     "AI与科技": {
-      "债券": 0.043,
-      "股票": -0.085,
-      "黄金": 0.085
+      "债券": 0.146,
+      "股票": -0.268,
+      "黄金": 0.122
+    },
+    "企业盈利与资本开支": {
+      "债券": -0.7,
+      "股票": 1.4,
+      "黄金": 0.0
     },
     "地缘政治与贸易": {
-      "债券": 0.0,
-      "股票": 0.0,
-      "黄金": 0.0
+      "债券": 0.523,
+      "股票": -0.031,
+      "黄金": 0.4
     },
     "增长与就业": {
       "债券": 0.0,
-      "股票": -0.8,
-      "黄金": 0.2
+      "股票": -0.533,
+      "黄金": 0.133
     },
     "宏观经济": {
       "债券": 0.0,
@@ -49,62 +56,171 @@
       "黄金": 0.0
     },
     "货币政策": {
-      "债券": -0.286,
-      "股票": 0.571,
+      "债券": -0.667,
+      "股票": 1.333,
       "黄金": 0.0
     },
     "通胀与大宗商品": {
-      "债券": -0.209,
-      "股票": -0.104,
-      "黄金": -0.104
+      "债券": 0.097,
+      "股票": -0.097,
+      "黄金": 0.258
     }
   },
   "asset_impact": {
-    "股票": -0.1,
-    "债券": -0.04,
-    "黄金": 0.03
+    "股票": -0.11,
+    "债券": 0.13,
+    "黄金": 0.18
   },
   "cycle_impact": {
-    "growth": -0.04,
+    "growth": -0.12,
     "inflation": 0.02,
     "interpretation": "增长信号中性；通胀信号中性"
   },
-  "bubble_pressure": 0.02,
+  "bubble_pressure": -0.0,
   "bubble_summary": "当日新闻尚未显著改变泡沫判断。",
   "bubble_drivers": [
-    "AI investment boom raises risks for insurers: Swiss Re - Business Insurance"
+    "Strong AI Revenue Growth and Earnings Beat Ease Disruption Fears for EPAM Systems (EPAM) - Yahoo! Finance Canada",
+    "AI Bubble Bear Market: Tech 20% Off Highs, Nvidia 9x - shattered.io"
   ],
   "summary": "本次聚合 101 条新闻，主导主题为“AI与科技”；增长信号中性，通胀信号中性。",
   "articles": [
     {
-      "title": "Gold Edges Lower as US Inflation Data Fuels Bets for Rate Hikes - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNWk5iY21FejJMUDVfS2h4ekdoUnQ1RndSalFWS2pkZzJZY1AwSXRnY1otVEdsMUdRVWZJV0NKSUxEM3Boc2VlQXNMMWkweGxJSWVGaFJHcC1qWTk0WTdIbXR0Z3VNQ2N2R054YXZMa1I2eVk4RjU5T09FelF5ZC1KdGJRYnV5bFdvMjJoRzBpMjNoUDkzMDJiTmdvejdOMF85Vy1JZU16eEI1M3VzVlBNa0RyMjk?oc=5",
-      "source": "Bloomberg.com",
-      "published_at": "2026-11-26T06:56:00+00:00",
-      "query_theme": "市场与地缘",
-      "category": "通胀与大宗商品",
+      "title": "SoftBank Default Risk Hits Four-Year High, Raising Alarm Over Debt-Funded AI Investment - https://economy.ac/",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9YMFpDeXBwd2s1R0VGTThiNlpQNEpBM3pQTEVLWHJDenduZUhWUzFYZXBXVTZMSzNaNDByZjk0RklOblJEb1dSeWpIWjVKZjRkSm9SYlF3UQ?oc=5",
+      "source": "https://economy.ac/",
+      "published_at": "2026-11-27T02:14:25+00:00",
+      "query_theme": "AI与科技",
+      "category": "AI与科技",
       "asset_impact": {
-        "股票": -1,
-        "债券": -2,
-        "黄金": -1
+        "股票": -3,
+        "债券": 2,
+        "黄金": 1
+      },
+      "growth_impact": -2,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票利空；增长影响 -2，通胀影响 +0",
+      "relevance_score": 9
+    },
+    {
+      "title": "Middle East Oil Price War Heralds Post-Conflict Glut: Bousso - EnergyNow.com",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdDAtNEN2TjAzSWowV2NvODJVTC1rZS1WYUVXU3NvVXpOb2F6T3oxTW14TDFJeG9sakNkSkNHR0FUdXVyM3FTZzQ3VU1SVXJhbHNOOF82V012Qk9XYUF3MS1CREdtWnZVNjU5MUszdTN1WXhpUGkyVk14QUtsZlAxc2RBSVlPQVVfUURWRzFFaWhYcHAy?oc=5",
+      "source": "EnergyNow.com",
+      "published_at": "2026-11-26T18:58:04+00:00",
+      "query_theme": "市场与地缘",
+      "category": "地缘政治与贸易",
+      "asset_impact": {
+        "股票": -2,
+        "债券": 2,
+        "黄金": 2
+      },
+      "growth_impact": -2,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票利空；增长影响 -2，通胀影响 +0",
+      "relevance_score": 9
+    },
+    {
+      "title": "Asian stocks rise as tech rebound, easing U.S. trade concerns lift sentiment - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPV0psdUF6VUczOU9wVThUTGpnWGFjVGdTV1NUenM4NW52MGloVm1KTXh0SGJWWXFlcEpneTZKMVFuRlI3M2dIa2Naekc0NTlVR1N2ZlZDbm81eHl3bWZYLWNtRXFtYmRvTVpzNlI0ZmV3RHg5SE52TjY3b0lyeUhQMTAwOGFsYU5GV0lUY2FwalVFSjRHZmtVSE1sdFJJSV8yWFJDeA?oc=5",
+      "source": "Yahoo Finance",
+      "published_at": "2026-11-27T04:17:00+00:00",
+      "query_theme": "市场与地缘",
+      "category": "地缘政治与贸易",
+      "asset_impact": {
+        "股票": 2,
+        "债券": 2,
+        "黄金": 1
       },
       "growth_impact": 0,
       "inflation_impact": 0,
       "bubble_impact": 0,
-      "impact_summary": "对债券利空；增长影响 +0，通胀影响 +0",
+      "impact_summary": "对股票利多；增长影响 +0，通胀影响 +0",
+      "relevance_score": 8
+    },
+    {
+      "title": "Strong AI Revenue Growth and Earnings Beat Ease Disruption Fears for EPAM Systems (EPAM) - Yahoo! Finance Canada",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOMmE1c2JIN1FfdFVrZTlrRWhOQ1QzX19yU1dveWQwVXdac01kNVZlQ1YtcmdwdXVhRHVmeHJGZkZ5eDBIRS05RTJoalFvQ3JnZ0M3aUhGaHhGZW1jQ2ZwdkZzcDNCRDNJVkI4cTdqVjh6NFhmR2JyeGhBOU5zTmgtMzJaczZWREN2Q1E?oc=5",
+      "source": "Yahoo! Finance Canada",
+      "published_at": "2026-11-26T15:45:35+00:00",
+      "query_theme": "AI与科技",
+      "category": "企业盈利与资本开支",
+      "asset_impact": {
+        "股票": 2,
+        "债券": -1,
+        "黄金": 0
+      },
+      "growth_impact": 1,
+      "inflation_impact": 0,
+      "bubble_impact": -1,
+      "impact_summary": "对股票利多；增长影响 +1，通胀影响 +0",
       "relevance_score": 7
     },
     {
-      "title": "Nvidia Halts AI Server Shipments to Four Southeast Asian Countries Amid New US Export Controls - Modern Diplomacy",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPaWhMX1JWMTVpZkxwRDQ3eGYzbW5hMGxneXRrN2x1SzNNQmJKbUlTaGN3UXJ3cDlJMGxiemRKbXB6QzB4MzdCZXNkWnl4ZzZ5dllVb3FzWFdiSTB1S2QyREF5WU5UQm1hakZRTmtQeXpLLUpWRGpnTGM4MVNuREV4SHNmeGZnRXlmVDlqTmphS0EwRzl0N3pUVjR5bWJQbkV5WGtoVTlZVlJXYVdyNGZUMVo4WnZSZERpZGVGck1MbmotakFSWkhEWXQ2cWlzdw?oc=5",
-      "source": "Modern Diplomacy",
-      "published_at": "2026-11-26T07:01:17+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
+      "title": "Oil: the Market has Already Written Off the Energy Crisis - GoldBroker",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1vNmljU2RuLW9SMGM3NHR5bXVJZTF1NDd4QlB0a2dSOFJWeDBxdzZLelJtR3RkWVZHOHAwU3YxZVJzcnAzNUd3RHFiN2tUYVFnUlo0N2JIQURWVXNYRTJsM2cwSkZHSlJDeHloM29sRWNLdw?oc=5",
+      "source": "GoldBroker",
+      "published_at": "2026-11-27T05:36:47+00:00",
+      "query_theme": "市场与地缘",
+      "category": "通胀与大宗商品",
       "asset_impact": {
         "股票": -1,
         "债券": 1,
         "黄金": 1
+      },
+      "growth_impact": -1,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票利空；增长影响 -1，通胀影响 +0",
+      "relevance_score": 6
+    },
+    {
+      "title": "AI Bubble Bear Market: Tech 20% Off Highs, Nvidia 9x - shattered.io",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPVzZwbDRLZWxHbFVTVEpNbDdiM0h6SmRKVS1MblZXbHFwT1J4U3lhSEhZbklRMjBfZ2FIbzdqcEhvVVFKNWQwdjhRb2NSeGhpRDV1eGcxQ3NPZkxFeWxaMVZESkYtM0tZN0U5cGNGMGx3WVVQY2N2dUxNWU5nQXJrQXhnMmFjTm1wbURLR1pHNno4c2xwSUl3?oc=5",
+      "source": "shattered.io",
+      "published_at": "2026-11-27T04:49:59+00:00",
+      "query_theme": "AI与科技",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": -1,
+        "债券": 0,
+        "黄金": 1
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 1,
+      "impact_summary": "对股票利空；增长影响 +0，通胀影响 +0",
+      "relevance_score": 6
+    },
+    {
+      "title": "Milei’s economic policy dealt fresh blow as Argentina enters recession - Argentina Reports",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOYnpVbGhGV2hCeVhHQm11TDR0bHZncnUzZ256TG9CMnZQOGhscWVxVTlDYTViRHhCS3VGQTUzZUNTbUJPTGFuTjUtSEg4M0JVU2FQVDAyamVQSjQ5M01yc0ZLRUFOaU52X012NTN6TnZRRDhFQlhtTEdhZHlHZzV2SUw4WlZQS3FJRlRYcGRPQ2VieXcyd1IxM0JieUpaa1Q3ZDlLTmpVNA?oc=5",
+      "source": "Argentina Reports",
+      "published_at": "2026-11-27T02:16:06+00:00",
+      "query_theme": "宏观经济",
+      "category": "增长与就业",
+      "asset_impact": {
+        "股票": -2,
+        "债券": 1,
+        "黄金": 0
+      },
+      "growth_impact": -1,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票利空；增长影响 -1，通胀影响 +0",
+      "relevance_score": 6
+    },
+    {
+      "title": "Argentina enters technical recession as weak consumption undermines Milei's economic gains - Yahoo Finance UK",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOSEZpdzhXR0dTbV9Na2huYzUtYzAyU0xnNUliTE15eTdLNEI4dHVrenJreUlMUU1hYXlZSzVIbzNIT19VRkF3RUpwejV2aHBUZTViVVBrTnhTQnBVWk9LZVUtVjJsN3h3VjAzRDdQaDNtYTRVb3dMbF9VTEZ5VDlqS0ItVG5tVHRYUlRMb3pGd0JsR3pJS3FIcQ?oc=5",
+      "source": "Yahoo Finance UK",
+      "published_at": "2026-11-26T19:52:29+00:00",
+      "query_theme": "宏观经济",
+      "category": "增长与就业",
+      "asset_impact": {
+        "股票": -2,
+        "债券": 1,
+        "黄金": 0
       },
       "growth_impact": -1,
       "inflation_impact": 0,
@@ -131,60 +247,6 @@
       "relevance_score": 6
     },
     {
-      "title": "AI investment boom raises risks for insurers: Swiss Re - Business Insurance",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNN1NuOXB3UkI0eHdMcDFUb3hydF8tN1BQYURHZ3FFZ1JqTldwa28tSllicElBOGo5ZjhnMGE2S3RvMm9zdkphZnE1SFFhekZrcVM5Vk1zY3RIRXhDT0l3NFlyMHZwNmtKcF90cUlURmZXMGl0dkpORXZBLXBxUnV0cGxRQkZHTmZ0NXp3VHYxSnVoUQ?oc=5",
-      "source": "Business Insurance",
-      "published_at": "2026-11-25T17:58:48+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": -1,
-        "债券": 0,
-        "黄金": 1
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 1,
-      "impact_summary": "对股票利空；增长影响 +0，通胀影响 +0",
-      "relevance_score": 6
-    },
-    {
-      "title": "The U.S. Isn’t in a Recession. Try Telling Many Americans That. - The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQR3RuY1haQ3o3Y3k5Sk90WmdBS2NDZXA4a2VScVkybm55am1BazFVa0RQRi1BU0VpbEJ4UVlURmdhYXBDYWZxcUllcWo4NGhNaG05VmdON2hfRjVWTWJOTW9ybnE5Zy16VHN5OVB3V0lVd1VnU2NLWjg2aGVkazJ4VXFjaDQ?oc=5",
-      "source": "The New York Times",
-      "published_at": "2026-11-25T17:06:11+00:00",
-      "query_theme": "宏观经济",
-      "category": "增长与就业",
-      "asset_impact": {
-        "股票": -2,
-        "债券": 1,
-        "黄金": 0
-      },
-      "growth_impact": -1,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票利空；增长影响 -1，通胀影响 +0",
-      "relevance_score": 6
-    },
-    {
-      "title": "Argentina's economy appears to enter recession as job concerns grow - upi",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPZ1hVcGhPR1JqVXJVcjk5dkFPU2VKVTYtb1pWOTZfaTI3WEdsSnRScF9QRzMyc3VxTWs2ZExLeHZBMmN2RmVoVVQtcG9Ra2c5WHk3UEQwRzVzcWFWTjdLZ0NoVWMwTFJXLVlmQ0pmcWoxVGtOTlVSaHdqVUtyU3I0TG1QT0hmcjJpd01nX01CTlBaQlM3VzVIYzM1RERWVE1Q0gGmAUFVX3lxTFBzOEh3UXZwbHhRdnlicmhZTFh1aWFkd2NxaE9uNTM3LWVILVAwdXBUeHFhenIyQ3ZmZUVXVkl4bkpwLV9SNlJlQWtnUHkxMm5hakhZLUxtY0toY0ZXQTVTZzU0b2dUTTNrVTh3M0ZmM3Etdl9zZDBmMTdqNDc5WjlweWJPN19UNHRHQVQ0V3pRNEk0SXE1MHA2cFBON3YwdlRMTWFyM3c?oc=5",
-      "source": "upi",
-      "published_at": "2026-11-25T16:56:52+00:00",
-      "query_theme": "宏观经济",
-      "category": "增长与就业",
-      "asset_impact": {
-        "股票": -2,
-        "债券": 1,
-        "黄金": 0
-      },
-      "growth_impact": -1,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票利空；增长影响 -1，通胀影响 +0",
-      "relevance_score": 6
-    },
-    {
       "title": "Fed’s preferred inflation gauge accelerated to 3.8% in October, raising the 2027 stakes for the central bank - CNBC",
       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1SREI2WkZTZTJWN0daalVYUlBFRVAtcUNzY3BybGN3dnJCUU1OR2dVRkNXMDRMWmtISWZSSkdNeFNGdm4xc2ZveGtVMmtnUFFqanhXbmhhcktZUWRrM1BpVUE0OU5ZNnNTOENfVDhoTmdWQWxNZGlFbXFR0gF_QVVfeXFMTmFSS3ViODJ4VUhoUF9pUHJwRldEZTlzTHoxRWt3djJQZGJLZ2R4dG9MSk9KaEZtbUp1a1ZwZjNMS0VJbDIyTldzcTlTblFKaWZ5LXJ0UXRMZERRbHNUZDdNYzV5UzVSV0pJYUhoVFh2T1psRElLZFlNUEVnUnBMaw?oc=5",
       "source": "CNBC",
@@ -203,64 +265,28 @@
       "relevance_score": 6
     },
     {
-      "title": "Worse Than the Dot-Com Crash: What an AI Bust Could Mean for the Economy - WSJ",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPblNwWDM3MlF0WmxWbGJCZFR5RDN1R29oOUdmRkFURTZqdTQ5VnpnVUU1bTNWRi0yMGJ6NFRkcnJmb1Mzc2FiZTd2YlJkeXBYQ1RlNDZZNG1GaWFOa3Z1MWJ0c085TDExQTd2VmVZd28zX3FPRllMa29GS2h4ZFdjSmcyemx2Vm1BNE5IbXBBVDY4TldqQTl1bUw5TFVnaERQVjZUX19zV2JnQzFm?oc=5",
+      "title": "Gold Price Reclaims $3,600 Level; Hong Kong Gold Stocks Rally for Second Day, Lingbao Gold Surges Nearly 11% - BigGo Finance",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBNVDJidG1HTEdEY1UxdjlmczZ6VGVJSmVUOUpvTFc5c1hjRUY3bm82eGxxUUxlMVkzU3Rsd0taWU4yRkJYV0ppdElVU1F5NVNxZmsxUUpNRXZsd2MwRGZRWU5nVEpCSkxFSFhnZ0FrcEFxeVUxR3c?oc=5",
+      "source": "BigGo Finance",
+      "published_at": "2026-11-27T07:36:00+00:00",
+      "query_theme": "市场与地缘",
+      "category": "通胀与大宗商品",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 2
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对黄金利多；增长影响 +0，通胀影响 +0",
+      "relevance_score": 5
+    },
+    {
+      "title": "U.S. Stock Futures Higher as AI Trade Steadies for Thanksgiving Break - WSJ",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPYVpJLTJSaU9XYTF3eFlMR2RLUl9zblNqVXpYQ2k2MGk4M3dZdGduVzRxWEZHWVJFX052TVIta1lIS2xILVBtdUVRYTRtMUloa21KXzhaUGFBdDdWcVdjNTFwcXRwcUhtaFg5ZUthalFGd0ZzWl9vbjJUX21KSWdLa2ZGdm1pa05HM0VTd0FWNHBtSWdTVVNfYW5mcUtHeDlWd2F3NU00MWxIVzQwNUF4dkJn?oc=5",
       "source": "WSJ",
-      "published_at": "2026-11-26T08:01:31+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Gold Price Forecast: Rally Toward $3,600 or Another Fed-Driven Sell-Off? - Investing.com",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQMklBMjBhbzhpckZGcl92UmZqcDh0ZUtySTVsSHBxekVPUmVUUEI4aTVET0ZfZWNwRTROaE1ORE5IYXZmZDIteExwdEhNclBWYnZ4SllwaHlJTHBhU0xNTVg4RnB1ZXYxbW5MMDlabWVXQ2w4SGVodnF5WnBINVVqRFlNR0NISldtU2pFUVMxbGNGdWxWVzRUZVhscC1lRzB1OXZCazZ2LWNFelBqVjhMQw?oc=5",
-      "source": "Investing.com",
-      "published_at": "2026-11-26T07:41:27+00:00",
-      "query_theme": "市场与地缘",
-      "category": "货币政策",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "SoftBank CDS Tops 516bp as AI Investment Skepticism Lifts Credit Risk to 4-Year High - BigGo Finance",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9Sd2ZENGFFQVdBZFpoY1VKZEVlYTMyZThEUmdxd1lhdHhsYm56ZzdRbENBdGV1OTdza1BmUTAwcmhCeGw3RHhTMHh1M0tYYjY0S2I3SEVQYTlHbkp4X0hVT25XcmdTeEppeUpGWjkzakRvS0VXR3c?oc=5",
-      "source": "BigGo Finance",
-      "published_at": "2026-11-26T07:26:00+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Stocks, Nasdaq Futures Climb as AI Trade Rebounds: Markets Wrap - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPeEQtTUQwY0ZyTEpubU1fOUV6eVQzR2llam9uaF9UUnQ5LVNvcWJFT0dRYW9NRHM2cDQtYkpaOF9rS1ZuVE8zaDhmYWk0S1IzdU1sOER5aWJLOTQteFZFTjRkMUJwUTdta0ZnemNITTBEa1VVb1c1MGJkUnZoMFRKNDZjM1d6SDBqZ1g2NDZTenZfSEZK?oc=5",
-      "source": "Bloomberg.com",
-      "published_at": "2026-11-26T06:55:00+00:00",
+      "published_at": "2026-11-27T08:08:01+00:00",
       "query_theme": "市场与地缘",
       "category": "AI与科技",
       "asset_impact": {
@@ -275,712 +301,10 @@
       "relevance_score": 3
     },
     {
-      "title": "Anthropic IPO raises stakes for China-US AI competition - Law.asia",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9zeUhsWXhqbTVDdTFGZjIwWG5ORVVNa3AySlRUdzk0VnJIamJiT0ZYUXFXNFp4dkpseS0wd0Q2am9IYkVkQ25OZUtZSU1CTGFkVjA3Y1RsSmtHVmV0Z0pETEUza2pOS3VuSlo3VENKZkM?oc=5",
-      "source": "Law.asia",
-      "published_at": "2026-11-26T06:41:20+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "US tries to restrict Chinese offshore computing capacity - DW.com",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNbDItUGs1MHYxMjl6MUNVVEdqRWNEUlBZbW5GdDRaU2tUWHlITUhVeVdDTTF6RXYwYnJFU2JvcmNuOVZJc0swZ1NLcXJicjJaRUFfbkdYVC1aT0Y4Z0Y2RkpfcUhPSmQ2LVkxME0za2hqWmxyUmVVRjhVUHZVSHpzajhhMXRwcWc5UWFKNWxCYnUzVnRCdU54QTBfaGZNM0Fh0gGgAUFVX3lxTFBOZEczY1BEcktVRHU3bHVtYXFQeGlhTGVsSV94TERod3FFamRrU0V5WmRRQ0lXNjZjSUlEWGFNaXVSeUdxLUk0a3o1TXJ0NW94bmlmZUNDQ2dsU0p6Nzd2QjZQUUlJYnVKVHVmNXA5T1MxYXNROEEyU0RzVnlIT3RmeEdENGtEWVBkeHQ5X3lJS21JTlhkZHlBQURNUjJCMFU?oc=5",
-      "source": "DW.com",
-      "published_at": "2026-11-26T06:39:16+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Nvidia Sells Top AI Chips to Chinese-Owned US Firms: CBS - The Defiant",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQRGM2RkdFODdwenFJQzFSVGIyWG1SQ2FYTVo3QWREMXU0SGJoOHpVUllQNFNHaWRBa2t0Q2RqZEd4eUVJdncxS2J2WTM1UnFvMGlKemR0cEVwT1Jzcy1WVmhDWHJMcTFOY2hHejRoZHNPbmZZVk55X3BLQjFGa1oyTTVCYW5SVUkxV1dKR2NuaHVHa1k?oc=5",
-      "source": "The Defiant",
-      "published_at": "2026-11-26T06:34:52+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Advanced Economies Outlook 2027 Growth for the few, power for the fewer - Triodos Investment Management",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPYjBieWhDNjU5ZWxmNDVhaGV0N29TekJhV050cDcxazV5R2dKZEM2MDdwRHgtSi1kS0JYLWM5dy1OcUY2MEVVbGJ0SndxZnlfakRjRG5oZTdYOE1wd1ZmUUVfek1XUXE3V1pmX01Uc05tV2ZLeDUxUXNramJQSEV4ZEpvbmQzeFZsdGtfd2tUdmVqeGFwbXdfak5uaVZGeEc4OHFnbG8wbXpjZzBZd1pNMw?oc=5",
-      "source": "Triodos Investment Management",
-      "published_at": "2026-11-26T06:34:33+00:00",
-      "query_theme": "AI与科技",
-      "category": "增长与就业",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Emerging Markets Outlook 2027 Taking on the challenge of wars, AI and climate risk - Triodos Investment Management",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPNTlYMHpvc1RKbFlHRTNOZ1lQSHE4X3ZNNldVRnVzTUFyU1ZIUHhIM2FhdGQ2V3lHSm8yV3R6dHNzY3QzempjbWctMEZTZkE2b3JtWTJNUm1FLU1GQ3FlV1drX240U3NqV0ZnanJuX09VMFMtdlB2Njg5WlMyZWVNbkhneTFsdVpacE96bmZqNTVJN05jRGo1WVgyUGNYbmhvY19oQWtRWGc0Uk9VRVJtT3Ita29uR055Tkhkc1VKTQ?oc=5",
-      "source": "Triodos Investment Management",
-      "published_at": "2026-11-26T06:34:07+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "South Korea’s central bank hikes interest rates, raises GDP growth forecast - Al Jazeera",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPTW9UQ1JfVnlQTzVzV1lDUEhkZ1VzaVVuNnlGclhleUZPNmJjUEl6aUpiQTB4bDhmdFRxakQ4N0s3NGRWOE1vbjhvTDMwY1dqb0w2NzZTQXBRRDJ1V1ZmaVhiaWM5UGtjQ2hIMjBJWVM1a0d1ZTFlWWdfRlFTRTJaZDA4Yl9sZmVvS213OFdpOWxuMnBKajl5RzF1OHI0NlF4c0s3QnAzMmFLeEEtN3Z2Q0xhWV9ESWFFWUHSAb8BQVVfeXFMTzcxaWxLMDRRY1A3aWNxZFFIdGNtNHEzcGR0aFJjME9Xb2NvTWp4NTd6SlZHOUFreldKQUg2R3hJWmxvS0Rsck1WancydVVSTFpMV0hhUk9xaHplUkd6Q01pRkJlMWlWcWFHYVI0QW9LNll3cUVNMjlIM1RVTzRNdkc5ZlJ0OHA2dTZtSmtEdFhkRkRtdmQxZlBldDRxVWtCRzZPMXIwR2FYeVFoMmp2N1FFMlo0VUxKT0VKUG94TFk?oc=5",
-      "source": "Al Jazeera",
-      "published_at": "2026-11-26T05:55:44+00:00",
-      "query_theme": "AI与科技",
-      "category": "货币政策",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "How China accessed Nvidia’s AI chips despite US restrictions - The Indian Express",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTmcwN3VFU3Z0cTlrUFI4blE4LVo1R0tVRmxLal91YnBuclEyUDI1c0ZxS3ZCRno2dy1fRWxSNGVCY0JKZkNuUUc2N2J2WlU2TkJoQjkwbHFiMDhuZEw4TDI1R09BMS1BZzlqWk9PN1RKNlU0VWFHQ2VjRS02andBUF9OajB5VkRlYlpJelZYS3cxdW9UQi04cDc4c1JZLVBFZ1VXLVF2QWV6a1M4VWQxZFY2d2NuNUxHdXfSAcABQVVfeXFMTkR1U0RpWWpVU0tGWkkwbGU1NzBzaC14aXJnNFN3VTNLeHZJMF9aaU5NWHhxdERVUnZGZmRhOUQwZ0JlMzVQYURoM0pqUVowdndIZERuQzh6QlJmTGxfVHZLQkhicFRHaWVmMDBhb1dmYndpUlRSNDFHSXF4QkJJaWJZMU1qa0YyaU9jMVNFY3BfUnA3YTkzVVRSSmY3WXA5S3VvVUVCN1JJNXdRejV2dDRnMWE5dktQY1RXSlNrWTJK?oc=5",
-      "source": "The Indian Express",
-      "published_at": "2026-11-26T05:45:41+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Oil Rallies as Hormuz Mine Strikes Rattle Global Markets - Crude Oil Prices Today | OilPrice.com",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOd3VWcGJsMERhMmJlY09wRFd5czQtNWg3UXNhVWxWSnB5dUhwVjlmM2NpOVBHWW9MV0d4YldGd1JfeXRJYlltTWl5aU9wUUFyLU5xNnlOdFZnU0JoTGhmZE8ycUZ0SzRHMEttVjBlb0pBUHl1cDEwOXI5b0hmZGs1ZDg0b2FBT2NVU3czT1VIR1AyR1VHeGVGWkZjVjBvb3VGaDBwQkotYkRJNUJTU0dhMTJB0gG3AUFVX3lxTE1mR0wtandFNjNmU2FtVTdzZWwwaklKWTM0R3FUb1RmdEp0Q29SclJCUEtpM3VoZ0x1azlZQXY2akdfV3FZbmRYYkVEeC12czEzUkZEZFllX1BaNGstMUo0emp4ZEVGMktESDhueHY5ZnN3alNOdDJJbGxEcHVXamVaeHN2ZEhFeGdKTkNwSFZ2TktneENSdmxhTy1rN1h4clpuNllTa0ZwZlc4OWhjSHdPbmpDMnNkNA?oc=5",
-      "source": "Crude Oil Prices Today | OilPrice.com",
-      "published_at": "2026-11-26T05:18:59+00:00",
-      "query_theme": "市场与地缘",
-      "category": "通胀与大宗商品",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "【TMGM Financial Recap】U.S. Inflation Intensifies Pressure; Markets Look for a Bottom as Gold Recovers Over $150 Following a Decline of More Than 3% - www.tmgm.com",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPRUR2QlZvVTBKV2ZIMFppRlNfWFZMTDRKTk50NG03NEI5V0JLZ0lrVTJJYk1QVzVaUVlTdUcwSUVEVmNGT1NxbmZLeGJLWDZQTGUzS1hHY3JBbFc4UHZDbUl0QkZDRkR1VkVpLUxXanJFRnN2RUpOLWthVlJ4TWdzR0JyZw?oc=5",
-      "source": "www.tmgm.com",
-      "published_at": "2026-11-26T05:15:11+00:00",
-      "query_theme": "市场与地缘",
-      "category": "通胀与大宗商品",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Nvidia halts server shipments to four Southeast Asian countries, FT reports - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOM1ZtZ1FmQ3d0Nk9xZzFmaDNtd3ZURjZ1cm1sWkptUktqcm1aOUc3eWpIYjVpUGoxWGxWd2FjRTZiTzBGRGtaTTA3ZUFsTEJLNk5BV3VfV2VKNHJVbk1mTDJqYkZkdEFPQ09jdzVHRzBHazlKVko5bVp4WDZMSUpUaEpyZk5ZUUUxbm42MjBIRWJCaGZzVXRkNklKN2dfdDRES3RwazQ1UU55Q3Bf?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-11-26T05:09:00+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "AI Investment Returns, Semiconductor Profit Durability Seen as Key to 2027 Stock Rebound; Kospi Views Split - bloomingbit",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBhZXlXS3FxNXZLdjBXbHp0N3BQZmpGVWZMOElWdWFWbmdFbmFNWklBT1RuN2ZGNHREem9DOG1XMXZqdXRPUEJLUDIyUFlENTN2empNNg?oc=5",
-      "source": "bloomingbit",
-      "published_at": "2026-11-26T05:06:00+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Nocera plans $22 mn investment for 44% stake in BitRock AI data center - Beinsure",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBHXy1RYk5MRk5TQnJ5c0xhaXkzcmoybDRubXdnYVlmN0FCcGFiVWE1YW9RcVlwbW10ZEpqWFh2VTNjczJzUTl0bjViSnduSnMtOVNJOTlURFUybDN2YldzUGtHejBlYUJDeERlYUhiaGJoVk5SbUc0?oc=5",
-      "source": "Beinsure",
-      "published_at": "2026-11-26T04:58:58+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Nvidia's Top AI Chips Reached Chinese-Owned U.S. Firms, Report Says Ahead of Huang Testimony - BigGo Finance",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5sZk9Ld29NVFloTzJEbFdyeEgwWHpibkhac3FncTBSMmljal9WZUUyZzJiTzFmVFlpM3RsamZpQ3JCSW1GNHZYZy13TGo3dkQyRlFNS29VRG01c0ZFN0JfemhLaXpUUTF0QVdWU2RtQXktbHhPMVE?oc=5",
-      "source": "BigGo Finance",
-      "published_at": "2026-11-26T04:35:00+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Why Is Gold Price Falling? What XAUUSDT's Closes Show - Phemex",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNMkY1RWROU1BVTFhxSGxxOGtDbHo1QjlKRWR0S1oxMURqa2ljVkJQaGYxaFA2TEV2YXplckdXbFBBbkN4Y19YY0VtUUVsVVBtMFlaVlRLTXd2OXNjZXcxMjB1amFPSWV4Tkt5RDNWN0g1aERuaUdsVlZRYWJmVFM5Rg?oc=5",
-      "source": "Phemex",
-      "published_at": "2026-11-26T04:27:35+00:00",
-      "query_theme": "市场与地缘",
-      "category": "通胀与大宗商品",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Nvidia Reportedly Sold Top Chips to Chinese-Owned US Firms - NVIDIA (NASDAQ:NVDA) - Benzinga",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQXzNjeDU1X1RUMmRpc1o2VkgxejRBRjJfR08yV0xOZXdXblJIeV9INVhyTS0xUFlvRDhwUkQxZ1ZQRzJBMVV0MGgycjJESmlFV0luRGFGSk1VVjNDWnNTNm0xWDdIRW03V0dXN1dSUGFuNGpaNWFVdkU1R2Y2NnpzMlBPOHpiaU1wd0IzVUxhazYxaE1FcmVyWGllcEw1SFVoTTBrMy1RT1NVbm9mdUNyVDJGR1FlVU81VFViTTFucG1SUFNYcl9rZFdUUmU3Zw?oc=5",
-      "source": "Benzinga",
-      "published_at": "2026-11-26T04:22:55+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "SE. Asia's AI drive faces hurdles - chinadailyhk",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBlVEZFeTFtZHBFTTdNSFI5OHVjdVh6WC1yOC1fVnA2anU3cTBiSi1TYmlNN0JYdWN4c1N3TnVobHUxcHY2Wi12Xzcwcm1hZ3BOYkxtZFY4SDM?oc=5",
-      "source": "chinadailyhk",
-      "published_at": "2026-11-26T04:20:25+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Huawei Teases Next-Gen AI Memory Chip to Take On Samsung, Hynix - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOM1BOZHJ2d0E5MXN6cVhHTVdoQm43SHlaMmJsMXlsQVJVeEtEbFVla3B4WHF0clJJV3BmNXctM2Y1SWFEU0ZkZ09FZ2hXcElpb1pqbGxaLXNZQ0djb1F4VFpBVFg3YXNFRzBLWFpmVEMwUzNVMF9XNXI1dUU4ZnBiME5Hb0VWdXlxYnRSNXJTbkZGT1U2Y1hDSV9yT25rT3haSVZVWWl1dG5WUDhRQmJOakRFdw?oc=5",
-      "source": "Bloomberg.com",
-      "published_at": "2026-11-26T04:06:00+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Chinese AI chips to jump nearly sixfold by 2030, UBS says, as Nvidia woes mount - South China Morning Post",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNcVFkdmJnVXo4N3RKXzFIM2ZvZWFON2xURmNfOFNPN0twalpVcnJ5aFVTakUyMGxrT2RCTWRRTVd1N2ZFT2xVWEhIeUI0dWVsZjl6S2VGS2FBLWl6WHI4ZU1xd1J5T2Y3T0Y3ekU4VEt6QTVINjNGLWJUZ0UySWd2Sk5CUXdjRlNiVFhQMUpxclNYdDdKd3dldzRDTUFIalpLTkJaQ19kOGozTFJSV0RpZldfbzZiXzlfZEN4VHRLRdIBvwFBVV95cUxOczRWLVN4Z1Y4ZUh4TGZKUUllUlR2Xy0tSVJlbDNNS2ZWSzZpenc3ZldBMklVWGF3aklncTUtalZtcDBzY3ZMSVY1aFlJcFdMczF3NFJCd2dSdEpzeDhTRUtWc0FIcVBQX1dFRzNOOFBNWDR0TWkta1JsMS1TUzFZeDNCLVUwQXlrZUV0OWlVdTBpZGhWY1lBb0U4QTRGMkFFbHFSLXBYY0c4b0RIZEZDaXl2NHZRVFF2Zl9pQ0lDVQ?oc=5",
-      "source": "South China Morning Post",
-      "published_at": "2026-11-26T04:00:11+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "NTU develops chips for on-device generative AI - Taipei Times",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE56WHJHSjgtZ1lzR2xUdnBRb1hIc2t2SVBIRnVfTHV5ekctN1ZpMlh0V2YwZ3hMMHo0WFNaQkFlQllMUjE3cXU1X1ZUUnp6ek5qUXNfV3RBYnJfUE1nU0ZEQXhxYkVDN0RDd3ZnQ0JsRFZsLU5kZ0FCU1NR?oc=5",
-      "source": "Taipei Times",
-      "published_at": "2026-11-26T03:51:03+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Gold ticks up after hitting 15-month low; Fed outlook in focus - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNczNWcXJNQVFwUEZ5UjlTc1o0ZFE5NVFYZzA2eTJURHRsMmRMRmc1LTZ1TWszbFYyN05QRHRiQ1VIb1ZxUE9pTUs5WDVya1M0WFJEQ3lCN3J0T3h4bndfa1NyZFB4VFFaby1NWVdRRlFZeGlKdDNnYkRZN0c0eFZQY3VSWS11NW9SbUdndElMZk9oNk1kd0haVWh0Rl9VcTA1MDg1REE1cHZXWk14Umc?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-11-26T03:39:00+00:00",
-      "query_theme": "市场与地缘",
-      "category": "货币政策",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "How Trump's newest tariffs could impact American economy - PBS",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE05UWxOeVlfN1Q4d0tYMTh1TkRRUS02Z09QLXdJbzE2aVdXTHhSTXBtWTNGUEl5OExXaUNMY29xOGR6QlFzTnZpV2x3bjFtcV9VSF9Hcng4eGdkczhXVGI0ank0OA?oc=5",
-      "source": "PBS",
-      "published_at": "2026-11-26T03:17:03+00:00",
-      "query_theme": "宏观经济",
-      "category": "地缘政治与贸易",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Stocks Meltdown Spills Into Unlikely Market, Sinking Carry Trade - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQME1DZHA3Z2xzbFRfdDg0WjNOZktfaTRSUHNwQ013U0NDNHYzY3VpNV95NDZHX2p3YVFNU0lpM19iQW12dTJiSkhaWmZEZUkwZHB0TU0xcWt0OXNvS1BTR2x4czRHaHc2QWJwd1REVzE4eEdDNTVQbWJHamNqMEw2aEdzY3Zuemk2WkMwX2hyUlJxSnFHX1Y2eEV1dVVRZDV5WTZycUhEdml1ZEJEUHlyV1FPNlY?oc=5",
-      "source": "Bloomberg.com",
-      "published_at": "2026-11-26T03:16:00+00:00",
-      "query_theme": "市场与地缘",
-      "category": "地缘政治与贸易",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Asian tech stocks jump as bargain buyers boost battered AI trade - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQT3ZFNnYxamp4RElmYnNmcTB2X0pIZEhxV29uSW8tQkliVmZHVERQNElNUjJjYklkU2g2ME5GSWRLOEdsUTROdHhvRFFXX3phY1otc0hscmozVDNGdjhad0xqekltZTlON1dnNVFLSmEtbnZCbEE5Yk9VWXlSNVFMZ21FdjRldUlIR0RPVXVJYW1QS0xadW9PYzBxMA?oc=5",
-      "source": "Yahoo Finance",
-      "published_at": "2026-11-26T03:03:00+00:00",
-      "query_theme": "市场与地缘",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "CBS News Investigation Finds US Firms With Chinese Owners Buying Advanced Nvidia Chips - Open Magazine",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPOUhfVnFLOWpXd3hyYVNld2oyY1EtWlJpalBlR2xfZWtQWlhXTC1LQmtxczYydWFUaWVwS2swV0JJbElLaVlTVjkyWHhnSVQ1T2Y2TFB2OWN4a2Q5YWZYb3VoRW1UYlZFQy1uaWZGTGtLVkVYb1Q1Yk5sZlhHZ1BLQUEzaGJBYUdyWk5fQTZqXzVhVWtnbng0R09Fd1BmY3J6bml3Zjk3Z25UTXo3YjZpV0cyRVh3X2R4RUNSaw?oc=5",
-      "source": "Open Magazine",
-      "published_at": "2026-11-26T02:58:58+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "USD/CHF Outlook: Swiss Franc Surges as AI Trade Capitulates and SNB Bets Shift - StoneX",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQa3U2ZW13ZXRzcXNJWmFtQmp4SElFaVdfaEhvOWJET2h6TEVfQ2NBWEFtbTJIQTRhSkRUa2hLZzZFeDRmZnc3TjBKWGpPUUpUQmVFRm42Uk5ES3RZVXRPckt2ZTAteE1OMkUyS3NfeTZnRVF3TS1hdVhXX2UtcGFCTXZKZ19xV3JjQ3phX1lneEI0am1jZEZSSEplVGNyZUJhWUxhNjZ3ZEpEeEVnc3kxUjZHWllHVnZEZXJpN0tpbkdGc3dxdWxWTl9icFJBTFlsaVE?oc=5",
-      "source": "StoneX",
-      "published_at": "2026-11-26T02:56:33+00:00",
-      "query_theme": "市场与地缘",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Our Rate-Hike Economy: Sizzling Private-Sector Economic Growth, Hot Inflation. - Wolf Street",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQb3ZmaE5RQks0cWUtOTZCRjg0ZkhuckVKbVFxeUp2TFJhbjBzbWx1THBEbnpBd3hUaVg4QWtYeUp5WXpTVzk4RU5PVHZHYjZsVF9xTGloakRRSlpyWGtoVXJZOGMxcl9oa0ZLQjhqUEhyNkRkU0dPV1FWTW4xa0JqZzA4WDFsemx4QUMxVFBhVXNidTNHMmtNaFBPclhEX016R0x6cEJpWXRSamdkSHFJ?oc=5",
-      "source": "Wolf Street",
-      "published_at": "2026-11-26T02:51:57+00:00",
-      "query_theme": "宏观经济",
-      "category": "增长与就业",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Beware higher correlation but nab high U.S. credit yields, fund managers say - CNBC",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOTHg1UVdrWGFYNVhhZ01fMmN6aWhqWWdHYUVKYXJKUUtnUU5TN0FYamxFbHJyTllzM0FRN0NGMGVoQVR3UGhMdDAxYV9zMU9QSUF5cXlFNURuZURXTldBZWFMOF8xeUhrNkFfVy0zY0ZJeXFkYXVWZTNXZXNWeFFQWjNOX095X1HSAYwBQVVfeXFMTW9UbkFlUXFkZjc1eE5LREVGQlhHeDZuQWVJYlh4V2QxRi1qMDVwMEY4YUdXOEpvVDFibGlMaUFRenExZ2xrVGF1dEY1Qjl6UzItM29VNHBCQlI4VS1HMV9SVjhBaTNnT01CLVdxVVhUWUdnX3ZjeGdFa2hyTGV4SHdEV1A5QWxSbUFVMGE?oc=5",
-      "source": "CNBC",
-      "published_at": "2026-11-26T01:34:00+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Billions in Data Center Deals Grind to Halt After AI Chip Curbs - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNZzNtOUdnTHJCQ2FCUGIyOXp4STRoQ2p4NTduYVNjYzF6eGFTUTE4LUFTRUZUUjlFZ0cyWVV0enBBNDNHazJIWTdiZUs3VHg3ckw3bjhhYndIN1g2Q21vcUh2RkFKcHp1TW1NQmpPS0VfQy1uMnBRZ1FTMzg1akN2UlVZUkVqRnh5OHFfWElYNWVnazFfSXV0WTlPclFNOUdEcU9Dbmg3c2xacldjNHpZZjFJYWM?oc=5",
-      "source": "Bloomberg.com",
-      "published_at": "2026-11-26T01:19:00+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Labor Shortages Could Derail Canada's Oil and Gas Growth Momentum - Crude Oil Prices Today | OilPrice.com",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOUDVyZDAtQzRCYnNGbmJvdHBtbUxuLUhfQ0VKb1BiQjZzU29lUnF2eFU0SWRPR05BcVlqOXZ5SVFfS3hObjNWOW5SQUNYQ1ZadXVBTGh2c01GTlRtTm1SOUQ3V09uM3A3RG5sdWVScEYxRV9xQmUwdzNRczV2ZTVDd01zRjJzM0tzSGc0d2FDS05yaXQ5cUt2YVRqcWZiMVRQaEZ2aThDTlhSazFVTUk3U09R0gG3AUFVX3lxTE55NHZhcTRjdWFtZXBqSnl1bl9hNDhpYWtWZWQ3bk92ZzcwTk5famN1SFpHdHY5R0JPSUpaTzdvQUdFd1QyWUpkWmNRR0xJOUoybXlha09GVUNIMUZxY2ZDQl82SU9QS0hwVWNjOHZZaUpBRnY1TXhvWF9RMjYzMVFmYTFLYUdaUEFfdTBCMzJFWEJjc09IZFp4YnVkdC1wMTQtV2JZeUhpb2FMZnpxQTl2QVFWSUhFNA?oc=5",
-      "source": "Crude Oil Prices Today | OilPrice.com",
-      "published_at": "2026-11-26T01:00:00+00:00",
-      "query_theme": "市场与地缘",
-      "category": "增长与就业",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Trump unveils new tariffs over excess industrial capacity - The Jakarta Post",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQTkt1cWlMTnJndU9RRUMtb2k3anc0YjJEdnFDVjRnS1lUWnZLQW5Oa1g3Y0Y4OUtpMDl1WmJxZEZGcUtvMF9mejAtZW5ucHRkTEoxWmxQMVl1eXF0M20yM095djZrbXB2TTFRNERsYTZwUnhUVUt1cG1EWDV1TTkwUnBHZ08xeExmeWRPWmVCMVY0Y0hBQk9Za3ZKcS1hdHV2OUVPbmpDd2hTXzd6?oc=5",
-      "source": "The Jakarta Post",
-      "published_at": "2026-11-26T00:57:57+00:00",
-      "query_theme": "宏观经济",
-      "category": "地缘政治与贸易",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "GenScript Convenes AI, Biotech and Investment Leaders in London as Faster AI-Enabled Drug Design Raises the Stakes for Biological Evidence - BioSpace",
-      "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQSmVGZ05ZcUhmbWxZbVdkTG05X0VQUXZyWFU5eHZtUWcycGxYa1BFX2R0MjRNSmVySTJURlNnajBYNkFrVkpFQVpOTlI4MUVqc3B5cU1kbjdpcXZjNnFGZmhKQ1FydlRCbk9oQ3BZZE5iTW9ySXRhMjlqdGRsSjFza0xQRzBBZlFjVGlwV1M0WGNFOU9zLTdKQ1k2MDV0TVllQUNYYmExZXdqTTlNVnYtNHBMRUhhZF9nZjdfclJGMXpFZ1NkUEYyUGtBTk1rY01OQmVhb1pWZWdDdnVfZGZ1ZXVoNDk0S3U1RVFwOV8yT1NBeFgtRnlEZFpobjlHaVFFUXZPLURySEY?oc=5",
-      "source": "BioSpace",
-      "published_at": "2026-11-26T00:57:38+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Arkansas’ economy growing moderately thanks to data center construction, defense spending, Federal Reserve says - The Arkansas Democrat-Gazette",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSHlSYlM5aWdmN3NfaWJBWGVnZlNHdlczeUozOHpEYURkaTVNeGpWbGZWbFBaYXI0TWtTc2RtNTlEdnZwR3lScGtGcXpBMm42SlRhRkV4NWc3ZW5MdUtDNUZMbUJlc0hLM2YtQzlhZ2xRclRKVHBrcGRSNGFVY2FGYmdqV0hxRW9zY1RyTHFpOUtweWxyLWhjOEEyem8?oc=5",
-      "source": "The Arkansas Democrat-Gazette",
-      "published_at": "2026-11-25T23:40:00+00:00",
-      "query_theme": "宏观经济",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "AI Investment Return Doubts Intensify as Nasdaq-100 Briefly Breaks Bear Market Threshold - BigGo Finance",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9fenh0eDlyWXRNMmhseHV0TmRZNlJQdU43OThFOG5MbEtNX1ZnalUyeFNmUXNRUlZUdUZ3ZENXRlNhNHNQZng5VXpnNVpmYm9xMlozSzY2MnJYaURHVHgxQmlmaUlTOGNtcmdMaG51WVFQOHhSdmc?oc=5",
-      "source": "BigGo Finance",
-      "published_at": "2026-11-25T23:35:00+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "US trading partners’ patience wears thin as Trump slaps on new tariffs - South China Morning Post",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNOXZ3Q2pWZFhFN0xaV0RTcmpzSnRJdzM1UGFNY01jTFpIUkxuQ1dRNnNqY1k2aXpRM29SVXZaS1ZFMFVuNUl2a1Zma0VielRPZGc5d3ZIREpUcmNkUVhodlY0QUtZaUVWLVRuR19lMGFLWDJVc3hvTmIyRE1HYmh3ZjhoTXAtdEZKZU1qOVBfc0RIam9JNk8wcENwVVByX0o3NDJWTklXRG10V3ZpTGJUbzQ5WEc2bEV1Tndsd05wblVSZFltbGt6Mk1zMNIBywFBVV95cUxOaUZpaExpRWZ0cHlRbTRscy1Pay0wLVoyQ3dWcDJmQ3BZR09SMUlRN1FsaUtEd2NwejlGUDNIMWlnbVR5Y1pzWWJjWXdZTEhYdXc5TXVBTTVfNC1rTzR4YktvaGRBbXNYRDFMMHVVR1VUUjJFTF9Dc1k5MkJPRjdjOWdYZkpRLVo4TFNtRkk2SGw4cklDb2tWRi1ZTU1xZS1nbl9jd3dZam5vWloydG44Ry1lTEpDbzBPMXBlN3Fack9fN1JBU3EyNUZlcw?oc=5",
-      "source": "South China Morning Post",
-      "published_at": "2026-11-25T23:30:23+00:00",
-      "query_theme": "宏观经济",
-      "category": "地缘政治与贸易",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Gold Outlook: Dollar fatigue opens the door to a squeeze - StoneX",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNel84SVV6QVBhMmhOVGNoakRndGR0NGZ5SjhUWF9yQnU5UEtCMFEtZHFDUDkyRUY4UTNMczItdEl4YTE1TWhBb0gyLXo0WU90Q0JxMW9qTndFX3BySktKLWtUN0loX3c0a2ZTR3djek5LV3doTGNvRlJVOVJUUDhQS25jcVh3d0ZESUd0bWRzWGNMcFdZRy1rWVNqblRlRk1ic3ZWQ2Fn?oc=5",
-      "source": "StoneX",
-      "published_at": "2026-11-25T23:10:33+00:00",
-      "query_theme": "市场与地缘",
-      "category": "通胀与大宗商品",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "2 California companies are buying Nvidia's most advanced chips. Those companies are actually Chinese-owned, a CBS News investigation reveals. - CBS News",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9MazBWOG43cVJLUGh2S1V6N2JMc0w4ck1MYlVVVnhMLThiQ1lIOTZZQmVzdTBpMzljVVBJbDdNZm1oLXh5WmNNMXZybDl2SmR0dGNld3ZJRFI2NnpXX0R6S3hiWmxfTDhmN2txdFNxaEl4TVU5N0E?oc=5",
-      "source": "CBS News",
-      "published_at": "2026-11-25T23:10:00+00:00",
-      "query_theme": "AI与科技",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "CHARTED: Oil Trade Through the Strait of Hormuz by Country – Visual Capitalist - EnergyNow.com",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQeU1tdWFDbEwyc2R5ZEFYN3Y4Q3czZEZKX2ZMWUZWUjVDaHljOVZXY1dTX1h1LXFMSlNJcGtad1VURWhBaHFPWm5nNmY5YzJDX1B1RU1ISDFKWEs1US1TNkptS3lIYXVyWUZsdUM4OTFzRk8zOU1abWE5M3IwV0dtX2VqWlhBUW5mbERvOVVoU2EyR25PQk5qbk9PNXBfbmZ3NTFlR1hXVVZNUQ?oc=5",
-      "source": "EnergyNow.com",
-      "published_at": "2026-11-25T23:07:18+00:00",
-      "query_theme": "市场与地缘",
-      "category": "通胀与大宗商品",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Wall Street recovers most early losses as pullback in AI stocks eases - AP News",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQdVFZQmxpUGVXLUtXYzR6ZzYzX0Njd0I2bzBVbkJMb2JhcDJkRHJnVGV5eC1Ma0o2djdvZUhROXVpYjRzbTVQUGliYlRINU1kdnJVOXpRd21KdlJYcFQySlR5aWRCc0ZLMjZESjdYOWlrZEpiR0owcTRILVhqNVZZeGtweUNoM21XQndPZEl4Ym1OeTQ?oc=5",
-      "source": "AP News",
-      "published_at": "2026-11-25T23:05:00+00:00",
-      "query_theme": "市场与地缘",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Stock Market Today (Nov 25, 2026): Nasdaq Trims Losses, Gold Price Falls, Brent Oil $91 - Eurasia Business News",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNd2RjT2JadEU4U2dETV94OG43V0ZnZElweC1GeElfVUkzemF2RU5Yb3ZaVDVUeWFmeDhva0Ntb3JrR2NlcmlteWdja3JadnpCNFp3eXRmR0U3Z1JtaXBpLW9NWllTWTJyeW9Sc1lVNFBmS1FVWlgzMnVHdExvR0hrU1liVVNvaExYbWE3SUszRFdSNl9nTURIU3dKei1LU3dhanFmTmV0aTBOOFFxekY5OW5zSS1sX3IxR1R6MV9kbzRCUQ?oc=5",
-      "source": "Eurasia Business News",
-      "published_at": "2026-11-25T22:13:37+00:00",
-      "query_theme": "市场与地缘",
-      "category": "通胀与大宗商品",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "S&P 500, Nasdaq, Dow Forecast: Wall Street Rebound Faces Major Resistance—Bull Trap or Breakout? - StoneX",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOdklPRnp5aF8zbVJaTnU0QUJXNWpVUnJPUjRxUzNoUjNCVjFsVW5mQWpLbWFJMUo2SXo3empTdkl3S253eUZiZzIxXzhwVzlEa1NNNl94X2J1V0lVRDNrTjVncGhNTnlRYktqeXZUbjg5QzF0bFJlRXo1WlBFWnExWEJXTllQRDlRQmZmb20tMjFrX0hnQllORXN4azdVcmFXMnhIVG9EN2lnNWFzNzJhdGZTMGZVUFNQWkplTW40UFJQc1c3NW16WHFpejlBLTVyclN2ZUduSU95UQ?oc=5",
-      "source": "StoneX",
-      "published_at": "2026-11-25T22:11:21+00:00",
+      "title": "Markets & Stocks - FinancialContent",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNX3NaVmRfLVZpQ3VKOEF4MHVOZy1KS2ZMNmZINmx4aWp3QVh4a0pDUjBxUUJ5X3dtalNWd2dRQ2xheTJWUE9qajhMbm9Vb0RBcjk5LUs1VEZjVkdWT1IycHVRV1lOc0U0UmNUamJHajlObk41OTNrSGNKTzZ0RldLNzQzN0tlMWFfT0NRN3RST3hZby1jUlpEOW1mVVB1aUUxRVRGWktMR3ZieEVNS1VVZXJqNExDYmFyb18yeTBsSjBwUmZIVGZFYmw1bTZzcVc3Z3dPbjRSZmk3VDdVODVv?oc=5",
+      "source": "FinancialContent",
+      "published_at": "2026-11-27T07:55:00+00:00",
       "query_theme": "市场与地缘",
       "category": "市场与地缘",
       "asset_impact": {
@@ -995,48 +319,12 @@
       "relevance_score": 3
     },
     {
-      "title": "US economy roars ahead in third quarter, inflation remains high in October - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNalBrRjhRWHdhRDduMzduLU1kN1lGVFpzNFllX0RzdjJXMjdtajRZS1l1dms2MFJFbkhJQmx3Qzgydi1nTTJnQ1JPLUtoa1R5LWZjWjItUXJhXzhoZG51NU9ENzVBQjVSZWFpdHlqbV9PSkVncWtjUlptdXhjd0ZKRXZ6d2Y1dw?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-11-25T22:06:55+00:00",
-      "query_theme": "宏观经济",
-      "category": "通胀与大宗商品",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Rising inflation is setting consumers up for a holiday squeeze - Scripps News",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNcGNDdUdNbHdEOHg4d21Hc0hDNFl4OGsxZUVtd0xPV3NUQ2M2dDh4RURzSE5QY01ndEVGVzRxbm10b1lDTU1nc0hHS080S2k2WWtTOGZCQlIyY0NBZWR3LXRFUnZfRHhHWmtHS0EtRV9aeGtob01JSUtEajlndk50MU1GMXA0a01QalhqbWtYanVZSTVwVkxIeHFhekhZY2dwMGlkSHJYeEhndWc?oc=5",
-      "source": "Scripps News",
-      "published_at": "2026-11-25T21:59:30+00:00",
-      "query_theme": "宏观经济",
-      "category": "通胀与大宗商品",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Stocks Swoon as AI Fears Spur Rush to Treasuries: Markets Wrap - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWjE4Zm9DOUxVdmFFaTlaQVJMWHFaVEVGVy1JcTNEcEc3bnhET2xfaGNCdFlpbXkwS210Tkx0d3JVUWVzbzA4amhwWU1FWGxLd2E0YUJBY1lOOUNlVmlwNF83b3Bqc2dqaWVMTzUwSGFfYWNJVDZwXzh5TGp5YUZaTzZoa0dZenZfalhyelF0UUZwbllhOEZIbWNGc1V3OHQxWlhfV3ZoeGdKRURCS3dTVEFSRnk?oc=5",
+      "title": "Trump’s Latest Tariffs Undercut the ‘China Plus One’ Idea - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQRlZxT2c1ekdQZ3lIOXg3OW1kakF5bnFLMHhYLWluR2EyVUlvSGc0R2d4TmgzSUsyTlRWdVo4M0NLdTU5YmpDbnNWOEpIQWtGSE1ORFhuZE0xaTFYQ3pFR0JmR1ozMnFZc3lyZ0Y2T3dRckRIWE51ZjhnODR5cVlzSFJDaXlmNVpzOUd0TXZBQlJHZ1JSNU5CeG5ZdG9lTEJCTmZQQlZQcFVEWGI3c0E?oc=5",
       "source": "Bloomberg.com",
-      "published_at": "2026-11-25T21:30:24+00:00",
-      "query_theme": "市场与地缘",
-      "category": "AI与科技",
+      "published_at": "2026-11-27T07:31:56+00:00",
+      "query_theme": "宏观经济",
+      "category": "地缘政治与贸易",
       "asset_impact": {
         "股票": 0,
         "债券": 0,
@@ -1049,64 +337,10 @@
       "relevance_score": 3
     },
     {
-      "title": "US stocks close lower in volatile session as AI trade remains under pressure - Financial Times",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNSU4xMm9XeS02RlVfRHptOVoyRXNfa2cxRmxISXhnOFBrVnYtSk94bnVDWklKQzVhODdtbEViRThXVkdIYWw4aUpLME9fc3cxQ01WZ0ZTejdGTXJZdnNESmxlRl9Tb2ZEaElSRExXTWs3Ymg5QmxjZVdZNDdnT3ZNSWV3bDE?oc=5",
-      "source": "Financial Times",
-      "published_at": "2026-11-25T21:26:33+00:00",
-      "query_theme": "市场与地缘",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Nvidia, AMD, and Micron stocks trim steep losses amid jittery AI trade - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVk9mVUxsUll4NmpxRklUb1dFaHduU3ZURXZRV2ktV0pDM2ZMNElPb3RrV0NiS0JlLTVXQXJKNnpTV1JmV1k2NGMtdzNLa0F0c2tsY2xRMmJKZHhwY1dueWZXb0l4VXhWNkl4NmJ6QUlTNjBpZUItN0xkX21JUXJ5WGlUbWdON0E0V2FOT2lGYkozcm9VSjlXVjR3SDc5WWQ3VzJhWm5mb29YbjBQSU1hQURkYw?oc=5",
-      "source": "Yahoo Finance",
-      "published_at": "2026-11-25T21:18:06+00:00",
-      "query_theme": "市场与地缘",
-      "category": "AI与科技",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Oil Up as Hormuz Attacks Counter Recovery in Supply - Rigzone",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOM2VXUmo1NGpPbVNNOXZPZjh6bmJLRDMtT0NaRVF2OHBpNUhwWWZFRUJKSlA4RFZ1bEpXYVlXQ1MxUTdGTDRzNzVyaHdRTVluWVlJVGVNYnIycmJMdWVpTlFGSVpLcWlXWW5VSGRITWZQWDZONnBFejkxd0dCa2xURWdPbFVxVkcxaGxIbExnTElrTEowMVhaTWpfRklzV01aZ29QRzBXbXV1bENiekxlMmNMdw?oc=5",
-      "source": "Rigzone",
-      "published_at": "2026-11-25T21:16:00+00:00",
-      "query_theme": "市场与地缘",
-      "category": "通胀与大宗商品",
-      "asset_impact": {
-        "股票": 0,
-        "债券": 0,
-        "黄金": 0
-      },
-      "growth_impact": 0,
-      "inflation_impact": 0,
-      "bubble_impact": 0,
-      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
-      "relevance_score": 3
-    },
-    {
-      "title": "Can CleanSpark (CLSK) Reprice On Its AI Pivot And Mixed Earnings? - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQVFpXYjFJc19ESFE5aURDbDh2d3pHMzVwd1k5VEZDOXUxeVVtVmF6R1ppV05tMmNVRmQ1eHlGRnZldU9VeXZhQlJ1UE00TlZwdGthLWpwWlJWS3dmazNNX3VlUEMyVWhpMTNMNjUxRFkzQk5wWTZ3VlZUNjQyMWozNFRaUVlJVldFdVp1OG53ZFZvbU0ycFJEYlhZcGhNQQ?oc=5",
-      "source": "Yahoo Finance",
-      "published_at": "2026-11-25T21:11:46+00:00",
+      "title": "Can Semiconductor Demand Sustain AI Investment Growth Through 2027 - KuCoin",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOekFiMFViTmJUWDhuQXpVSGJpMEVGMHJRYW9kWm83UG05dFE3U1hMTmZLOF9GV24zTmtsNjNDa1pLcXFHTTkwRUVpZUtlMkNOUDFaek5NcjJLNFpSWGxUYy1GZkFNX09zdE5pY3lQT1ZXTjlsbHF2dDFSRnp5bmhLNERRbHFtTDRYM1E?oc=5",
+      "source": "KuCoin",
+      "published_at": "2026-11-27T07:29:02+00:00",
       "query_theme": "AI与科技",
       "category": "AI与科技",
       "asset_impact": {
@@ -1121,10 +355,10 @@
       "relevance_score": 3
     },
     {
-      "title": "Oil Futures Pick Up as Middle East Tensions Persist - WSJ",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNT2lmRnNkZk4xMmU5a3lHTWEwV3JfZ2pfUW55aTJUNi04clZpa2E4dDJacWRnQVRjMzRFX3FfSFA1c203SFhvd0tHOTZWTUloNmhtTm91QS1raEwwNWJKaUpaZktCbGlFRzRlMXA1ZTFUVHZKWGMxVWswU0JyUWRSNEtxSFBBUnN2ZGxfazFpTEw2QkJpUC1WUHJ5TnRxaFVSa0VZaFJodmZrUkJZNXY0OEVsYXNGek4wTHp2OEczai0?oc=5",
-      "source": "WSJ",
-      "published_at": "2026-11-25T21:07:00+00:00",
+      "title": "Gold Climbs Over 2% As US Holiday Trading Eases Market Pressure - Forbes Middle East",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPZEFPSUcwaVN2TjZwallqLV9ocW1tYzZHa24wRHlSRzZpbVRRUmQ3bnZfYXdPMDl3N1o3dmQ4YWU0SFk4VXFQVHo0SWZ2dEgyMm5ldWZ3Q2NqQXl0YnZqWEdiSFJZS0R4ak9zMTBtUGwtcVhlbW5CNmJfdnZhd2N0Y2d2NmVFRVlCbE50cnVnNmNwenNLUkNXa3RLbHFwSEE2RW9fdg?oc=5",
+      "source": "Forbes Middle East",
+      "published_at": "2026-11-27T07:16:14+00:00",
       "query_theme": "市场与地缘",
       "category": "通胀与大宗商品",
       "asset_impact": {
@@ -1139,12 +373,786 @@
       "relevance_score": 3
     },
     {
-      "title": "U.S. Rig Count Holds Steady as Oil Production Hits Fifth Straight Record - Crude Oil Prices Today | OilPrice.com",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOc3pmU04tR1N4V3hzOGo3Nm5kTlJQZzE5WEw3UHRESnRNV1pab1d2M3I1RG9GbnF6VE1KY0VqZHkzVVc4RE1QSjBaZVhtbUVxeGFCbE1JeWppZWNmeXVlSnlmRnpRbWRIUFNuXzVYRDF3XzljamlPWmsxYUtvWk9zS2toeHh1RXQzdVZCaEU2ZDUwMEdPbzVLYlRmQmowR3pmenhfQUV3RDRyUE9kVjM5aVNac9IBuAFBVV95cUxOc0oxZ0JsSVZxaEw4Q0F3N1ZBQ2taNkpvanR1NDZRbklLQjVrbUQ3bXhOVEYtSUNGNkQyTk9ESjFEbXFTNmNfalFjZnZNRVFldF96NzBhdU84TGNPcDRWbXpSZEJjSFRVODkwalVrNzBaaUU3dGFKbTZuRlZnLVp0cmxtMjBWbFFoNVhRUFZWdHo1ZFBzRW5sZV92YjNkSEtWZW96MlJqVkdBNEhUUXBqRnZUOUY1QVpn?oc=5",
-      "source": "Crude Oil Prices Today | OilPrice.com",
-      "published_at": "2026-11-25T21:06:52+00:00",
+      "title": "Watch Markets: Equities Extend Recovery as AI Trade Rebounds - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPeU9IemRKYmFqRlZHZmt6NTZ3bDhzaHJQSnBUNVM3RXNwVFhXVFZNQ0F5Wk12djI4SlF5bFd4RlNfdjNBaTFIREZ3M3dNb3lrU0hLNnFpS1cxTk00ZmgybGZjZE8wZmRHUjAzNkxQU2E1LVpzQXVaQVZQc0kwMndsSmtoYkI1VUpJc3RJQ3JGdlFlSkdxRV9Zd1RlMTFIZld0aVE?oc=5",
+      "source": "Bloomberg.com",
+      "published_at": "2026-11-27T07:02:07+00:00",
+      "query_theme": "市场与地缘",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Asian Stocks Rise for Second Day, Treasuries Slip: Markets Wrap - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPd2ZFa0FGcTRjb19HbGxhWGxZc05LTXQ2WUJDTTQzc2hYNGVrbE5GQWtlcERpWGdVZmptNEFUM0ltY0ZobVhoaVo1Qzl4ZTFuNlBDSXFNaG9ETXFDOGdYSGppVVh1cW10TFJ5RG9sVVNYZmUzMHk2VlROMG9yVDM3UzRtM1VSbXlaYWlSN01McUlncVljREZvOGY5UzZaSjc3R3MzdWJUOF9oS3ZLU2c3bmV0MA?oc=5",
+      "source": "Bloomberg.com",
+      "published_at": "2026-11-27T06:59:00+00:00",
+      "query_theme": "市场与地缘",
+      "category": "市场与地缘",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Asian stocks rally as China shares surge on fresh market-support pledges - Investing.com",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQSWJGczA3SXRIVUpJMHhFR3FCRXN2NE9qX3luZ2tCUi12MWFTNGNEay13SGlFUFhvbDNqTVJXT0k5YURCZ2RqZE1UYjZtU2psdDljaEpRSHFlcFAtekVLLTBUeXlJY1ROVEZaYWIwYXctOVpNenBHTDktSFhxUC1MMk1WcW9yM2k1Y2Q0Y21xdnRXeWZSM2ZUQWdwd3BBT09GWHNqMl80eUU4ZkFVZnpINTR2VVV5MnNFVW5iXzBUbFBnMXB2dGtwMUZ3?oc=5",
+      "source": "Investing.com",
+      "published_at": "2026-11-27T06:55:34+00:00",
+      "query_theme": "市场与地缘",
+      "category": "地缘政治与贸易",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "China Telecom releases 285B AI model trained on Ascend chips and MindSpore - Superpower Daily",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOV3ViRGRZRWROUm1pcVJYRHliQ0tyQW90cmZOOHA1a0h5b2hEYUx3bEZqY2g5TWZWbmJKSFhjVlBQTXAxWmlPQi1ZNHNUbDJremN1OWViU0NmTGVjMVoySDgtVnFKbE9sR0RJaXhlOGk5WUpNMXdRUzJsZk5abjhyazNhZnRrbExjbEt1R0dYeXJwWVphbXFnNHR0R3BjREJKNkIyVDBnZDhHanBE?oc=5",
+      "source": "Superpower Daily",
+      "published_at": "2026-11-27T06:40:00+00:00",
+      "query_theme": "AI与科技",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Oil is rising again before OPEC+ meets — can Saudi attacks overpower surplus fears? - Mitrade",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNaGpMUGgwbkFCWTNILVc2RVNmVmwwYnZ3Y2NtNmZLUVh1VDVSYzNEakJlN2V3aExLZWxTYUZfVDhmclA0U1V2b3RkQVViMkJCem5tQkNWU1JlMlN6V3cwdHhudmdyM2VFUTg5MW9wUU5GRDBqazB0ZkJCVEctM0dHd1l1S2ZHMC0yM0NRb0J1bEQ?oc=5",
+      "source": "Mitrade",
+      "published_at": "2026-11-27T06:35:18+00:00",
       "query_theme": "市场与地缘",
       "category": "通胀与大宗商品",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Oil Stockpiling to Influence Market in 2027, Energy Aspects Says - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZnZNWXh1cDVpakh4RUVkNDh0UTRpTVFKTjJReHdXbmstVnpiVllRY3kyc1NZQzA3ZmE1YzllekxUel9RdGR0SnUyRUZnYldJWnI1VER1a1lDeUtrM2FjY0I1UTM3Mnk0bDNBamdwdWxtYWpna0U1eU9BTEl2TGFVdGVkNGtlZWF2WjBkQzlMUEZGMlJHVHROMnE5VV9ZcWZyZVJ4RldsNnc4bENqRUFXV2RPc0s?oc=5",
+      "source": "Bloomberg.com",
+      "published_at": "2026-11-27T06:31:00+00:00",
+      "query_theme": "市场与地缘",
+      "category": "通胀与大宗商品",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "China stocks, yuan rally after Beijing vows stronger market support - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPLWxqTUV2X2RZam8zVGVSY2ZFTzRLQkxKYjdBUVJvR1dIOVlaczllTWRmay1FM3pMOHk5SlBjYkhxaDZ4YmJXbWM3NFpSRDBuWWs3T05QS2hZU2FoVzluTzJTMVFjQmhVS3B3a3ZQSXlOc0JKLV92RHZiNFZoNUlXUW5MMk1ncnpDXzVsMnhpTGx4OWpOVnpCNjlWRlJCa1Bp?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-11-27T06:24:00+00:00",
+      "query_theme": "市场与地缘",
+      "category": "地缘政治与贸易",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Gold Price Crash: Could the 2026 Sell-Off Trigger a Prolonged Recovery? - Coinpedia",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxORzNOZHRpTThqME9Eek5IbUlFanZBQmhBVGRvcGU1N0tSNHhHemg5NWZ5SEhsZ0NyektJbHNMVTdIanJ3NnBya25uQWVIRGJfRWNfYTI4OUEtOFZvZkFGWnJvazJKWVliYjBxQTRTcF9nYlhLLWg1NTYzcWRHRjZ3SUFRSGpCMlhfVlVNaEY3dzZja3B1b24xb2xSSnZjOUdTLWhEMFdRZWM2S1HSAbABQVVfeXFMTm9PV09LLXNrZ0stQXJYcUVJRGk4WHBnZkNqOGczRHhTMFZPSWo5UUdWcjI5UEhpbm9GVWFXR2lYSWhPczhWWklZbzI5a1RvLXdKYk9MRnI2NlAtOUE4dUtxOVd2cUVnVHVtY0ZlZ2Q5MVNYMXZfRVJDNWU1dElKNUlWMXotV3RZbUNlY1VQMGRjWmlZUGdDYU9fdGpOa0kybnlJMUpSSFRQU09IODBidE0?oc=5",
+      "source": "Coinpedia",
+      "published_at": "2026-11-27T06:20:48+00:00",
+      "query_theme": "市场与地缘",
+      "category": "通胀与大宗商品",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Gold price rebounds from one-year low, but experts feel sentiment remains fragile — Check key factors affecting outlook - Livemint",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPekJJd1hEUjM4MG5weWZlcGhVMVF1dEJreUdqZmZ0cGtCVnRQRmt5MFNSUC1HUlVRTEVaV00wYk9LWlBUU2RCYklYREFyZjVOaXVRVHNKdmE5WUVoU1cwVEhiVVZNYzl4X0hxZzl4SzVOc2VObE1NdDBuN1JzdTNheVFsdWJPQ1YzZnZyVUFhLTh2c1lQWC1MMFZMN3c2VFFqaG5OQjYtNzgza20ydC1vUDVDRGxEWjQxbzl3anRoYmw1RURVQ1F3b0NaRVhYbkxYNVI4bWs3QWFxcGtCQjBtWmZSNnFLeU5FUWJ3NHcxOUhjZVg5d0NDdG5hd9IBgAJBVV95cUxPNzZtczZpLWJvRDdROXc1UWxHcHV4VWZfck9UNGdBV3BXa3N6T2Via2x6ZFBhc3hKbXhfVElldjZ4ZGRxQjF2VEZaQTFNcUR4cm9ad0pPMnBISm5hNENPRDZ0R1Roa3plT0w3LVRPZ0swMHJQdWZLZXVZV2E5aWVkZGNBSkswM0ZGaW9vZnotMkdPbzdTOUkwNnRORDBIZ1VXall1am5qWjI2cXFpbnhhSWFWeHpGVmVlWDFPUjdZeE9nZTJzMjdzSHlQVUpyS2VCZE1JUVlWTDIta052WXR2VTlZZzhMeGNPR3B3RDZhYTVuMU1TTjVhOXhBR3QyMlVO?oc=5",
+      "source": "Livemint",
+      "published_at": "2026-11-27T05:44:28+00:00",
+      "query_theme": "市场与地缘",
+      "category": "通胀与大宗商品",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Credo Technology Ahead of Q2 Earnings: How to Approach the Stock Now? - The Globe and Mail",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNeUVrcUktQ0lHc2d4QnBraVJmMlZiMUlEY2diN3RuR2ZUOGpDUkhjOElrRjQwVE12LUFoa01SLURzRmdKdy1kMmJRRW1rQjVKN2d5UGRvVFo3SXVlX1ZSM0FDNG85Z1BlT09Za0RyUG5GZFRicy1QU1ZqWTNsbVZVU1Ezb0lrTDRhQW44UXFXRGh0TE9kQWVXeG5TM09vOHBtQ3hhOGJJczJETVRWczNpUi1ZSEY4YzRyZFgwNDdxUTZ4ai12SUlNcmZObms4T0x6YTRUckQ3Qm9IWDJ2a0ZDUE9PLUJRM3lEM1E?oc=5",
+      "source": "The Globe and Mail",
+      "published_at": "2026-11-27T05:15:00+00:00",
+      "query_theme": "AI与科技",
+      "category": "企业盈利与资本开支",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "South Korea November exports seen posting fastest growth in over 50 years on AI chip surge - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPTkp1LWozY2ZReDhYRHNMVDFCYXFRd0p5UXFrbnltSC0weTB2TUdpaXZpSlYyUXJMbzJDMmRTbU15ajBYU2pTMEpNT2wzT2dlRy1TQzRaZXRQaERGMVlIamV0NWxPVnU1U2t1UzRHZ1ZLUUIzYVVWSWpjb2xvdVZNY1c1SmVfem03dF9kMGZqMnZkZUFCaGFJdWtkVDBEM290NXdpaFlwS0NybmV0Nmp4dTY3N1hlZlRhTmRnYmE4SG1GZ0Vfb05JMnZTaWFDUQ?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-11-27T05:03:00+00:00",
+      "query_theme": "AI与科技",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Singapore Talking to US to Keep AI Chip Access, Deputy PM Says - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNOTF6RUh5d1BiSVM4cDdTQUxicmQ2alpjS2l0V2hQWWUwbGlTalB3dlByQXhkV0hRd0FsSnduSkVHY0J1VFByMFFvWTN6SV9nT1NNYUloME9TLXV1d05Yb3dGSi1sQ19sRTg0eXJhemxPM2xIYWpwaDduTlFhd2daVWpnOWt4SmJEenU3ZkRnd0Y5MV9lN0tQS1FBazYwb21GSGJpNWswd1M2WFRza1Q3cC1R?oc=5",
+      "source": "Bloomberg.com",
+      "published_at": "2026-11-27T05:00:00+00:00",
+      "query_theme": "AI与科技",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Nvidia GPU Sellers Restrict Neocloud Sales Over Chinese Access to AI Chips - NVIDIA (NASDAQ:NVDA) - Benzinga",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQNXJLYnM0R2lJUkVNSmZSN3pZcmhXOGtHLWpjUXQ1bDU5bG9RNGF0UWIwUmtxOGNpLXdvcVUtcXpDTjhma1RPTEg3UWtXUlZ3OTNhNWZPdTBFbVFraE1XaFMwX3U3dnNRRTB3QldNNnAzZ3VlZXVKdDVxbnBCSFZzYXJ1U3ZhRXdQQVR2cElIX2xUeHFhMjJLVWpYY1hLOFRVVDFCX2FXYkZJNFkt?oc=5",
+      "source": "Benzinga",
+      "published_at": "2026-11-27T04:11:20+00:00",
+      "query_theme": "AI与科技",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Gold Price Forecast: XAU/USD Breaks Multi-Year Uptrend in Worst Week Since March - StoneX",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOS0V0aXctMHhmVjRnZXFxRnZyVzRBMUxVUklISmhWTEEtNlk2RWYzbFcxd3kxOXpFUGJZNU15YlN1MkpPOXd4d1EtRVpfeHByTkVhOVNrcGROWnh6WEhWQ2xLSW53QXZVdXdialViRWl2WXFHcUxET1N6cDRkR0hHZnZXLVBJbndPSV9mbkhRZWtsN1ZLWUx0LWFWTkJRNXhwYndoeEZXVmN1MkI5NDNFbWk2QzJzU3VwMVdaLVV2QTd5Sk9hNGc?oc=5",
+      "source": "StoneX",
+      "published_at": "2026-11-27T04:02:37+00:00",
+      "query_theme": "市场与地缘",
+      "category": "通胀与大宗商品",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Gold Price Forecast: XAU/USD eyes weekly gain after hitting 15-month lows - FXStreet",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPMGNmNnU5UXhtOGNEMUxoOW9MbnV3dlBTMVZqUGRsTUdJMElMTWxNOENLSW94TTlUVGJIRUhHT2pYOUJKOENtcXNzMXNzNEFfV1FUbjQ4ckJnLW5iUkRvUVgyMkg3VVVWVFYzR0dyYnhQWTM2Ym9mTVRhNEc5NVlScV81b2xVVmoycjd2MHoyV3JpcF9wb3N0ak9vQXh1cWlLQy1yal9rSy12Rmd6cmMzclpfRXJCbVZuZXhn?oc=5",
+      "source": "FXStreet",
+      "published_at": "2026-11-27T03:48:04+00:00",
+      "query_theme": "市场与地缘",
+      "category": "通胀与大宗商品",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Asian stock markets rise after earlier tech rout - Al Jazeera",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQdGVRWWVjMXZERWVTSkhGRDFoSTFXVE1NeGY4cVdYSmQ0MkQwUFNnSXU2enI2ckEzREZrTmFVWFhMVVNKbnhuc3dQSjB1X3JTN2dNeWNwNGhFcDJmWUYzSnAzeUQyWHlBU21sY1VWWHl6a2RuRWRwdmZ1Y1NtSFpkcGs0RHR0T1RuUVJZREtCMm44RWNra3FyNtIBngFBVV95cUxNZUR4RVgzSXFQeEp5WktydzV5NjF4eU1XblVwdVRnUEh6MEZ5a1hvZmI1QmVuM0VaQkd2dVpQRGhIZ09IeEp4ZTl2WHpfNVIybjJ5X1Z2SElYUzl3UndYNkYyME5rNHoxeUt5Tmd2QVJud3FDb3p5Vk1MRnJRc3l3bkZ0eng3ZzUtVVZuSlVmNUdZMzVGWDZEYmlYWVFaUQ?oc=5",
+      "source": "Al Jazeera",
+      "published_at": "2026-11-27T03:46:18+00:00",
+      "query_theme": "市场与地缘",
+      "category": "市场与地缘",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Gold rebounds from one-year low as AI jitters ease - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOYW55b1BZTkM4emFaZmljMEIzZlBhd2duLWJnRlpMaVA1UnBMaXpEQTdYU0JQUF93QWRkMEV0ZHlaUFhJM3JwTkVLSFNQcDhJSW43VEJ3ME9uQmVvaXpaVkV6eG1CWnBISXFncTVTQjI0NElBcUZDTXlNZEw0S0RCSGxFa25EX29sYzJVZHJmREFnckNW?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-11-27T03:28:00+00:00",
+      "query_theme": "市场与地缘",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Chinese-Controlled Firms Used as Conduits for Nvidia’s Advanced AI Chips - Businesskorea",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBsQlhVX3VWTlFiNjl4RUh6T2h4MDVoNmptUl9oYzZsNGtPZ1F0VUVmRThzc25uS2c5b1NFbk52Q2lKcVM4bmJzMjNzc0VsZWtxRjlEcFhBakpEZVBvZW9iR05nYVJqSy01RjJtNVNRODZEa2kt?oc=5",
+      "source": "Businesskorea",
+      "published_at": "2026-11-27T02:59:58+00:00",
+      "query_theme": "AI与科技",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Taiwan’s AI boom thrusts nuclear power back onto the ballot - South China Morning Post",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPX3EtZXZrYnNNRTlrUWtNem5tQnhhUUw3eHBSZE0yNDFsQzZJakdhTG9uZFQ0YWVvWWU1b1JBems3Sk5TWkxwMW0xdXF3UFZzRnQxSjlIYmxRN2hMY1JWS1RRMkNvUklxVHBZVjBqblFaSEw3M3E3YVJ0Q29lc2FINVBqT1l1NjNSV3lEcFgzd2JhQk9JdjlqRVBjRVViSHhZcG54M0pkSm5FS0RlR0l4RVFzcVMzTzFleFFSQkU4YzI1M25ad0lZX3NB?oc=5",
+      "source": "South China Morning Post",
+      "published_at": "2026-11-27T02:59:14+00:00",
+      "query_theme": "AI与科技",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Rupee rally stumbles alongside equities on tentative AI trade comeback - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTVpnbGF5MDlLb2hLcjBEWnM2ajc3TkQ0R0tmYy1ZV2lMU2NpeEMtdG95djVVcDVFY3dZMmxRSjFPT19sWDJNeDNCcTJyLVJYelprdFNIdkNOQTV0NG80VjV3bTVkYXhBb3JWY2ZydEJsbFVMUll0Q3lkZVAyWWkwY0NNV3lVcll6YzVqcDU2SGZma0c4cm5WR2ZSLVlTekx6LUgwUGlWTWNuMlBXeEhrQTIza3Q4TTBC?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-11-27T02:47:00+00:00",
+      "query_theme": "市场与地缘",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Nvidia Halts Sales to Southeast Asia as U.S. Tightens China Restrictions - The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNSHM3RHJjQzd5X25CS3B2YkpjVm9fa092SkJjUmlWLS1xRi1EaFZNam9wTi1lbUpmTXdPeVRaYXdjM2hnT2dLenQyQXVtOHZzcDJ5SkZSeGdlS0ZCZHMtMUNfclhqT3VJVUNmNy1yUmtNMnlnRkhvd1ZWV2FKdVQ1QmtB?oc=5",
+      "source": "The New York Times",
+      "published_at": "2026-11-27T02:45:41+00:00",
+      "query_theme": "AI与科技",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "OPEC+ facing tricky talks on 2027 output and capacity targets - The Japan Times",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5jX0EwaTlETjNFcTZ2aHhDOHNackF2aWVaMGRwNWl5V2lIZWxDZjl5RjdZTWEzRUZIbWJVeDBQdkpqanl3T3VxWVlWLWszQjcwSzhSRklHSUg5U3lrWW9yRThlazRRZmlLd1ZHWEJJZTVUUWQ2aHZEWktVcUY?oc=5",
+      "source": "The Japan Times",
+      "published_at": "2026-11-27T02:37:00+00:00",
+      "query_theme": "市场与地缘",
+      "category": "市场与地缘",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Oil Mixed as Markets Track Mideast Developments, U.S. Inventories - WSJ",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNElnc21mUVJWTGEwdHJtLW92M2loQ2dEUW1majlOZzhqMThGeTdYUHJiS2xfSEFIY3JQbnhZdUJjV3VtVG9HYUdYY2JaU2M0bmhIU25aQkNPa2tmSlR1N0VGUlNQekJlMEtHS1hYQWZZYmh4WXFRYndQTzNNdlFkMm1oU3NiS3VhaWw0NVFObVktazlrR0dLamM4Uy1wNkkydmFSS1hOa0pIMmdjUHR4dzc0VkZ6SjRqa3RPXw?oc=5",
+      "source": "WSJ",
+      "published_at": "2026-11-27T01:48:00+00:00",
+      "query_theme": "市场与地缘",
+      "category": "通胀与大宗商品",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Records: Alice Huang-Linked Firms Listed $270 Million in AI Servers for Chinese Data Centres - Politics Today",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOdGpCTDFaVFNBQzE4U2ZSU2xjSHFUblVpSHUyOGRFYVozWVN3Vm10ZjJOLXNfSnEzWkNqR2hReW1rWU9LRE5kUnRHVkFiZjRkUEc4TU9zYWxpR0ozQ1JyNlRKcDVzb3M5VGF3Z3BFYmpmc2pfNExuQlVtdUNoQTc4VG9kY2pheGtBaERfZTYtanNtUTRMaWNpeDRhZ2x2NGZBSU52TncwZTBOYzlwV1RzVXFHZHNlYm03?oc=5",
+      "source": "Politics Today",
+      "published_at": "2026-11-27T01:27:46+00:00",
+      "query_theme": "AI与科技",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Hong Kong SMEs urged to upgrade themselves to handle new US tariffs - South China Morning Post",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNeFBYcXNuOFhHaFJBM0I3NUs0SEtCQkNQTWc5WUk1bFl2enVocjZ2QWwtSmZWQURfOEhLTms5aHFneXlKY2xvVHBJTkw4b1Z2Tk1halJ6dVAtUE5SVHZEVGJmRDhOQkJsbklKck9mWjJUX2luY29Mc2pYb1B1WU1TenZGRjBtbi1sQW5rallZUm1Oclg1OEdKY3c2RW5JS19YVDBLRWMtQ2xNc3pWZEZBUnIzd0g3d2N4TmVjRkEyTzBhZVpxblNUTHRqUlh6RjFUajJZQ2RtMU5KZVl00gHcAUFVX3lxTE9KSENsaEVRMU9aSmpFeGxJdHVCRE85YWFOc0paZVlUdllaRXZDT2NnS1IwMWFoQlJFM2FDVWhsTndEME84UG5yRXA4UDNYc29LanROVG9sLTRrUGJFYkF5TFIwcGVidEVfQkZlTE16ek9Pd1dSbXVvSkJJRnhQQlNqM0dUTWVieFF4d0VrYzVIX1JlUWpwVzJuSVhXNklqOVNwMUlPZnNrdnhLQ0lVaVN3QS1CSEF0R1VrejBJcHhuMk9TV1lkZ0Z2UGlMRWJtTlpVRWhPc3l0UEVnRE8?oc=5",
+      "source": "South China Morning Post",
+      "published_at": "2026-11-27T00:30:05+00:00",
+      "query_theme": "宏观经济",
+      "category": "地缘政治与贸易",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Trump says Wednesday's market had him briefly 'concerned' before stocks recovered - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOWHRXZnN1TmZVRDJ6VUJtNjhuRm85eGlQVmdGNGQ0SC0yeHlPVUlKSksyLVNZa0VqRGdqUWVtaW1oNHhjQldDdHlKYnZ0TVgtbkpEcmJfVEcyTUxnNkNYeEdaYXlWUmQwcnhyLUtrUERoYnhIdnVxV3lFeUhza21Wc3U2WW9yd2loWmpxeXE4SG9OT2Rlai1reWtSemRkYnlBZndLaFVNOHJHeDF4ZkVmckpqSzZSbElNZHpfdUFLTTBsOW9C?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-11-27T00:25:00+00:00",
+      "query_theme": "市场与地缘",
+      "category": "市场与地缘",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "From satellites to AI chips: Global space startups turn to Taiwan for growth - digitimes",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQX1lKdFZ6N1pFT0oxUGxiSXk4M0l4OS1SNnV2S3hpNkZYN0Rob1BCOFJ4ajBEalFWazdVUUg1RXR3YjFHNkJHampqaEVQUlV0Smk3eWxVbDR0YzMySTZyUXlsSzNHYlc4aEpSaTlmekxJRWNqVW5LaFIzZUVIaGIxdHVpYk1Yam5URHlmUA?oc=5",
+      "source": "digitimes",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "query_theme": "AI与科技",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "NASA Wanted a 100-Kilowatt Reactor on the Moon but Is Settling for 20 - Crude Oil Prices Today | OilPrice.com",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQZG5mUjlkSjBLYnBQekZjQ0QxQ0p5cnFZcWVxb0N1ZFRlbGtNWlVfQlFDWTNYZWp0eUtJVVRIdzRnZ1p6U2hWa09pT21yeHBmbEpIcGdOMHZfWXE1UFlBOTJ0LW5GUG1vZ3F4UkNBWkJtbVk1SjNxMUE0SkpieDljd0pNVUU5WWJqOTdZX3lCZWVSMDlGSVFkek9IeVowQm1wYlJkY1VHSlZiRmVYbGpJR2RPdmdpTE1XUkllR0JuamwtUV9seEVZ0gHMAUFVX3lxTE5QRk85bGVWWkRLeElSQUk3X1gtVXk0emNtY2Z2RnJvN2VWMmRNTHVtZEhkQWg5UkJ1UXRpODFoakZUeXB3WHJERlRhdEdlaE9PMXg1d2swNHBsRHBPcGFCUW5Oa3haQ1NCR0F1ZEhLUXgyeWtaUkFMTXFGQU15bWx3UHMxR00tdFBBb3NXTVEzb19IMGRUeVFrcEM4MUh6Tnh0ZTNIeHdnbFVscERIUHlNc191Qm9RWkVjM3kwTXkwZExzWU5McE5kMDhpdA?oc=5",
+      "source": "Crude Oil Prices Today | OilPrice.com",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "query_theme": "市场与地缘",
+      "category": "通胀与大宗商品",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Watch Watch Stockpiling in Oil Markets in 2027: Energy Aspects - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNM2Y4cm9WcGl2NWRYeUp6ZU5MNFdHWHFhLTV2UFlUdUZWdDhOODlVWHVqOEtRVzY2VHA5ZWo2anBCQll1N3dkTDJORXo0ZXN3aFFDNmpJZlktV2toV0ZrLXNyaWtINE5MeENuTzNYLWllMXlRdEZzSWdFcllkeFJEaVlDemxuNDRNR3RXVC1lNEV1bVFSMTQ2c2ZNZUI3ai1rYnVvVjBOb2Q5d052aEF3?oc=5",
+      "source": "Bloomberg.com",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "query_theme": "市场与地缘",
+      "category": "通胀与大宗商品",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Ukraine's Strike in Benghazi Threatens the Deal That Keeps Libya at Peace - Crude Oil Prices Today | OilPrice.com",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOUW1XTFowclRtZlhSQVdqYVFlOVQ5bTNLRjQwX3lqU2FZRVJmUzV2endmVWg2cnZEN1NvR1pEUUpZMkk4eVpXNk80dXc0Vmd1SkJQYTlSTXI1RnJTMlR2NzJWc1RETTRFTjlJTkJ1dFQ1amQ1TUthSGhVX1h3NllhZHozZDNVY3A4SlFZdEhRdy14ckNPbXRxTW9tM1BZSlBBc2k4emxEdzRidDFkc3VwYkZmQW1JNmM00gG-AUFVX3lxTE1KV2laNFZkRVk1S2lQeXlBeGEybl9hYUtSbGZWUXZRdHpULTN4TEs1ZVljbmFkWEwtNzhWUnJoRVlHalRMSEhLNDhCLVA0X3o0MzZyTks5aTlKWFhwb1IwMVlLYjkwc09ISnRObzlyQ3hrOEJwOGJTVXp2bkFZTlBjX0xuVFRUazh0dU5KMmFfd1AzVGx1dFIzOElGaFhVZ2hDNzdVT0xDUUFfNFNJc1AzWGRfRXVZMEM1dnZ3SFE?oc=5",
+      "source": "Crude Oil Prices Today | OilPrice.com",
+      "published_at": "2026-11-27T00:00:00+00:00",
+      "query_theme": "市场与地缘",
+      "category": "通胀与大宗商品",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Huawei pitches Ascend AI chips to South Korean customers - digitimes",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNYXJNTnJRbmtOVlhZTGIxQTgxWjRLdjdkYmZ4NWtTUUd6dUNja21PWFkyTV9xMTN3UWFoMmtKTG8yYjNfWU9HZU0wUE1JNnE0VFNhd3Q1Y0lJbjFfdS1Ub3p6RnVGazk1b0VhS2xsRWplaU5VWnZtU0MzX3pEc3FXb3p1WEE5NnZSTFNN?oc=5",
+      "source": "digitimes",
+      "published_at": "2026-11-26T23:57:02+00:00",
+      "query_theme": "AI与科技",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Jensen Huang: How the Nvidia scandal exposed the risks of Asia's big AI bet - BBC",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE51TDBpUzhfN1drWDJYSTJWWE02Z0REZmJ0emFrUE1ldXU5X0JQVTlqOVNHUTdZV2g2RS10SmliRnJWNnNZeTcyYnlFQ0cwbnNkVVNvR0Jqdk9jQTQ?oc=5",
+      "source": "BBC",
+      "published_at": "2026-11-26T23:08:12+00:00",
+      "query_theme": "AI与科技",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Nvidia's Most Advanced AI Chips Suspected of Leaking to China Through Chinese-Owned US Entities - BigGo Finance",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9BUU9hSVRLUHZMQlVEaGp5WHc4MUdENHJPVmJXSzZic3ZxNTA2anEtT3ZoOE02eGNFZDRJaGJFQXdFd2VkbTgxRDdOMDlLOTA0dHJoZUY4bkFhVXRDN1JqaUdqREt3Q2wxSWdDWHVZbXZmenFHV2c?oc=5",
+      "source": "BigGo Finance",
+      "published_at": "2026-11-26T22:25:00+00:00",
+      "query_theme": "AI与科技",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "The Next Big Clean Energy Bet Borrows Its Drilling Tech From Big Oil - Crude Oil Prices Today | OilPrice.com",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWkdaTkpBRFp0cDVhdDUzemR4dXMzWUNUcjJLclcwWU9wMnlFMjBPbXN3QWVSdDZ1dEZPNUpWcWxJWkdhSXdRa3VnVkRCZWwzSUdmU1B4d0xyc24tY0N3dlFaNFp5NGRyelhINmtqdGdXd2ZGWlBEdVVpMEhwdTl5NmhqYV9WZUlSd0tJQUNkY2lkWVBadE5hMUMzdmhXNmo4WmZGRl9NcU9pMnktanVEWE5sNVBQNjDSAbwBQVVfeXFMTjJXZkVKaGM3TUNaNWVvamJ1R0tjRXlFOHlteVFNdWt2bkxkdzJrZDdIV25VZmZweEdJYjBtNC1OdFU5U3NzdU8yZjRDMWdZUUp4YXJ2OWpmOU00LUxUYUx1SFFlWjJsQ0J3dGFhd2xJN0xZVS1MN2RNOWMwbG1STDE2ZktqS0VvMXBGblNJZTg2Y1Y3dXFLTVlLVHNWeDBySDVrUE9FQVVfTnR6YkVrbTRUeGQ1dllFeVZZbm0?oc=5",
+      "source": "Crude Oil Prices Today | OilPrice.com",
+      "published_at": "2026-11-26T22:00:00+00:00",
+      "query_theme": "市场与地缘",
+      "category": "通胀与大宗商品",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Alphabet Confronts Growing Fears Over AI Investment Returns - FinanceBuzz",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE81WnlJdEVvcHdmeVZWYjZXQ2xGbHZWX0NZQkczeGNlRmlZRTY1Ri1qa0lvMC1sVklnU1BtYXZIUVBzX0ZvemVvSnJtdnJuY0MzUW1XRVhDTUtxNS11RmR0c05WNHNPS0RkWjRYTmNn?oc=5",
+      "source": "FinanceBuzz",
+      "published_at": "2026-11-26T21:20:38+00:00",
+      "query_theme": "AI与科技",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Trump demands investigation into GDP data revisions - Axios",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNWVlCaW5mTVRqakpXMHNGRVhybk5hTFZTSFVyRGlQbUJ4dU9yQ0Znam1ua3JGdVBubXhXanNtVVNzUExzeTZwTFpqMjdVZmVVbDZCQmNZbGlucFRHaE5zRTVkRkdBQk8ybkdaNjdKN1hKSVhWdXIyNlFCcGd5X3A0MA?oc=5",
+      "source": "Axios",
+      "published_at": "2026-11-26T21:11:41+00:00",
+      "query_theme": "宏观经济",
+      "category": "增长与就业",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "California companies owned by Chinese firms are scooping up Nvidia’s most advanced AI chips: report - New York Post",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQc1NqSGpiN2IzRzMtNnFlTHg0QVg1Nkw2UjRvUVlGY29oMnV0enQ1ZndsNElEa2ExT2lfSWVhMlpBMjlvb3FxQTFRU0NHTVRiem9IYTJkazNSY3FIRGwtb1VhVVlzSTJZbmxpOFhVZXhwUXBxT0pCaGRuckFyTEhJdXVNd3laczhTWS1XeXk2VWpiRVhIaTJCLVI0cmFuc3YtQW85T0lJRDM5TFlXOTZERGEwY3ktUQ?oc=5",
+      "source": "New York Post",
+      "published_at": "2026-11-26T20:41:00+00:00",
+      "query_theme": "AI与科技",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Nvidia sold advanced AI chips to Chinese-owned U.S. firms, CBS investigation finds - Superpower Daily",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNREFSYzBBenpwOHhXN1pnU3NXOFAxMXJRN3gyXzNyLXpiSDY2ejRwT3NESDQ0b19FdDN3cDR1TTBNTVotMlFIZ1psNWZuSWEtaGxmQk9QYWlkMWo3RW9za3BxdWx5dTctbEVtREE2ZEctS0hTTnJybmhqbThLVU1iVk95SnRsaGQwWWJNZXRrVF9CTEVTdHp5cVpTeHI4eVpZcmI5NGJ5SG9sWnFJa1RLNjhuUGQ?oc=5",
+      "source": "Superpower Daily",
+      "published_at": "2026-11-26T20:13:29+00:00",
+      "query_theme": "AI与科技",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Can AI investment give RegTech firms a lasting competitive edge? - FinTech Global",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQMENhZUs0WHhjUUJHV0x0VlhFcVFmTktjVkVLeU8wWjZoSnF6emlKVmNCNVRfeUpwMnV2TmthMHVKbWxGci1xRjNpYjQ4cm8zbE5TNmo1NlFfNU4tN3hSMVRhU0xVUmRyUUc3QWRNOGdrczZkVEJMdEFMVldsdnF2RWZ0N3VKVVNza2RIWTd2emxURmhPSjRZeVJhcEVHRFE?oc=5",
+      "source": "FinTech Global",
+      "published_at": "2026-11-26T19:49:46+00:00",
+      "query_theme": "AI与科技",
+      "category": "AI与科技",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Gold Dec 26 (GC=F) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBCLWFGVVBHUGF5Q2c0b1o5UTFKT0M1RWtfQS14aDl1SDdPR2t6eHFLQnkzbWU3MFhGTHQ1Mk1tWmpjVk9zYWpvMGRKVUhmeFk0NFhoUg?oc=5",
+      "source": "Yahoo! Finance Canada",
+      "published_at": "2026-11-26T19:29:18+00:00",
+      "query_theme": "市场与地缘",
+      "category": "通胀与大宗商品",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "EU-Indonesia trade deal promises new market opportunities, but challenges remain - DW.com",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNYnUtOTZfYW5XOFVTSDJoU1RrTElOSEJNUTUwckw3eXpLbENjVi1QbUtwc1ZsclUwSWdBZzdiV1RDX0hld0RuWUFfVnVNX0xMUWN3eWZKY09Da2h1TXRHTUhpMEk5OGhHdFpudjUycnFWeXpYb3hTeDZCSmhwOHBMWlRORFg3ZGZLT3Y2VHdIUk5XQmF6MU03LUJyN2PSAZwBQVVfeXFMT0hJVGZqMW8tdS14T0FBbm1lcE12ZXpYV0p4RHJTSVFBc0pwbTUtYTZxb3BrNVVqS3Azdi1Rd0xCelpmcENPeld6dzlvcVEydkl3Z05hU2Z4SnlhM3lILUZWQmZ6YkUwY1A1cHhyc2xVZTltWlZWT3BIXzFTZDVwUU9wLW1hZ0lUMWVROG1fLUt5LU9KNXBKdnRIQlVy?oc=5",
+      "source": "DW.com",
+      "published_at": "2026-11-26T19:16:54+00:00",
+      "query_theme": "市场与地缘",
+      "category": "地缘政治与贸易",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Despite market disruptions, is an oil glut on the way? - Marketplace.org",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQdXA5UTk5UFpIc2pxUWo3SmNiVTlFd0JNblJSTV8xRTBKQ3RNM1RHckR1ZnpHamFmSHQ2TW83VXNNNG5QM19yN0ozalRXalBHME5VMEJxSVZvalZFN0ZXQldOTXpFMngxY2RYeTk2aDYzY3hwOXkxbVZhdmRHQW83Y2F0RExFTXVtMFBJ?oc=5",
+      "source": "Marketplace.org",
+      "published_at": "2026-11-26T19:06:00+00:00",
+      "query_theme": "市场与地缘",
+      "category": "通胀与大宗商品",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "What are tariffs, how do they work and why is Trump using them? - BBC",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBweHdveUp5S2F0aGJwSEs2U2lOMkF6NzRNZTd3bEJUdTQwVjhRX0pjZmFzZ25hRzk4MHE0WW9KVkEtUjIxRUNWbXRzX3pmd1A5UWhyaE5Ja1ZWdw?oc=5",
+      "source": "BBC",
+      "published_at": "2026-11-26T18:54:51+00:00",
+      "query_theme": "宏观经济",
+      "category": "地缘政治与贸易",
+      "asset_impact": {
+        "股票": 0,
+        "债券": 0,
+        "黄金": 0
+      },
+      "growth_impact": 0,
+      "inflation_impact": 0,
+      "bubble_impact": 0,
+      "impact_summary": "对股票中性；增长影响 +0，通胀影响 +0",
+      "relevance_score": 3
+    },
+    {
+      "title": "Kazakhstan boosts AI cooperation with Russia, which is hungry for advanced US chips - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQUmRrMnRZNThoLUtNVGFhaXJMeG1NaWZ1YXVxS1l2UkczbFZJcUxUWFJSQkF0RlJiczJwQkFPNlV2RDFRaV9DdlVXbFRKb0ZQSFQyODNTZ3Btdy1nOGFfVzJCdzI1cHk4dm12ZDdLYmZOeDVLQ0VlUnNucm1JNHdsdnFZS3liQTVxTVg4MUlaOEJGSG13d2gyV2ZiaUdFWkF2QWdhSEhuZ08yRktJTC1pZDJMbTQ3TmhmLVZwUkZrSVJUenhjMTVrM0tSNA?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-11-26T18:48:00+00:00",
+      "query_theme": "AI与科技",
+      "category": "AI与科技",
       "asset_impact": {
         "股票": 0,
         "债券": 0,
@@ -1162,8 +1170,8 @@
     "RSS只保存标题、来源、时间和链接；未抓取或复制新闻正文。",
     "突发事件可能在多家媒体重复出现，系统已按标题去重但不能保证完全消除重复。"
   ],
-  "deepseek_analysis": "# 宏观资产配置研判（2026-11-26 08:06 UTC 快照）\n\n## 总判断\n**中性偏防御，但内部信号明显对冲。** 规则底稿给出股票 -0.1、债券 -0.04、黄金 +0.03 的轻微负面倾斜，增长与通胀均被判定为“中性”。然而新闻簇呈现两组相互抵消的力量：一边是通胀黏性（核心PCE 3.8%）叠加地缘供给冲击（霍尔木兹海峡水雷、油价上行）推升利率与通胀风险；另一边是AI资本开支与出口管制的信用/盈利担忧压制风险偏好。综合看，**“通胀上行 + AI信用裂痕”是本次快照最值得关注的双尾风险**，而非单一方向趋势。\n\n## 主要新闻簇\n1. **通胀与利率重定价（偏空债券）**：核心PCE加速至3.8%，市场对“加息”而非降息的押注升温；韩国央行加息并上调GDP预测，显示部分经济体已转向紧缩。金价先跌超3%后反弹逾150美元，说明实际利率与避险需求在拉锯。\n2. **AI资本开支的信用面裂缝（偏空股票、偏多债券/黄金）**：软银CDS升至516bp、四年高位；Swiss Re警示AI投资热潮抬高保险公司风险；WSJ讨论“AI bust”情景。这是从“估值担忧”向“信用定价”扩散的信号。\n3. **AI地缘管制升级（方向不明）**：英伟达暂停对四个东南亚国家服务器出货、美国限制中国离岸算力、芯片经第三国流入中国的报道——既压制供应链收入预期，也强化“算力稀缺”叙事。\n4. **增长分化（偏空股票、偏多债券）**：美国“非衰退但民众体感衰退”、阿根廷进入衰退，与“增长仍强”标题并存，增长信号确实中性偏弱。\n5. **地缘供给冲击（偏多通胀、偏空债券）**：霍尔木兹水雷事件推升油价，是本次通胀信号的主要上行来源。\n\n## 股票 / 债券 / 黄金\n- **股票**：轻微承压。AI主线内部撕裂——期货反弹（“AI trade rebounds”）与信用利差走阔、出口管制并存，属**高波动而非单边下跌**。规则 -0.1 与新闻簇一致，但需注意“AI反弹”标题是抵消项。\n- **债券**：偏空但幅度有限（-0.04）。3.8%核心PCE与韩国加息是主要压力；但AI信用担忧与增长分化提供避险买盘，**收益率上行空间被对冲**。\n- **黄金**：轻微偏多（+0.03）。通胀黏性 + 地缘 + AI信用风险三重支撑，但“加息押注”与实际利率上行是明确的反向力量，故仅小幅正贡献。\n\n## 经济周期\n规则判定 growth -0.04、inflation +0.02，即**“增长中性偏弱、通胀中性偏上”的轻度滞胀倾斜**。新闻层面：美国增长“强但体感弱”、阿根廷衰退、韩国上调增长并加息——全球并不同步，**不支持统一的衰退或再通胀叙事**。\n\n## AI泡沫影响\n压力评分仅 0.02（低），但新闻簇的**质量信号重于数量信号**：软银CDS四年高位、保险业风险警示、WSJ“比互联网泡沫更糟”情景讨论，说明泡沫讨论正从股价层面渗透到**信用与系统性风险层面**。这是本次快照中“规则评分偏低、但新闻证据偏重”的**最大预期差**，值得给予高于0.02的关注权重。\n\n## 未来24—72小时观察清单\n1. 核心PCE后的**利率期货/加息押注变化**与美债收益率曲线反应。\n2. **软银CDS与AI相关信用利差**是否继续走阔（信用传染的关键温度计）。\n3. 英伟达出口管制的**官方确认与范围**，以及黄仁勋证词内容。\n4. **霍尔木兹事件升级与否**及油价、运费反应。\n5. 黄金在“加息押注 vs 避险”之间的**方向选择**（是否守住反弹）。\n6. 韩国加息后**其他央行是否跟进**（紧缩扩散信号）。\n\n## 不确定性\n- 规则底稿的资产影响多为**方向性先验**，与个别新闻（如CNBC通胀标题给股票+2）存在符号冲突，说明**标题级情绪不可直接加总**。\n- AI泡沫压力评分（0.02）与信用市场证据（CDS四年高位）**明显不匹配**，是本研判最大的不确定来源。\n- 地缘事件（水雷）若被证实为短期扰动，则通胀上行信号将快速消退；若升级，则滞胀倾斜加剧。\n- 多数标题为**单一来源快讯**，未经交叉验证，不宜作为因果结论。\n\n*本研判仅基于标题、来源、时间与规则底稿，未阅读正文，不构成任何个股买卖建议。*",
-  "deepseek_analyzed_at": "2026-11-26T08:07:06.100570+00:00",
+  "deepseek_analysis": "# 宏观资产配置研判（2026-11-27 08:16 UTC）\n\n## 总判断\n**中性偏防御，但内部信号相互抵消。** 规则底稿给出股票 -0.11、债券 +0.13、黄金 +0.18，AI泡沫压力约 0.0，增长 -0.12、通胀 +0.02，均属“中性”区间。综合新闻簇看：AI叙事出现“信用端裂缝”（软银违约风险四年高位）与“价格端修复”（亚股科技反弹、美股期货企稳）并存；油价“战后过剩”叙事与OPEC+会议前的反弹并存；美国通胀读数偏高但增长仍强。结论是**风险资产不宜追涨、久期与黄金略占优，但缺乏方向性共识**。\n\n## 主要新闻簇\n- **AI信用与估值（主导，38条）**：软银违约风险升至四年高位，指向“债务融资型AI投资”的警报；同时有“科技自高点回撤20%、英伟达9倍”的泡沫熊市叙事，与“AI交易企稳、亚股科技反弹、EPAM业绩超预期”形成对冲。\n- **地缘与贸易（18条）**：中东油价战/战后过剩 vs OPEC+会议前油价反弹；特朗普新关税削弱“中国+1”；中国稳市场承诺推动A股与人民币走强。\n- **通胀与大宗（19条）**：金价重回3600美元、单日涨超2%，但同簇出现“2026金价崩跌”讨论——黄金内部亦多空并存。\n- **增长与就业（12条）**：阿根廷进入技术性衰退（局部、非全球）；美国“通胀升但增长强”。\n- **货币政策（2条）**：美联储偏好通胀指标10月升至3.8%，抬升2027年政策不确定性。\n\n## 股票 / 债券 / 黄金\n- **股票（略偏空）**：AI资本开支的融资端风险是主要拖累；但科技反弹、中国政策托底、美增长韧性构成抵消。倾向**结构性而非系统性**：对高杠杆AI叙事敞口谨慎，不追高。\n- **债券（略偏多）**：增长信号偏弱、AI信用担忧与油价过剩叙事利好久期；但3.8%通胀读数与“增长仍强”限制下行空间，属**温和支撑**。\n- **黄金（偏多）**：规则权重最高（+0.18），金价站上3600、避险与信用担忧共振；但“崩跌”类标题提示拥挤度风险，**看多但不加杠杆**。\n\n## 经济周期\n增长 -0.12、通胀 +0.02，均在中性带内，**不构成明确的衰退或再通胀交易**。特征更像“增长边际走弱 + 通胀黏性偏高”的弱滞胀尾部风险，而非基准情形。阿根廷衰退为局部扰动，不改变全球判断。\n\n## AI泡沫影响\n规则AI泡沫压力约 0.0，说明**标题层面尚未形成一致的泡沫破裂定价**。真正的信号是结构性的：风险从“估值”转向“融资”（软银违约风险），这比单纯回撤更值得跟踪；同时业绩超预期与交易企稳说明基本面尚未断裂。**判定：泡沫担忧上升但未证实，属“信用端预警”而非“已发生因果”。**\n\n## 未来24—72小时观察清单\n1. OPEC+会议结果与油价对“过剩 vs 地缘”的定价方向。\n2. 软银相关信用指标（CDS/评级表态）是否进一步走弱。\n3. 美国通胀（3.8%）后美联储官员表态与2027年路径暗示。\n4. 中国稳市场承诺的后续落地与A股/人民币持续性。\n5. 科技板块能否守住反弹（亚股第二日上涨的延续性）。\n6. 特朗普新关税的适用范围与“中国+1”供应链反应。\n\n## 不确定性\n- 新闻仅为标题级，**无法确认正文细节**，软银风险的具体触发因素未知。\n- 黄金同簇多空标题并存，方向置信度低。\n- 规则权重整体接近零，**任何单一新闻簇都可能反转总判断**；本研判为相关性梳理，非因果结论，亦不构成个股买卖指令。",
+  "deepseek_analyzed_at": "2026-11-27T08:16:39.750092+00:00",
   "deepseek_model": "deepseek-chat",
   "deepseek_evidence_count": 24
 }
